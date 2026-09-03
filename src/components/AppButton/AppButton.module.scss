@@ -1,0 +1,152 @@
+// Variant palettes are passed down as custom properties so the interaction
+// states live in one place. The design has exactly three states (default /
+// pressed / disabled), so hover is derived as a midpoint between the default
+// and pressed palettes. Hover must stay above `:active` — both selectors have
+// the same specificity, so source order is what makes pressed win.
+
+@use 'text-styles' as *;
+
+.root {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+
+  @include text-body-1(semibold);
+
+  // Figma overrides the body-1 line-height on button labels: 20px, not 150%.
+  line-height: 20px;
+  color: var(--app-button-color);
+  text-decoration: none;
+  cursor: pointer;
+  background-color: var(--app-button-bg);
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  transition:
+    color 0.15s ease,
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.3;
+  }
+
+  @media (hover: hover) {
+    &:hover:not(:disabled) {
+      color: var(
+        --app-button-color-hover,
+        color-mix(
+          in srgb,
+          var(--app-button-color) 70%,
+          var(--app-button-color-pressed, var(--app-button-color))
+        )
+      );
+      background-color: var(
+        --app-button-bg-hover,
+        color-mix(
+          in srgb,
+          var(--app-button-bg) 70%,
+          var(--app-button-bg-pressed)
+        )
+      );
+    }
+
+    &:focus-visible:not(:disabled) {
+      color: var(
+        --app-button-color-hover,
+        color-mix(
+          in srgb,
+          var(--app-button-color) 70%,
+          var(--app-button-color-pressed, var(--app-button-color))
+        )
+      );
+      background-color: var(
+        --app-button-bg-hover,
+        color-mix(
+          in srgb,
+          var(--app-button-bg) 70%,
+          var(--app-button-bg-pressed)
+        )
+      );
+    }
+  }
+
+  &:focus:active:not(:disabled) {
+    color: var(--app-button-color-pressed, var(--app-button-color));
+    background-color: var(--app-button-bg-pressed);
+  }
+}
+
+.big {
+  padding: 15px 23px;
+}
+
+.small {
+  padding: 9px 15px;
+}
+
+.primary {
+  --app-button-color: var(--color-text-on-primary);
+  --app-button-bg: var(--color-interactive-primary);
+  --app-button-bg-pressed: var(--color-interactive-primary-pressed);
+}
+
+.secondary {
+  --app-button-color: var(--color-interactive-primary);
+  --app-button-bg: var(--color-interactive-secondary);
+  --app-button-bg-pressed: var(--color-interactive-secondary-pressed);
+}
+
+.tertiary {
+  --app-button-color: var(--color-interactive-primary);
+  --app-button-bg: var(--color-interactive-tertiary);
+  --app-button-bg-pressed: var(--color-background-bg-card-pressed);
+
+  &.iconOnly {
+    --app-button-color: var(--color-icon-on-card);
+  }
+}
+
+.outlined {
+  --app-button-color: var(--color-interactive-primary);
+  --app-button-bg: var(--color-interactive-tertiary);
+  --app-button-bg-pressed: var(--color-background-bg-card-pressed);
+
+  border-color: var(--color-stroke-on-surface);
+
+  &.iconOnly {
+    --app-button-color: var(--color-icon-on-card);
+  }
+}
+
+.error {
+  --app-button-color: var(--color-accents-danger-text);
+  --app-button-bg: var(--color-background-surface-attention);
+  --app-button-bg-pressed: var(--color-background-surface-attention-press);
+  --app-button-outline-color: var(--color-accents-danger-text);
+}
+
+.link {
+  --app-button-color: var(--color-interactive-primary);
+  --app-button-color-pressed: var(--color-interactive-primary-pressed);
+  --app-button-bg: transparent;
+  --app-button-bg-pressed: transparent;
+
+  padding: 0;
+  border: 0;
+}
+
+.iconOnly {
+  padding: 0;
+
+  &.big {
+    width: var(--app-button-size, 52px);
+    height: var(--app-button-size, 52px);
+  }
+
+  &.small {
+    width: var(--app-button-size, 40px);
+    height: var(--app-button-size, 40px);
+  }
+}

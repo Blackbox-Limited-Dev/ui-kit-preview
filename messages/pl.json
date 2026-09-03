@@ -1,0 +1,547 @@
+{
+  "season": {
+    "winter": "zima",
+    "summer": "lato"
+  },
+  "search": {
+    "placeholder": "Szukaj czego chcesz"
+  },
+  "footer": {
+    "infoLine": {
+      "label": "Infolinia 08:30–21:00",
+      "value": "0 800 500 818"
+    },
+    "hotelBooking": {
+      "label": "Rezerwacja hoteli",
+      "value": "+38 (0342) 59 11 00"
+    },
+    "support": {
+      "label": "Wsparcie «Bukovel-24»",
+      "value": "b24@bukovel.com"
+    },
+    "allContacts": "Wszystkie kontakty",
+    "subscribe": {
+      "title": "Subskrybuj i dowiaduj się pierwszy o promocjach, nowościach i stanie tras",
+      "placeholder": "Twój e-mail",
+      "cta": "Subskrybuj",
+      "invalid": "Podaj poprawny adres e-mail",
+      "success": "Dziękujemy! Subskrypcja została zapisana"
+    },
+    "mobileApp": "Bukovel w twoim smartfonie",
+    "groups": {
+      "conditions": "Regulaminy i warunki",
+      "company": "Firma",
+      "info": "Informacje",
+      "other": "Inne"
+    },
+    "links": {
+      "hotelRules": "Zasady rezerwacji hoteli",
+      "purchaseRules": "Zasady zakupu karnetów, wypożyczalni, szkoły narciarskiej i aquaparku",
+      "slopeRules": "Zasady zachowania na stokach",
+      "liftRules": "Zasady korzystania z wyciągów",
+      "paymentSecurity": "Bezpieczeństwo danych płatniczych",
+      "publicInfo": "Informacje publiczne",
+      "refunds": "Zwrot środków",
+      "jobs": "Praca w Bukovel",
+      "rent": "Wynajem powierzchni komercyjnych",
+      "partnership": "Partnerstwo z Bukovel",
+      "invest": "Invest Bukovel",
+      "hotelPartner": "Zostań hotelem partnerskim",
+      "sustainability": "Polityka zrównoważonego rozwoju",
+      "blog": "Blog",
+      "news": "Aktualności",
+      "contacts": "Kontakt",
+      "bus": "Bukovel Bus",
+      "parking": "Parking",
+      "maps": "Mapy kurortu",
+      "insurance": "Ubezpieczenie",
+      "companyLogin": "Zaloguj się jako firma",
+      "medical": "Centrum medyczne",
+      "emergency": "Służby ratunkowe",
+      "ecology": "Stan ekologii",
+      "faq": "Częste pytania",
+      "skiSchools": "Szkoły narciarskie w Bukovel"
+    },
+    "copyright": "© {year} TOV «Bukovel»",
+    "slogan": {
+      "winter": "Do zobaczenia na stokach",
+      "summer": "Twoja letnia przygoda jest tu"
+    }
+  },
+  "header": {
+    "actionsLabel": "Główne działy",
+    "scrollBack": "Przewiń wstecz",
+    "scrollForward": "Przewiń dalej",
+    "nav": {
+      "profile": "Profil",
+      "cart": "Koszyk",
+      "favourites": "Ulubione",
+      "menu": "Menu",
+      "search": "Szukaj"
+    },
+    "actions": {
+      "hotels": "Hotele",
+      "skipass": "Skipassy",
+      "school": "Szkoła narciarska",
+      "rentals": "Wypożyczalnia i serwis",
+      "mavka": "Aquapark «Mavka»",
+      "med": "Centrum medyczne",
+      "insurance": "Ubezpieczenie",
+      "online": "Bukovel online"
+    },
+    "panels": {
+      "hotels": {
+        "links": {
+          "spa": "SPA w cenie",
+          "pool": "Z basenem",
+          "board": "Pełne wyżywienie",
+          "kids": "Z dziećmi"
+        },
+        "cards": {
+          "rare": {
+            "title": "Rzadkie perełki",
+            "alt": "Namiot glampingowy na drewnianym podeście w zielonych Karpatach"
+          },
+          "hotels": {
+            "title": "Hotele",
+            "alt": "Drewniane domki hotelowe podświetlone nocą"
+          },
+          "apartments": {
+            "title": "Apartamenty",
+            "alt": "Aparthotel Bukovel na tle góry z wyciągiem"
+          },
+          "chalet": {
+            "title": "Domki chalet",
+            "alt": "Drewniane chalet wśród świerków"
+          }
+        }
+      },
+      "skipass": {
+        "links": {
+          "all": "Wszystkie skipassy",
+          "carriers": "Karty-nośniki",
+          "rules": "Zasady"
+        },
+        "priceLabel": "Cena od",
+        "priceUnit": "/ dzień",
+        "action": "Więcej: {season}",
+        "seasons": {
+          "day": {
+            "title": "Skipassy na dzień",
+            "dates": ["Tylko 14 lutego"],
+            "price": "400 ₴"
+          },
+          "low": {
+            "title": "Niski sezon",
+            "dates": ["22 lis - 18 gru", "17 mar - ..."],
+            "price": "1 125 ₴"
+          },
+          "high": {
+            "title": "Wysoki sezon",
+            "badge": "Teraz",
+            "dates": ["19 gru - 1 sty", "7 sty - 16 mar"],
+            "price": "1 875 ₴"
+          },
+          "holiday": {
+            "title": "Sezon świąteczny",
+            "dates": ["2 - 6 stycznia"],
+            "price": "2 225 ₴"
+          }
+        }
+      },
+      "school": {
+        "links": {
+          "skis": "Narty",
+          "snowboard": "Snowboard"
+        },
+        "cards": {
+          "individual": {
+            "title": "Zajęcia indywidualne",
+            "alt": "Instruktor uczy narciarkę na stoku"
+          },
+          "group": {
+            "title": "Zajęcia grupowe",
+            "alt": "Grupa narciarzy z instruktorem na ośnieżonym stoku"
+          },
+          "kids": {
+            "title": "Zajęcia dla dzieci",
+            "alt": "Instruktor i dziecko na nartach pokazują kciuk w górę"
+          }
+        }
+      },
+      "rentals": {
+        "links": {
+          "skis": "Narty",
+          "snowboard": "Snowboard"
+        },
+        "cards": {
+          "fullSets": {
+            "title": "Pełne zestawy",
+            "alt": "Narciarze w pełnym sprzęcie na stoku"
+          },
+          "accessories": {
+            "title": "Akcesoria",
+            "alt": "Narciarze w kaskach i goglach przed zjazdem"
+          }
+        }
+      },
+      "mavka": {
+        "cards": {
+          "slides": {
+            "title": "Strefa zjeżdżalni",
+            "alt": "Zjeżdżalnie wodne aquaparku «Mavka»"
+          },
+          "wave": {
+            "title": "Strefa basenu\nfalowego",
+            "alt": "Basen falowy aquaparku «Mavka»"
+          },
+          "spa": {
+            "title": "Strefa SPA",
+            "alt": "Strefa SPA aquaparku «Mavka»"
+          },
+          "infinity": {
+            "title": "Strefa Infinity",
+            "alt": "Drewniana sauna aquaparku «Mavka» z panoramicznym oknem na las"
+          }
+        }
+      },
+      "med": {
+        "cards": {
+          "emergency": {
+            "title": "Pomoc doraźna",
+            "alt": "Karetka przed budynkiem centrum medycznego"
+          },
+          "appointment": {
+            "title": "Umów wizytę",
+            "alt": "Lekarz centrum medycznego podczas wizyty"
+          },
+          "services": {
+            "title": "Specjalizacje",
+            "alt": "Budynek centrum medycznego w Bukowelu wśród gór"
+          }
+        }
+      },
+      "insurance": {
+        "cards": {
+          "skiing": {
+            "title": "Narciarstwo zjazdowe",
+            "alt": "Narciarz na trasie zjazdowej"
+          },
+          "school": {
+            "title": "Szkoła narciarska",
+            "alt": "Zajęcia szkoły narciarskiej na stoku"
+          },
+          "aquapark": {
+            "title": "Aquapark MAVKA",
+            "alt": "Goście aquaparku «Mavka»"
+          },
+          "accommodation": {
+            "title": "Zakwaterowanie",
+            "alt": "Pokój hotelowy w Bukowelu"
+          }
+        }
+      }
+    }
+  },
+  "hotels": {
+    "breadcrumbs": {
+      "home": "Główna",
+      "hotels": "Hotele",
+      "list": "Lista hoteli",
+      "label": "Ścieżka nawigacji"
+    },
+    "card": {
+      "stars": "{count} z 5",
+      "nights": "{count, plural, one {# noc} few {# noce} many {# nocy} other {# nocy}}",
+      "roomTypesCount": "{count, plural, one {Jeszcze # typ pokoi} few {Jeszcze # typy pokoi} many {Jeszcze # typów pokoi} other {Jeszcze # typu pokoi}}",
+      "favourite": "Do ulubionych",
+      "prevPhoto": "Poprzednie zdjęcie",
+      "nextPhoto": "Następne zdjęcie"
+    },
+    "hero": {
+      "title": "Nocleg w Bukovel\nz dodatkowymi bonusami",
+      "description": "Korzystaj z ekskluzywnych korzyści: upgrade skipassów do VIP, wieczorna jazda, zniżki do aquaparku “Mavka” i inne bonusy od wybranych hoteli",
+      "imageAlt": "Zimowy Bukovel: chata w śniegu przy wyciągu krzesełkowym",
+      "datesCaption": "Daty pobytu",
+      "datesPlaceholder": "Wybierz daty",
+      "guestsCaption": "Liczba gości",
+      "searchCta": "Szukaj"
+    },
+    "search": {
+      "guestsAdults": "Dorośli",
+      "guestsAdultsHint": "Od 13 lat",
+      "guestsChildren": "Dzieci",
+      "guestsChildrenHint": "2-12 lat",
+      "guestsValue": "{adults, plural, one {# dorosły} few {# dorosłych} many {# dorosłych} other {# dorosłych}}{children, plural, =0 {} one {, # dziecko} few {, # dzieci} many {, # dzieci} other {, # dzieci}}",
+      "guestsDecrease": "Mniej: {label}",
+      "guestsIncrease": "Więcej: {label}",
+      "apply": "Zastosuj",
+      "viewOptions": "Zobacz oferty"
+    },
+    "benefits": {
+      "title": "Jakie korzyści mogę otrzymać?",
+      "subtitle": "Rezerwując nocleg przez naszą stronę goście otrzymują dodatkowe bonusy",
+      "mavkaIconAlt": "Logo aquaparku “Mavka”",
+      "cards": {
+        "vip": {
+          "title": "VIP upgrade skipassu",
+          "alt": "Narciarz zjeżdżający zaśnieżonym stokiem Bukovel",
+          "description": "Uzyskaj dostęp do przywilejów jazdy VIP"
+        },
+        "mavka": {
+          "title": "Zniżki do aquaparku “Mavka”",
+          "alt": "Zjeżdżalnie wodne aquaparku “Mavka”",
+          "description": "Specjalne warunki odwiedzin aquaparku"
+        },
+        "mastercard": {
+          "title": "Mastercard i PrivatBank",
+          "alt": "Płatność kartą w kurorcie Bukovel",
+          "description": "Ekskluzywna oferta partnerskiego systemu płatności"
+        },
+        "night": {
+          "title": "Wieczorna jazda",
+          "alt": "Wieczorna jazda na oświetlonym stoku Bukovel",
+          "description": "Upgrade skipassu o darmową wieczorną jazdę"
+        }
+      }
+    },
+    "carousel": {
+      "title": "Hotele z ekskluzywnymi bonusami od Bukovel",
+      "imageAlt": "Ośnieżony kompleks hotelowy Bukovel",
+      "prev": "Poprzednie hotele",
+      "next": "Następne hotele"
+    },
+    "compare": {
+      "title": "Dlaczego warto rezerwować bezpośrednio przez Bukovel",
+      "mavkaIconAlt": "Logo aquaparku “Mavka”",
+      "cta": "Wybierz hotel",
+      "chips": {
+        "vip": "VIP upgrade skipassu",
+        "mavka": "Zniżki do aquaparku “Mavka”",
+        "mastercard": "Zniżki od Mastercard i PrivatBank",
+        "night": "Wieczorna jazda"
+      },
+      "rows": {
+        "bonuses": "Bonusy kurortu",
+        "packages": "Pakiety hotel + aktywności",
+        "support": "Oficjalne wsparcie na miejscu",
+        "flexibility": "Elastyczna zmiana dat lub anulowanie"
+      },
+      "others": {
+        "title": "Na innych\nplatformach",
+        "bonuses": "Brak",
+        "packages": "Rzadko",
+        "support": "Przez pośrednika",
+        "flexibility": "Niemożliwe"
+      },
+      "bukovel": {
+        "title": "Rezerwując\nna Bukovel",
+        "bonuses": "W cenie",
+        "packages": "W cenie",
+        "support": "Bezpośrednio",
+        "flexibility": "W cenie"
+      }
+    },
+    "list": {
+      "countTitle": "{count, plural, one {# hotel dostępny} few {# hotele dostępne} many {# hoteli dostępnych} other {# hoteli dostępnych}} na {dates}",
+      "banner": {
+        "title": "Wczesna rezerwacja",
+        "description": "Zniżka na wszystkie typy pokoi",
+        "label": "do -20%"
+      },
+      "choice": "Wybór Bukovel",
+      "hide": "Ukryj",
+      "sort": {
+        "recommended": "Polecane",
+        "cheapFirst": "Najpierw najtańsze",
+        "expensiveFirst": "Najpierw najdroższe",
+        "byRating": "Według popularności",
+        "byDistance": "Według odległości od wyciągów"
+      },
+      "tabs": {
+        "list": "Lista",
+        "map": "Mapa"
+      },
+      "filters": {
+        "title": "Filtry",
+        "show": "{count, plural, one {Pokaż # hotel} few {Pokaż # hotele} many {Pokaż # hoteli} other {Pokaż # hoteli}}",
+        "clear": "Wyczyść",
+        "close": "Zamknij",
+        "from": "Od",
+        "to": "Do",
+        "groups": {
+          "exclusive": "Oferty ekskluzywne",
+          "price": "Cena",
+          "type": "Typ noclegu",
+          "distance": "Odległość od wyciągów",
+          "payment": "Forma płatności",
+          "board": "Wyżywienie",
+          "perks": "Atuty hotelu",
+          "amenities": "Udogodnienia"
+        },
+        "options": {
+          "vipUpgrade": "VIP upgrade skipassu",
+          "freeNightSkiing": "Darmowa wieczorna jazda",
+          "mavkaDiscount": "Zniżka do aquaparku “Mavka”",
+          "mastercardDiscount": "Zniżka z Mastercard i PrivatBank",
+          "typeHotel": "Hotel",
+          "typeChalet": "Domek górski",
+          "typeApartments": "Apartamenty",
+          "boardNone": "Bez wyżywienia",
+          "boardBreakfast": "Ze śniadaniem",
+          "boardHalf": "Half board (śniadanie + kolacja)",
+          "boardFull": "Full board (śniadanie + obiad + kolacja)",
+          "skiInOut": "Ski-in/out (dostęp do wyciągu z hotelu)",
+          "transferToLift": "Dostępny transfer do wyciągu",
+          "near200": "Blisko (do 200 m)",
+          "walk500": "W zasięgu spaceru (do 500 m)",
+          "far500": "Daleko (ponad 500 m)",
+          "noPrepay": "Bez przedpłaty",
+          "prepay": "Z przedpłatą",
+          "partialPrepay": "Częściowa przedpłata",
+          "spa": "SPA w hotelu",
+          "gym": "Siłownia",
+          "playroom": "Strefa rozrywki/pokój zabaw",
+          "kidsRoom": "Pokój dziecięcy",
+          "nanny": "Usługi niani/animatora",
+          "transfer": "Transfer",
+          "bbq": "Strefa BBQ",
+          "vats": "-15% na bukowelskie banie",
+          "oasisSpa": "Darmowe SPA Oaza",
+          "skiRoom": "Ski room",
+          "parking": "Darmowy parking",
+          "reception": "Recepcja",
+          "tv": "TV",
+          "miniBar": "Mini bar",
+          "restaurant": "Restauracja",
+          "luggage": "Przechowalnia bagażu",
+          "roomService": "Room service",
+          "bikeRental": "Wypożyczalnia rowerów",
+          "pets": "Zwierzęta dozwolone (po uzgodnieniu)",
+          "inclusiveRoom": "Pokój dostępny (inkluzywny)"
+        }
+      },
+      "pagination": {
+        "showMore": "Pokaż więcej",
+        "prev": "Poprzednia strona",
+        "next": "Następna strona"
+      },
+      "otherDates": "Dostępne w innych terminach",
+      "selectRoom": "Wybierz pokój",
+      "installments": "Płatność ratalna od monobank",
+      "countTitleNoDates": "{count, plural, one {# hotel dostępny} few {# hotele dostępne} many {# hoteli dostępnych} other {# hoteli dostępnych}}",
+      "filtersAria": "Otwórz filtry",
+      "guestsShort": "{adults, plural, one {# gość} few {# gości} many {# gości} other {# gości}}",
+      "childrenShort": "{children, plural, one {# dziecko} few {# dzieci} many {# dzieci} other {# dzieci}}"
+    }
+  },
+  "skiPass": {
+    "breadcrumbs": {
+      "home": "Główna",
+      "skiPass": "Skipassy",
+      "label": "Ścieżka nawigacji"
+    },
+    "meta": {
+      "title": "Skipassy",
+      "description": "Szybki zakup na dziś lub rezerwacja z wyprzedzeniem"
+    },
+    "list": {
+      "title": "Skipassy",
+      "subtitle": "Szybki zakup na dziś lub rezerwacja z wyprzedzeniem",
+      "dayTitle": "Skipassy jednodniowe",
+      "daySubtitle": "Ważne tylko dzisiaj",
+      "accordionTrigger": "Pokaż taryfy",
+      "daysLeft": "Do końca sezonu {days} dni",
+      "seasonEnd": "koniec sezonu",
+      "hintTrigger": "Pokaż daty sezonu",
+      "hintClose": "Zamknij",
+      "promoBadge": "-10%",
+      "promo": "Otrzymaj 10% zniżki przy płatności kartą MasterCard od PrivatBank",
+      "usageGroup": "Sposób wykorzystania",
+      "usage": {
+        "consecutive": "Pod rząd",
+        "flexible": "Do wyboru"
+      },
+      "seasons": {
+        "high": {
+          "title": "Wysoki sezon",
+          "hint": "Kiedy trwa wysoki sezon"
+        },
+        "low": {
+          "title": "Niski sezon",
+          "hint": "Kiedy trwa niski sezon"
+        },
+        "ny": {
+          "title": "Sezon świąteczny",
+          "hint": "Kiedy trwa sezon świąteczny"
+        }
+      }
+    },
+    "dateCard": {
+      "exactTab": "Dokładne daty",
+      "flexibleTab": "Elastyczne daty",
+      "tabsGroup": "Sposób wyboru dat",
+      "daysLabel": "Orientacyjna liczba dni",
+      "decreaseDays": "Zmniejsz liczbę dni",
+      "increaseDays": "Zwiększ liczbę dni",
+      "monthLabel": "Miesiąc",
+      "apply": "Zastosuj",
+      "open": "Wybierz daty",
+      "close": "Zamknij",
+      "months": [
+        "Styczeń",
+        "Luty",
+        "Marzec",
+        "Kwiecień",
+        "Maj",
+        "Czerwiec",
+        "Lipiec",
+        "Sierpień",
+        "Wrzesień",
+        "Październik",
+        "Listopad",
+        "Grudzień"
+      ]
+    },
+    "links": {
+      "myPasses": "Moje skipassy i nośniki",
+      "rules": "Zasady korzystania ze skipassów",
+      "faq": "Częste pytania"
+    },
+    "brilliant": {
+      "title": "Jazda bez limitu",
+      "body": "Karta Brilliant otwiera nielimitowany dostęp do wyciągów i wejście VIP bez kolejek na cały sezon",
+      "cta": "Kup kartę",
+      "cardTitle": "Karta sezonowa Brilliant",
+      "cardSubtitle": "Wejście VIP przez cały sezon zimowy",
+      "cardChip": "Jazda bez limitu",
+      "cardPrice": "34 850 ₴",
+      "cardAction": "Przejdź do karty sezonowej Brilliant"
+    },
+    "offSeason": {
+      "title": "Skipassy wrócą z pierwszym śniegiem",
+      "subtitle": "Kurort żyje także bez śniegu: aquapark, SPA, wyciągi widokowe, wycieczki i wiele więcej czeka na Ciebie już teraz.",
+      "remind": "Przypomnij o starcie sezonu",
+      "activities": "Zobacz wszystkie atrakcje",
+      "notice": "Orientacyjny start sezonu zimowego — połowa listopada",
+      "promoTitle": "Dowiedz się pierwszy, kiedy otworzą się stoki",
+      "promoBody": "Włącz powiadomienia w aplikacji Bukovel — poinformujemy, gdy tylko ruszy sprzedaż skipassów na nowy sezon.",
+      "appStore": "Pobierz aplikację Bukovel w App Store",
+      "googlePlay": "Pobierz aplikację Bukovel w Google Play",
+      "promoPhotoAlt": "Aplikacja Bukovel na ekranie smartfona"
+    },
+    "pdp": {
+      "descriptionTitle": "Opis",
+      "deliveryTitle": "Dostawa i aktywacja",
+      "faqTitle": "Częste pytania",
+      "locationTitle": "Lokalizacja",
+      "route": "Wyznacz trasę",
+      "copyAddress": "Skopiuj adres",
+      "open": "Otwarte",
+      "closed": "Zamknięte",
+      "cta": "Zamów",
+      "tariffs": "Taryfa",
+      "favourite": "Dodaj do ulubionych"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+// Breakpoints. Kept on the same scale that was in use to avoid layout shifts.
+// Lives apart from `settings.scss` so `mixins.scss` can be used from a CSS
+// module without dragging the global `:root` token block into it.
+// `@media` queries cannot read CSS custom properties, hence a Sass map.
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1200px,
+  xxl: 1400px,
+);

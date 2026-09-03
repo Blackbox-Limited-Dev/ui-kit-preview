@@ -1,0 +1,140 @@
+@use 'mixins' as *;
+@use 'text-styles' as *;
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+
+  &_header {
+    margin: 0;
+  }
+
+  &_trigger {
+    @include text-body-1(medium);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 36px;
+    padding: var(--size-sm) 0;
+    color: var(--color-text-on-surface);
+    text-align: left;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+
+  &_chevron {
+    display: flex;
+    flex-shrink: 0;
+    color: var(--color-icon-on-card-subtle);
+  }
+
+  &_trigger[data-state='open'] &_chevron_closed {
+    display: none;
+  }
+
+  &_trigger[data-state='closed'] &_chevron_open {
+    display: none;
+  }
+
+  &_content {
+    overflow: hidden;
+
+    @media (prefers-reduced-motion: no-preference) {
+      &[data-state='open'] {
+        animation: accordion-slide-down 0.2s ease-out;
+      }
+
+      &[data-state='closed'] {
+        animation: accordion-slide-up 0.2s ease-out;
+      }
+    }
+
+    &_inner {
+      display: flex;
+      flex-direction: column;
+      gap: var(--size-lg);
+      padding: var(--size-sm) 0;
+    }
+  }
+
+  &.card {
+    gap: var(--size-md);
+
+    @include b-d(md) {
+      gap: var(--size-sm);
+    }
+  }
+
+  &.card &_item {
+    background-color: var(--color-background-bg-theme);
+    border-radius: var(--radius-2xl);
+  }
+
+  // The item's padding lives on the trigger so the whole card is clickable.
+  &.card &_trigger {
+    @include text-title-3;
+
+    column-gap: var(--size-md);
+    height: auto;
+    padding: var(--size-xl);
+
+    // Animated alongside the Radix height animation — a snap back to the full
+    // padding on close reads as the content jumping up into the header.
+    @media (prefers-reduced-motion: no-preference) {
+      transition: padding-bottom 0.2s ease-out;
+    }
+
+    &[data-state='open'] {
+      padding-bottom: 0;
+    }
+  }
+
+  &.card &_chevron {
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--color-icon-on-card);
+    background-color: var(--color-interactive-tertiary);
+    border-radius: var(--radius-pill);
+  }
+
+  &.card &_content_inner {
+    @include text-body-1;
+
+    padding: var(--size-xs) var(--size-xl) var(--size-xl);
+    color: var(--color-text-on-surface);
+  }
+
+  &.divider &_item {
+    padding: var(--size-md) 0;
+    border-bottom: 1px solid var(--color-stroke-divider-on-surface);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+@keyframes accordion-slide-down {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-slide-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+
+  to {
+    height: 0;
+  }
+}

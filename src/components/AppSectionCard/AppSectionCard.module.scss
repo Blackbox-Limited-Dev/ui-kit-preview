@@ -1,0 +1,39 @@
+@use 'text-styles' as *;
+
+.root {
+  display: flex;
+  flex-direction: column;
+
+  &.outside {
+    gap: var(--size-lg);
+  }
+
+  &_title {
+    @include text-title-2;
+
+    margin: 0;
+    color: var(--color-text-on-bg);
+  }
+
+  // `--section-card-gap` lets a caller tighten the title↔body gap without a prop.
+  &_card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--section-card-gap, var(--size-lg));
+    padding: var(--size-lg);
+    background-color: var(--color-background-bg-card);
+    border-radius: var(--radius-2xl);
+
+    &__flush {
+      padding: 0;
+      background: none;
+      border-radius: 0;
+    }
+  }
+
+  &_slot {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-lg);
+  }
+}

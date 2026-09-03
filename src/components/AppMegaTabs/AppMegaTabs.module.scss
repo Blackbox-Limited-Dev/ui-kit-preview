@@ -1,0 +1,58 @@
+@use 'mixins' as *;
+@use 'text-styles' as *;
+
+.tabs {
+  display: flex;
+  gap: var(--size-xs);
+  align-items: center;
+  height: 68px;
+  padding: var(--size-xs);
+  background-color: var(--color-background-bg-on-surface);
+  border-radius: var(--radius-2xl);
+
+  @include b-d(md) {
+    gap: 0;
+  }
+
+  &_item {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--size-xs);
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    height: 60px;
+    padding: 10px var(--size-md);
+    cursor: pointer;
+    background: none;
+    border: none;
+    border-radius: var(--radius-xl);
+    transition: background-color 0.15s ease;
+
+    &[data-state='on'] {
+      background-color: var(--color-background-surface);
+    }
+  }
+
+  &_caption {
+    @include text-body-2;
+
+    color: var(--color-text-on-bg-on-surface-subtle);
+  }
+
+  &_price {
+    @include text-body-2(semibold);
+
+    line-height: 1.1;
+    color: var(--color-text-on-bg-on-surface);
+  }
+
+  &_item[data-state='on'] &_caption {
+    color: var(--color-text-on-card-subtle);
+  }
+
+  &_item[data-state='on'] &_price {
+    color: var(--color-text-on-card);
+  }
+}

@@ -1,0 +1,26 @@
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--meta-gap);
+  align-items: center;
+
+  &_item {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &_dot {
+    flex: none;
+    width: 3px;
+    height: 3px;
+    border-radius: var(--radius-pill);
+  }
+
+  &.subtle &_dot {
+    background-color: var(--color-icon-on-secondary-subtle);
+  }
+
+  &.disabled &_dot {
+    background-color: var(--color-interactive-disabled);
+  }
+}

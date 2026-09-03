@@ -1,0 +1,11 @@
+@use 'mixins' as *;
+
+.container {
+  max-width: var(--size-container-max);
+  padding: 0 var(--size-container-padding);
+  margin: 0 auto;
+
+  @include b-d(sm) {
+    padding: 0 var(--size-container-padding-sm);
+  }
+}

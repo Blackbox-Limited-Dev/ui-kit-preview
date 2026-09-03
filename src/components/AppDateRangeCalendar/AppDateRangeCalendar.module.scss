@@ -1,0 +1,260 @@
+@use 'text-styles' as *;
+
+.calendar {
+  position: relative;
+
+  &_months {
+    display: flex;
+    gap: 40px;
+  }
+
+  &_month {
+    width: 320px;
+  }
+
+  &_caption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    margin-bottom: var(--size-sm);
+  }
+
+  &_caption_label {
+    @include text-body-2(semibold);
+
+    color: var(--color-text-on-card);
+    text-transform: capitalize;
+  }
+
+  &_nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_nav_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    color: var(--color-icon-on-card);
+    cursor: pointer;
+    background: none;
+    border: none;
+
+    &:disabled {
+      color: var(--color-icon-disabled);
+      cursor: default;
+    }
+  }
+
+  &_grid {
+    width: 100%;
+
+    // Selected days shrink to a fixed 32px button; without fixed layout the
+    // table re-distributes column widths on every selection.
+    table-layout: fixed;
+    border-spacing: 0 var(--size-sm);
+    border-collapse: separate;
+  }
+
+  &_weekday {
+    @include text-body-2(semibold);
+
+    height: 32px;
+    padding: 0;
+    color: var(--color-text-on-card-subtle);
+    text-align: center;
+  }
+
+  &_day {
+    height: 32px;
+    padding: 0;
+    text-align: center;
+
+    &_button {
+      @include text-body-2;
+
+      position: relative;
+      width: 100%;
+      height: 32px;
+      padding: 0;
+      color: var(--color-text-on-card);
+      cursor: pointer;
+      background: none;
+      border: none;
+      border-radius: var(--radius-pill);
+    }
+
+    &_dot {
+      position: absolute;
+      top: 23px;
+      left: 50%;
+      width: 4px;
+      height: 4px;
+      background-color: var(--color-labels-blue);
+      border-radius: var(--radius-pill);
+      transform: translateX(-50%);
+
+      &_today {
+        background-color: var(--color-interactive-primary);
+      }
+
+      &_selected {
+        background-color: var(--color-text-on-primary);
+      }
+    }
+
+    &_disabled &_button,
+    &_outside &_button {
+      color: var(--color-text-disabled);
+      cursor: default;
+    }
+
+    &_hidden {
+      visibility: hidden;
+    }
+
+    // rdp withholds `range_start`/`range_end` until both ends are picked, so a
+    // lone start day is only marked `selected`.
+    &_range_start,
+    &_range_end,
+    &_selected:where(:not(&_range_middle)) {
+      position: relative;
+
+      .calendar_day_button {
+        @include text-body-2(semibold);
+
+        position: relative;
+        z-index: 1;
+        display: block;
+        width: 32px;
+        height: 32px;
+        margin-inline: auto;
+        color: var(--color-text-on-primary);
+        background-color: var(--color-interactive-primary);
+        border: 2px solid var(--color-stroke-on-surface);
+        border-radius: var(--radius-pill);
+      }
+    }
+
+    &_range_start::after {
+      right: 0;
+    }
+
+    &_range_end::before {
+      left: 0;
+    }
+
+    &_range_start:not(&_range_end)::after,
+    &_range_end:not(&_range_start)::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 50%;
+      content: '';
+      background-color: var(--color-background-bg-on-surface);
+    }
+
+    &_range_middle {
+      background-color: var(--color-background-bg-on-surface);
+
+      &:first-child {
+        border-top-left-radius: var(--radius-pill);
+        border-bottom-left-radius: var(--radius-pill);
+      }
+
+      &:last-child {
+        border-top-right-radius: var(--radius-pill);
+        border-bottom-right-radius: var(--radius-pill);
+      }
+
+      .calendar_day_button {
+        border-radius: 0;
+      }
+    }
+
+    &_preview {
+      background-color: var(--color-background-bg-on-surface);
+
+      &:first-child {
+        border-top-left-radius: var(--radius-pill);
+        border-bottom-left-radius: var(--radius-pill);
+      }
+
+      &:last-child {
+        border-top-right-radius: var(--radius-pill);
+        border-bottom-right-radius: var(--radius-pill);
+      }
+    }
+
+    &_preview_start {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 50%;
+        content: '';
+        background-color: var(--color-background-bg-on-surface);
+      }
+    }
+
+    // The band stops where the 32px endpoint circle would, so closing the
+    // range does not shift its edge.
+    &_preview_end {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        inset: 0 calc(50% - 16px) 0 0;
+        content: '';
+        background-color: var(--color-background-bg-on-surface);
+        border-radius: 0 var(--radius-pill) var(--radius-pill) 0;
+      }
+
+      &:first-child::before {
+        border-radius: var(--radius-pill);
+      }
+    }
+
+    // Hover circle behind the day number; never on selected or previewing
+    // cells, which paint their own band.
+    @media (hover: hover) {
+      &:not(
+          &_selected,
+          &_range_start,
+          &_range_end,
+          &_range_middle,
+          &_preview,
+          &_preview_end
+        ) {
+        .calendar_day_button:hover:not(:disabled)::before {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          z-index: -1;
+          width: 32px;
+          height: 32px;
+          content: '';
+          background-color: var(--color-background-bg-on-surface);
+          border-radius: var(--radius-pill);
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+
+  &_chevron {
+    display: block;
+  }
+}

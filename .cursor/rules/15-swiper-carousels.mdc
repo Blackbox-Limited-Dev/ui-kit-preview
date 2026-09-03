@@ -1,0 +1,101 @@
+---
+description: Swiper (swiper/react) carousel rules — the CSS the library injects, why slides need an explicit width under `slidesPerView: 'auto'`, how to get equal-height slides, and which params can move into `breakpoints`.
+globs: src/**/*.{ts,tsx,scss}
+alwaysApply: false
+---
+
+# Swiper carousels
+
+Carousels use the React components from `swiper/react` plus `import 'swiper/css'` at the top of the component file. Everything below is verified against the installed package (`node_modules/swiper/swiper.css`, `node_modules/swiper/shared/swiper-core.mjs`) and <https://swiperjs.com/swiper-api>.
+
+## What the library's CSS already sets
+
+```css
+.swiper-wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  position: relative;
+  display: block;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* only when the `autoHeight` param is on */
+.swiper-autoheight,
+.swiper-autoheight .swiper-slide {
+  height: auto;
+}
+.swiper-autoheight .swiper-wrapper {
+  align-items: flex-start;
+}
+```
+
+The container (`.swiper`) has no height of its own, so the `height: 100%` chain — container → wrapper → slide — is indefinite. Percentage heights inside a slide therefore resolve to `auto`.
+
+Class names Swiper adds at runtime and that are safe to style: `swiper-slide-active`, `swiper-slide-next`, `swiper-slide-prev`, `swiper-slide-visible`, `swiper-slide-fully-visible`. Do **not** rename them through `slideClass` / `slideActiveClass` — those params are documented as unsupported in the React components.
+
+## Slide width under `slidesPerView: 'auto'`
+
+With `slidesPerView: 'auto'` Swiper reads each slide's **computed width** (`getComputedStyle(slide).width` plus padding/margin) to build the snap grid. The slide must therefore carry a real width in CSS:
+
+```scss
+// good — explicit track item width
+&_item {
+  width: 336px;
+}
+
+// good — shrink-wrap a fixed-width card
+&_item {
+  width: fit-content;
+}
+
+// wrong — a block-level slide with `auto` fills the whole track
+&_item {
+  width: auto;
+}
+```
+
+`width: auto` on a block box means "fill the containing block", so every slide measures the full track width and only one slide is ever visible.
+
+## Equal-height slides
+
+Give the slide `height: auto` and let the flex wrapper stretch it; the card then fills the slide:
+
+```scss
+// track item
+&_item {
+  width: 336px;
+  height: auto;
+}
+```
+
+```scss
+// card root
+.vertical {
+  height: 100%;
+}
+```
+
+Never turn a slide into a `display: flex` / `display: grid` container to achieve this. Grid and flex size their children by intrinsic width, and cards whose media is absolutely positioned (galleries with `next/image` `fill`) have almost no intrinsic width — the card collapses to its text's min-content width. Block-level slides let the card fill instead.
+
+`autoHeight: true` is the opposite feature: the wrapper shrinks to the **active** slide's height. Use it only for single-slide-per-view carousels with unequal content.
+
+## Params
+
+- `spaceBetween` is applied by Swiper as a margin on each slide. Never add your own `margin` to slides — the docs warn navigation breaks.
+- `slidesOffsetBefore` / `slidesOffsetAfter` add px padding to the start/end of the track; prefer them over container padding, which clips the drag area.
+- `breakpoints` may only change params that do not alter layout logic — `slidesPerView`, `slidesPerGroup`, `spaceBetween`, `grid.rows`, and the offsets. `loop` and `effect` are ignored there.
+- `rewind` and `loop` are mutually exclusive.
+- Import only the modules used (`import { A11y } from 'swiper/modules'`) and pass them via `modules={[...]}`; `swiper/css` alone covers the core styles, module styles are separate imports.
+
+## Where carousels live
+
+- `src/app/hotels/_components/HotelsCarouselSection.tsx` — landing carousel, `slidesPerView: 'auto'`, fixed slide width.
+- `src/app/hotels/_components/HotelsList.tsx` — «Вибір Буковеля» strip, `slidesPerView: 'auto'`, `fit-content` slides.
+- `src/components/AppHotelGallery/index.tsx` — per-card photo slider nested inside a card; its slides keep the default full-width behaviour.

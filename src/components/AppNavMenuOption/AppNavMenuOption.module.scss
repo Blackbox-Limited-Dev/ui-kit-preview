@@ -1,0 +1,74 @@
+@use 'text-styles' as *;
+
+.root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 219px;
+  padding: 20px;
+  overflow: hidden;
+  color: var(--color-text-on-primary);
+  text-decoration: none;
+  border-radius: var(--radius-2xl);
+
+  // Keeps the title readable over any photo.
+  &::after {
+    position: absolute;
+    inset: 0;
+    content: '';
+    background-color: rgb(0 0 0 / 20%);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-interactive-primary);
+    outline-offset: 2px;
+  }
+}
+
+// Transform rather than a size change, so the zoom stays on the compositor.
+// Base scale(1) + fixed origin pre-promote the layer, preventing a 1-2px
+// raster snap when the hover transition starts.
+.image {
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  transform: scale(1);
+  transform-origin: center;
+}
+
+@media (hover: hover) {
+  .root:hover .image {
+    transform: scale(1.05);
+  }
+}
+
+// No scale means no transition to run, so the transition itself can stay.
+@media (prefers-reduced-motion: reduce) {
+  .root:hover .image {
+    transform: none;
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-xs);
+}
+
+.title {
+  @include text-body-xlarge(medium);
+
+  // Figma overrides the body-xlarge line-height on the card title: 28px.
+  line-height: 28px;
+
+  // `pre-line` honours `\n` in the message string while still wrapping on width.
+  white-space: pre-line;
+}
+
+.description {
+  @include text-body-2(regular);
+
+  color: var(--color-text-on-primary-subtle);
+}

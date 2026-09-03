@@ -1,0 +1,86 @@
+@use 'text-styles' as *;
+
+.root {
+  display: flex;
+  gap: var(--size-sm);
+  align-items: center;
+  height: 44px;
+  padding: var(--size-xs) 10px;
+
+  @include text-body-2(semibold);
+
+  // Figma overrides the body-2 line-height on the label: 20px, not 150%.
+  line-height: 20px;
+  color: var(--color-text-on-bg);
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: var(--color-background-bg-card);
+  border: 0;
+  border-radius: var(--radius-pill);
+  transition: background-color 0.15s ease;
+
+  &:focus-visible {
+    outline: 2px solid var(--color-interactive-primary);
+    outline-offset: 2px;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--color-background-bg-card-pressed);
+    }
+  }
+}
+
+.flag {
+  flex-shrink: 0;
+
+  // Figma wraps the 20px circle in a 24px "Flag Offset" box.
+  margin: 2px;
+  border-radius: 50%;
+}
+
+.chevron {
+  transition: transform 0.15s ease;
+
+  .root[data-state='open'] & {
+    transform: rotate(180deg);
+  }
+}
+
+.menu {
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  background-color: var(--color-background-surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-default);
+
+  &_item {
+    @include text-body-1;
+
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 12px 16px;
+    color: var(--color-text-on-surface-subtle);
+    cursor: pointer;
+    background-color: var(--color-background-bg-card);
+    border-radius: var(--radius-pill);
+    outline: none;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--color-background-bg-card-pressed);
+      }
+    }
+
+    &[data-highlighted] {
+      background-color: var(--color-background-bg-card-pressed);
+    }
+
+    .flag {
+      border: 1px solid var(--color-stroke-divider-on-surface);
+    }
+  }
+}

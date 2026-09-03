@@ -1,0 +1,112 @@
+@use 'text-styles' as *;
+
+.preview {
+  position: relative;
+  display: flex;
+  gap: var(--size-md);
+  width: 320px;
+  padding: var(--size-md);
+  background-color: var(--color-background-bg-card);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+
+  &_photo {
+    position: relative;
+    flex-shrink: 0;
+    width: 102px;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &_status {
+    position: absolute;
+    top: var(--size-xs);
+    left: var(--size-xs);
+  }
+
+  &_content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--size-sm);
+    min-width: 0;
+  }
+
+  &_top {
+    display: flex;
+    gap: var(--size-xs);
+    align-items: flex-start;
+  }
+
+  &_text {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--size-xs);
+    min-width: 0;
+  }
+
+  &_name {
+    @include text-body-large(medium);
+
+    color: var(--color-text-on-card);
+  }
+
+  &_dates {
+    @include text-caption;
+
+    color: color-mix(in srgb, var(--color-text-on-card) 72%, transparent);
+  }
+
+  &_heart {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    color: var(--color-icon-on-card);
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+
+  &_labels {
+    display: flex;
+    gap: var(--size-xs);
+    overflow: hidden;
+
+    > * {
+      flex-shrink: 0;
+    }
+  }
+
+  &_price {
+    display: flex;
+    gap: 6px;
+    align-items: baseline;
+    margin-top: auto;
+  }
+
+  &_price_value {
+    @include text-title-3;
+
+    color: var(--color-text-on-card);
+  }
+
+  &_price_nights {
+    @include text-body-2;
+
+    color: color-mix(in srgb, var(--color-text-on-card) 72%, transparent);
+  }
+
+  &_price_old {
+    @include text-body-2;
+
+    color: var(--color-text-disabled);
+    text-decoration: line-through;
+  }
+}

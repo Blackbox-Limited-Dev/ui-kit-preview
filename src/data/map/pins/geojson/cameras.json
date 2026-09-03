@@ -1,0 +1,66 @@
+{
+  "type": "FeatureCollection",
+  "name": "Веб-камери",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "bkv-cam-01",
+      "geometry": { "type": "Point", "coordinates": [24.3968, 48.3486] },
+      "properties": {
+        "id": "bkv-cam-01",
+        "name": "Верхня станція витягу 12",
+        "subcategory": "Веб-камера",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": null,
+        "precision": "approximate",
+        "source": "mock",
+        "category": "cameras",
+        "categoryLabel": "Веб-камери",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-cam-02",
+      "geometry": { "type": "Point", "coordinates": [24.4189, 48.3641] },
+      "properties": {
+        "id": "bkv-cam-02",
+        "name": "Аквапарк “Мавка”",
+        "subcategory": "Веб-камера",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": null,
+        "precision": "approximate",
+        "source": "mock",
+        "category": "cameras",
+        "categoryLabel": "Веб-камери",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-cam-03",
+      "geometry": { "type": "Point", "coordinates": [24.4047, 48.3612] },
+      "properties": {
+        "id": "bkv-cam-03",
+        "name": "VODA club",
+        "subcategory": "Веб-камера",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": null,
+        "precision": "approximate",
+        "source": "mock",
+        "category": "cameras",
+        "categoryLabel": "Веб-камери",
+        "seasons": ["all"]
+      }
+    }
+  ]
+}

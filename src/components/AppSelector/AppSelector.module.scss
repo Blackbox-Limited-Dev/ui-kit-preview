@@ -1,0 +1,88 @@
+@use 'text-styles' as *;
+
+// Field anatomy mirrors AppInput: label above, 52px box on the input tokens.
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-sm);
+}
+
+.label {
+  @include text-body-1(semibold);
+
+  line-height: var(--line-height-tight);
+  color: var(--color-text-on-card);
+}
+
+.trigger {
+  display: flex;
+  gap: var(--size-sm);
+  align-items: center;
+  justify-content: space-between;
+  min-height: 52px;
+  padding: var(--size-md);
+  cursor: pointer;
+  background-color: var(--color-input-bg);
+  border: 1px solid var(--color-input-stroke);
+  border-radius: var(--radius-md);
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+
+  @media (hover: hover) {
+    &:hover:not([data-state='open']) {
+      background-color: var(--color-background-bg-card-pressed);
+    }
+  }
+
+  &:focus-visible,
+  &[data-state='open'] {
+    border-color: var(--color-input-stroke-active);
+    outline: none;
+  }
+
+  &_value {
+    @include text-body-1(regular);
+
+    overflow: hidden;
+    color: var(--color-input-text);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &[data-placeholder] &_value {
+    color: var(--color-input-placeholder);
+  }
+
+  &_icon {
+    flex-shrink: 0;
+    color: var(--color-icon-on-card);
+  }
+}
+
+.menu {
+  z-index: 30;
+  padding: var(--size-sm);
+  background-color: var(--color-background-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-dropdown);
+
+  &_item {
+    @include text-body-1;
+
+    padding: var(--size-sm) var(--size-md);
+    color: var(--color-text-on-card);
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    outline: none;
+
+    &[data-highlighted] {
+      background-color: var(--color-background-bg-on-surface);
+    }
+  }
+}
+
+// Radix sets the trigger-width var only under `position="popper"`.
+.full {
+  width: var(--radix-select-trigger-width);
+}

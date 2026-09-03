@@ -1,0 +1,117 @@
+@use 'mixins' as *;
+@use 'text-styles' as *;
+
+.root {
+  // Below `lg` the card stops being one box: the thumbnail moves to the top of
+  // the page, the heading is covered by the page's own `h1`, and only the
+  // tariffs and the CTA keep the cutout shell. `> span` / `> div` are
+  // `AppCutoutCard`'s shape and slot — keep in sync with that component.
+  @include b-d(lg) {
+    // Doubled class so this beats `AppCutoutCard`'s own `display: flex`
+    // whatever order the two modules land in.
+    &.root {
+      display: contents;
+    }
+
+    > span {
+      display: none;
+    }
+
+    > div {
+      display: contents;
+    }
+  }
+
+  &_thumb {
+    position: relative;
+    aspect-ratio: 302 / 242;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+
+    img {
+      object-fit: cover;
+    }
+
+    @include b-d(lg) {
+      order: -1;
+      aspect-ratio: 343 / 242;
+    }
+  }
+
+  &_favourite {
+    position: absolute;
+    top: var(--size-lg);
+    right: var(--size-lg);
+  }
+
+  &_heading {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-xs);
+    align-items: center;
+
+    @include b-d(lg) {
+      display: none;
+    }
+  }
+
+  &_title {
+    @include text-title-2;
+
+    margin: 0;
+    color: var(--color-text-on-card);
+    text-align: center;
+  }
+
+  &_meta {
+    @include text-body-1;
+
+    justify-content: center;
+    color: var(--color-text-on-bg-subtle);
+  }
+
+  // Nested `AppCutoutCard`: a real ticket card below `lg`, dissolved into the
+  // outer card's slot on desktop. `> span` / `> div` are its bg and slot.
+  &_purchase {
+    // Doubled class so this beats `AppCutoutCard`'s own `display: flex`
+    // whatever order the two modules land in.
+    &.root_purchase {
+      @include b-up(lg) {
+        display: contents;
+      }
+    }
+
+    @include b-up(lg) {
+      > span {
+        display: none;
+      }
+
+      > div {
+        display: contents;
+      }
+    }
+
+    @include b-d(lg) {
+      position: sticky;
+      bottom: 0;
+      order: 1;
+      width: 100%;
+    }
+  }
+
+  &_cta {
+    width: 100%;
+
+    @include b-d(md) {
+      --app-button-size: 60px;
+    }
+
+    &_dot {
+      width: 3px;
+      height: 3px;
+      margin-inline: var(--size-sm);
+      background-color: currentcolor;
+      border-radius: var(--radius-pill);
+    }
+  }
+}

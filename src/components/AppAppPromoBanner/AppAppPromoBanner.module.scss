@@ -1,0 +1,100 @@
+@use 'text-styles' as *;
+@use 'mixins' as *;
+
+.root {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 600px;
+  padding-inline: var(--size-3xl);
+  background-color: var(--color-interactive-primary);
+  border-radius: var(--radius-4xl);
+
+  &_pattern {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 279px;
+    height: 540px;
+  }
+
+  &_content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 497px;
+    margin-left: 72px;
+  }
+
+  &_title {
+    @include text-display-1;
+
+    margin: 0;
+    color: var(--color-text-on-primary);
+  }
+
+  &_body {
+    @include text-body-xlarge;
+
+    margin: 0;
+    color: var(--color-text-on-primary);
+  }
+
+  &_stores {
+    display: flex;
+    gap: var(--size-sm);
+  }
+
+  &_badge {
+    display: flex;
+    width: 140px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+
+    > svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  // The phone rises above the banner's top edge by design; the banner does not
+  // clip, and the photo never reaches the container's horizontal edges.
+  &_photo {
+    position: absolute;
+    top: -83px;
+    right: 115px;
+    width: 595px;
+    height: auto;
+  }
+
+  @include b-d(lg) {
+    flex-direction: column;
+    gap: var(--size-2xl);
+    height: auto;
+    padding: var(--size-2xl) var(--size-xl) 0;
+    overflow: hidden;
+    border-radius: var(--radius-2xl);
+
+    &_pattern {
+      display: none;
+    }
+
+    &_content {
+      max-width: none;
+      margin-left: 0;
+    }
+
+    &_title {
+      @include text-display-3;
+    }
+
+    &_photo {
+      position: static;
+      width: 100%;
+      max-width: 420px;
+    }
+  }
+}

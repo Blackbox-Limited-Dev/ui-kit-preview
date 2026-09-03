@@ -1,0 +1,32 @@
+@use 'mixins' as *;
+
+.pagination {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-lg);
+
+  &_more {
+    width: 100%;
+  }
+
+  &_pages {
+    display: flex;
+    gap: var(--size-sm);
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_number {
+    width: 40px;
+    padding-right: 0;
+    padding-left: 0;
+
+    @include b-up(lg) {
+      width: 52px;
+    }
+  }
+
+  &_active {
+    color: var(--color-text-interactive);
+  }
+}

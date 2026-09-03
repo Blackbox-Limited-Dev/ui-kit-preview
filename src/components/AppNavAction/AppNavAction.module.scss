@@ -1,0 +1,53 @@
+@use 'text-styles' as *;
+
+.root {
+  position: relative;
+  display: inline-flex;
+  gap: var(--size-sm);
+  align-items: center;
+  height: 44px;
+  padding: 6px var(--size-sm);
+
+  @include text-body-1(medium);
+
+  // Figma overrides the body-1 line-height on the action label: 20px, not 150%.
+  line-height: 20px;
+  color: var(--color-text-on-surface);
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  border-radius: var(--radius-pill);
+  transition: background-color 0.15s ease;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--color-background-bg-card-pressed);
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-interactive-primary);
+    outline-offset: 2px;
+  }
+
+  // Radix marks the open mega-menu trigger; keep it in the hover treatment.
+  &[data-state='open'] {
+    background-color: var(--color-background-bg-card-pressed);
+  }
+}
+
+.illustration {
+  flex-shrink: 0;
+}
+
+.dot {
+  position: absolute;
+  top: 10px;
+  right: 3px;
+  width: 5px;
+  height: 5px;
+  background-color: var(--color-accents-brand-red);
+  border-radius: 50%;
+}

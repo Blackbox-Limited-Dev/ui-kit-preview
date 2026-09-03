@@ -1,0 +1,158 @@
+---
+description: How to add a compound component — parent owns state, shares it with named subcomponents via context. AppModal, AppSheet, AppTabs, AppAccordion, AppDropdown, AppRadioGroup, etc.
+globs: src/components/**/*.{ts,tsx,scss}
+alwaysApply: false
+---
+
+# How to add a compound component
+
+> **Check rule `13-radix-primitives-first.mdc` before you start.** Radix UI almost certainly has a primitive for compound widgets like `AppModal`, `AppSheet`, `AppTabs`, `AppAccordion`, `AppDropdown`, `AppRadioGroup` — it handles the state machine, ARIA, keyboard navigation, and focus management for you. The pattern below is how to **wrap** a Radix primitive in this project's file layout, not how to rebuild one from scratch.
+
+Pattern: a parent that owns (or wraps Radix-owned) state and shares it with named subcomponents. Use this for `AppModal`, `AppSheet`, `AppTabs`, `AppAccordion`, `AppDropdown`, `AppRadioGroup` — anything with named slots.
+
+Every design-system component is prefixed `App` (see AGENTS.md Part 2 — Conventions). Examples below use `AppModal` as the canonical case; substitute `App<Name>` for your component.
+
+For folder layout (extra files compared to a simple component), see AGENTS.md Part 2 (Conventions).
+
+## Step-by-step (AppModal as the canonical example)
+
+1. Create `src/components/AppModal/` with:
+
+   ```
+   AppModal/
+   ├── index.tsx                    ← root, owns state, renders Context.Provider, attaches subcomponents
+   ├── AppModal.Header.tsx          ← subcomponent, consumes context
+   ├── AppModal.Body.tsx
+   ├── AppModal.Footer.tsx
+   ├── AppModal.context.ts          ← Context + useAppModalContext()
+   ├── AppModal.types.ts
+   ├── AppModal.module.scss         ← root + shared styles
+   ├── AppModal.Header.module.scss
+   ├── AppModal.Body.module.scss
+   ├── AppModal.Footer.module.scss
+   ├── AppModal.stories.tsx
+   ├── README.md
+   └── assets/                      ← only if colocated SVGs are needed
+   ```
+
+2. Context (`AppModal.context.ts`):
+
+   ```ts
+   import { createContext, useContext } from 'react'
+
+   export type AppModalContextValue = {
+     isOpen: boolean
+     close: () => void
+   }
+
+   export const AppModalContext = createContext<AppModalContextValue | null>(null)
+
+   export const useAppModalContext = (): AppModalContextValue => {
+     const ctx = useContext(AppModalContext)
+     if (!ctx) {
+       throw new Error('AppModal subcomponents must be rendered inside <AppModal>.')
+     }
+     return ctx
+   }
+   ```
+
+3. Root (`index.tsx`) — owns state, renders the provider, and attaches subcomponents onto the root for the compound API:
+
+   ```tsx
+   'use client'
+
+   import { useCallback, useMemo } from 'react'
+   import cn from 'classnames'
+
+   import { AppModalContext } from './AppModal.context'
+   import { AppModalHeader } from './AppModal.Header'
+   import { AppModalBody } from './AppModal.Body'
+   import { AppModalFooter } from './AppModal.Footer'
+
+   import s from './AppModal.module.scss'
+
+   import type { AppModalProps } from './AppModal.types'
+
+   const AppModalRoot = ({ isOpen, onClose, className, children }: AppModalProps) => {
+     const close = useCallback(() => onClose(), [onClose])
+     const value = useMemo(() => ({ isOpen, close }), [isOpen, close])
+
+     if (!isOpen) return null
+
+     return (
+       <AppModalContext.Provider value={value}>
+         <div
+           role="dialog"
+           aria-modal="true"
+           className={cn(s.root, className)}
+         >
+           {children}
+         </div>
+       </AppModalContext.Provider>
+     )
+   }
+
+   type AppModalCompound = typeof AppModalRoot & {
+     Header: typeof AppModalHeader
+     Body: typeof AppModalBody
+     Footer: typeof AppModalFooter
+   }
+
+   export const AppModal = AppModalRoot as AppModalCompound
+   AppModal.Header = AppModalHeader
+   AppModal.Body = AppModalBody
+   AppModal.Footer = AppModalFooter
+
+   export type { AppModalProps } from './AppModal.types'
+   ```
+
+4. Subcomponents (`AppModal.Header.tsx`, `AppModal.Body.tsx`, `AppModal.Footer.tsx`) are arrow-function components and call `useAppModalContext()` when they need shared state:
+
+   ```tsx
+   import cn from 'classnames'
+
+   import { useAppModalContext } from './AppModal.context'
+
+   import s from './AppModal.Header.module.scss'
+
+   import type { AppModalHeaderProps } from './AppModal.types'
+
+   export const AppModalHeader = ({ title, className }: AppModalHeaderProps) => {
+     const { close } = useAppModalContext()
+     return (
+       <header className={cn(s.root, className)}>
+         <h2 className={s.title}>{title}</h2>
+         <button
+           type="button"
+           className={s.close}
+           onClick={close}
+           aria-label="Close"
+         >
+           ×
+         </button>
+       </header>
+     )
+   }
+   ```
+
+5. Consumers use the compound API:
+
+   ```tsx
+   <AppModal isOpen={isOpen} onClose={close}>
+     <AppModal.Header title="Confirm booking" />
+     <AppModal.Body>...</AppModal.Body>
+     <AppModal.Footer>
+       <AppButton variant="primary" onClick={confirm}>Confirm</AppButton>
+     </AppModal.Footer>
+   </AppModal>
+   ```
+
+## Notes
+
+- Mark the root file `'use client'` whenever the component owns interactive state (`useState`, `useCallback`, etc.). Subcomponents that only render markup do not need the directive — they inherit the client boundary from the root.
+- Each subcomponent gets its own `*.module.scss`. Shared layout styles live in `AppModal.module.scss`.
+- Re-export from `src/components/index.ts` only the root and shared types — the compound members are accessed via `AppModal.Header`, `AppModal.Body`, etc.
+
+## Stories, showcase, and barrel
+
+Same Storybook + barrel + showcase entry steps as a simple component. See `10-add-simple-component.mdc` steps 5–9. Storybook title is `Components/AppModal`. Stories should cover the closed state, the open state, and any subcomponent permutation that meaningfully differs (header-only, header + body, full compound). Showcase slug stays unprefixed (`modal`); the `name` field in the catalog is `AppModal`.

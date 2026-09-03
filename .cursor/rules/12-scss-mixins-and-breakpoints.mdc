@@ -1,0 +1,150 @@
+---
+description: SCSS responsive mixins and the breakpoint map. Use these for every @media query and fluid sizing calculation. Never write raw min-width/max-width queries in component SCSS.
+globs: src/**/*.scss
+alwaysApply: false
+---
+
+# SCSS Mixins & Breakpoints
+
+All responsive logic in this project flows through helpers defined in `src/styles/mixins.scss`, which read the `$breakpoints` map declared in `src/styles/settings.scss`. Never write raw `@media (min-width: …)` queries in component SCSS — go through the mixins so the breakpoint scale stays single-sourced.
+
+## The breakpoint map
+
+```scss
+// src/styles/settings.scss
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+```
+
+Mobile-first design — `xs` is the implicit default, no `@media` needed.
+
+## How to use the mixins
+
+Import once at the top of any component SCSS module:
+
+```scss
+@import 'mixins';
+```
+
+The bare `mixins` import is resolved via `sassOptions.loadPaths: ['src/styles']` in `next.config.js`. Do not pass relative paths to `@import` — keep imports stable across moves.
+
+### `b-up($name)` — min-width (default choice)
+
+Apply styles **from this breakpoint and up**. The mobile-first idiom.
+
+```scss
+.card {
+  padding: var(--size-md);
+
+  @include b-up(md) {
+    padding: var(--size-lg);
+  }
+
+  @include b-up(xl) {
+    padding: var(--size-xl);
+  }
+}
+```
+
+Edge case: `b-up(xs)` renders the block as-is with no media wrapper, since `xs = 0` is the implicit default.
+
+### `b-d($name)` — max-width (rarely needed)
+
+Apply styles **below this breakpoint**. Uses `max-width: $value - 0.02px` so it never overlaps with a `b-up` at the same breakpoint name.
+
+```scss
+.mobile-only-nav {
+  display: block;
+
+  @include b-d(md) {
+    border-bottom: 1px solid var(--color-stroke);
+  }
+}
+
+.hide-on-mobile {
+  @include b-d(md) {
+    display: none;
+  }
+}
+```
+
+Prefer `b-up` whenever the design can be expressed mobile-first. Only reach for `b-d` when the desktop case is the default and you're peeling layout off for small screens.
+
+### `b-btw($lower, $upper)` — between two breakpoints
+
+Apply styles **inside a range, inclusive on the lower end, exclusive on the upper** (`min-width: $lower` AND `max-width: $upper - 0.02px`).
+
+```scss
+.tablet-only {
+  @include b-btw(md, lg) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+```
+
+### `b-o($name)` — only at this breakpoint
+
+Apply styles **only inside the range from this breakpoint up to the next entry in the map** (or `min-width` only if it's the last entry).
+
+```scss
+.sm-only {
+  @include b-o(sm) {
+    font-size: var(--font-size-sm);
+  }
+}
+
+.xxl-only {
+  @include b-o(xxl) {
+    // No upper bound — applies xxl+
+    max-width: 1600px;
+  }
+}
+```
+
+Use sparingly — most responsive layout reads more clearly as a `b-up` ladder.
+
+## Fluid sizing — `clamp-builder($lower, $upper, $min-size, $max-size)`
+
+Returns a `clamp(min, slope, max)` expression that scales linearly between two breakpoints. Useful for typography and spacing that should grow with viewport width inside a window.
+
+```scss
+.hero-title {
+  // Scales from 32px at sm-width up to 64px at xl-width, clamped outside that range.
+  font-size: clamp-builder(sm, xl, 32, 64);
+}
+
+.section {
+  padding-block: clamp-builder(md, xxl, 24, 64);
+}
+```
+
+**Opt-in.** Use `clamp-builder` when fluid scaling genuinely improves the design — long-form headings, hero sizing, generous container padding. Don't reach for it on small UI atoms (buttons, inputs) where stepped tokens are clearer and easier to QA. The decision belongs to the dev.
+
+The size arguments are pixel values without units (the builder strips and re-applies units internally). Keep ranges narrow enough to avoid huge interpolated values on uncommon viewports.
+
+`strip-unit($number)` is a helper exposed by the same file. It's mostly internal to `clamp-builder`, but available if you need to do math with values that may carry units.
+
+## Hard rules
+
+- **No raw `@media (min-width: …)` or `(max-width: …)` in component SCSS.** Always go through `b-up` / `b-d` / `b-btw` / `b-o`.
+- **No raw pixel values inside the mixin arguments.** Always pass breakpoint *names* from the map (`md`, not `768px`) so renaming or adding a breakpoint stays a one-line change.
+- **Default to mobile-first (`b-up`).** Use `b-d` only when the design genuinely starts from desktop and peels layout off.
+- **`@import 'mixins'` once per SCSS module that uses them.** Don't import via relative paths.
+- **Add new breakpoints to the map**, never inline a one-off value. Discuss before adding — six steps is already plenty.
+
+## Decision matrix
+
+| Situation | Mixin |
+|---|---|
+| Bumping padding from `--size-md` to `--size-lg` at and above tablet width | `b-up(md)` |
+| Hiding a desktop-only sidebar on mobile | `b-d(md)` |
+| A grid that's 2 cols at tablet only, 3 cols at desktop+ | `b-btw(md, lg)` for the 2-col rule, `b-up(lg)` for 3-col |
+| Style that fires only at exactly the xxl breakpoint | `b-o(xxl)` |
+| Heading that scales fluidly from sm to xl viewports | `clamp-builder(sm, xl, …, …)` |
+| Any `@media (min-width: 800px)` you were about to write | Stop. Pick the nearest map breakpoint and use `b-up`. |

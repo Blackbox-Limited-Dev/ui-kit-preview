@@ -1,0 +1,27 @@
+@use 'text-styles' as *;
+
+.root {
+  @include text-body-2(medium);
+
+  display: inline-flex;
+  align-items: center;
+  padding: 2px var(--size-sm);
+  color: var(--color-labels-text-on-label);
+  border-radius: var(--radius-pill);
+}
+
+.red {
+  background-color: var(--color-accents-red-label-on-card);
+}
+
+.green {
+  background-color: var(--color-labels-green);
+}
+
+.blue {
+  background-color: var(--color-labels-blue);
+}
+
+.purple {
+  background-color: var(--color-labels-purple);
+}

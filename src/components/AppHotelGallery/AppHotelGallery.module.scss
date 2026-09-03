@@ -1,0 +1,119 @@
+.gallery {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: var(--radius-lg);
+
+  &_track {
+    height: 100%;
+  }
+
+  &_slide {
+    position: relative;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  // Swiper core sets `.swiper { z-index: 1 }` on the track; overlays need
+  // their own z-index to paint above it.
+  &_fade {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    height: 40px;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgb(102 102 102 / 0%), #000);
+    backdrop-filter: blur(12px);
+    mask-image: linear-gradient(180deg, transparent, #000);
+  }
+
+  &_dots {
+    position: absolute;
+    bottom: var(--size-sm);
+    left: 50%;
+    z-index: 1;
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    transform: translateX(-50%);
+  }
+
+  &_dot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8px;
+    height: 8px;
+
+    &::after {
+      width: 4px;
+      height: 4px;
+      content: '';
+      background-color: rgb(255 255 255 / 70%);
+      border-radius: var(--radius-pill);
+    }
+  }
+
+  &_dot_active::after {
+    width: 6px;
+    height: 6px;
+    background-color: var(--color-stroke-image);
+  }
+
+  &_status {
+    position: absolute;
+    top: var(--size-sm);
+    left: var(--size-sm);
+    z-index: 1;
+  }
+
+  &_heart {
+    position: absolute;
+    top: var(--size-sm);
+    right: var(--size-sm);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    color: var(--color-stroke-image);
+    cursor: pointer;
+    background: none;
+    border: none;
+
+    svg path {
+      stroke-width: 1.8;
+    }
+
+    &[aria-pressed='true'] svg path {
+      fill: currentcolor;
+    }
+  }
+
+  &_arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    transform: translateY(-50%);
+
+    &_prev {
+      left: var(--size-sm);
+    }
+
+    &_next {
+      right: var(--size-sm);
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover .gallery_arrow {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@use 'text-styles' as *;
+
+.root {
+  display: flex;
+  gap: var(--size-md);
+  align-items: center;
+  justify-content: space-between;
+  height: 96px;
+  padding: var(--size-sm) var(--size-xl);
+  color: var(--color-text-on-card);
+  text-decoration: none;
+  background-color: var(--color-background-bg-card);
+  border: 1px solid var(--color-stroke-on-surface);
+  border-radius: var(--radius-2xl);
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+
+  // `:any-link` keeps the treatment on the `href` variant — the plain card is
+  // not a press target.
+  @media (hover: hover) {
+    &:any-link:hover {
+      background-color: var(--color-background-bg-card-pressed);
+      border-color: var(--color-stroke-primary);
+    }
+  }
+
+  &_title {
+    @include text-body-large(medium);
+
+    // Titles carry manual `\n` breaks from the messages.
+    white-space: pre-line;
+  }
+
+  &_artwork {
+    display: flex;
+    flex: none;
+    width: 48px;
+    height: 48px;
+
+    > svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

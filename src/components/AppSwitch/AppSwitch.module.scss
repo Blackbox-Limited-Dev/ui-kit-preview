@@ -1,0 +1,49 @@
+.root {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: flex-start;
+  width: 54px;
+  height: 32px;
+  padding: 0;
+  cursor: pointer;
+  background-color: var(--color-background-bg-on-surface);
+  border: 0;
+  border-radius: var(--radius-pill);
+  transition: background-color 0.15s ease;
+
+  &:focus-visible {
+    outline: 2px solid var(--color-interactive-primary);
+    outline-offset: 2px;
+  }
+
+  &[data-state='checked'] {
+    background-color: var(--color-interactive-primary);
+  }
+
+  &[data-disabled] {
+    cursor: not-allowed;
+    background-color: var(--color-input-text-disabled);
+  }
+}
+
+// Both insets ride in the transform, not in layout. `translate` keeps the
+// travel on the compositor, and it also keeps the 2px vertical inset out of
+// flex centring: the track leaves 5 device pixels of slack at a 1.25 pixel
+// ratio, so a laid-out knob snaps 3 above and 2 below, while a transform is
+// not pixel-snapped and stays even.
+.thumb {
+  display: block;
+  width: 28px;
+  height: 28px;
+  background-color: var(--color-background-surface);
+  border-radius: var(--radius-pill);
+  box-shadow:
+    0 3px 1px rgb(0 0 0 / 6%),
+    0 3px 8px rgb(0 0 0 / 15%);
+  transition: transform 0.2s ease;
+  transform: translate(2px, 2px);
+
+  &[data-state='checked'] {
+    transform: translate(24px, 2px);
+  }
+}

@@ -1,0 +1,156 @@
+---
+description: Always reach for Radix UI primitives first when building new interactive components. Fall back to other vetted npm packages only when Radix has no matching primitive. Build custom only as a last resort.
+globs: src/components/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# Radix UI Primitives First
+
+When building a new interactive component, the default starting point is a Radix UI primitive. Radix ships unstyled, fully-accessible building blocks (WAI-ARIA-compliant, full keyboard support, focus management, controlled/uncontrolled APIs) — the project's SCSS-module + CSS-vars theming sits on top of them naturally. Hand-rolled state machines for dialogs, menus, dropdowns, listboxes, etc. are almost always a regression in accessibility and a waste of build time.
+
+## Decision ladder
+
+For every new interactive component:
+
+### 1. Use a Radix primitive (default)
+
+If Radix has a primitive for it, use it. Style the rendered DOM with SCSS modules. Common primitives installed in this repo:
+
+| Primitive | Package | Use for |
+|---|---|---|
+| Dialog | `@radix-ui/react-dialog` | Modals, confirm flows, image lightboxes |
+| AlertDialog | `@radix-ui/react-alert-dialog` (install on demand) | Destructive confirmations |
+| DropdownMenu | `@radix-ui/react-dropdown-menu` | App menus, kebab menus, user menus |
+| ContextMenu | `@radix-ui/react-context-menu` (install on demand) | Right-click menus |
+| Tabs | `@radix-ui/react-tabs` | Tab switchers |
+| Accordion | `@radix-ui/react-accordion` | Collapsible sections, FAQ |
+| Tooltip | `@radix-ui/react-tooltip` | Hover/focus hints |
+| Popover | `@radix-ui/react-popover` | Floating panels, filter popovers, date pickers (combined with `react-day-picker`) |
+| Select | `@radix-ui/react-select` | Native-like select with full styling control |
+| Checkbox | `@radix-ui/react-checkbox` (install on demand) | Custom-styled checkboxes |
+| RadioGroup | `@radix-ui/react-radio-group` (install on demand) | Custom-styled radios |
+| Switch | `@radix-ui/react-switch` (install on demand) | Toggles |
+| Slider | `@radix-ui/react-slider` (install on demand) | Range inputs |
+| ToggleGroup | `@radix-ui/react-toggle-group` (install on demand) | Segmented controls |
+| ScrollArea | `@radix-ui/react-scroll-area` (install on demand) | Custom-styled scrollbars |
+| Toolbar | `@radix-ui/react-toolbar` (install on demand) | Editor / control bars |
+| HoverCard | `@radix-ui/react-hover-card` (install on demand) | Profile previews on hover |
+| NavigationMenu | `@radix-ui/react-navigation-menu` (install on demand) | Header navigation |
+| Avatar | `@radix-ui/react-avatar` (install on demand) | User avatars with fallback |
+| AspectRatio | `@radix-ui/react-aspect-ratio` (install on demand) | Locked-ratio media boxes |
+| Separator | `@radix-ui/react-separator` (install on demand) | Semantic dividers |
+| Progress | `@radix-ui/react-progress` (install on demand) | Determinate progress bars |
+| Slot | `@radix-ui/react-slot` | `asChild` composition (wrap a project component as a Radix trigger) |
+| VisuallyHidden | `@radix-ui/react-visually-hidden` | Screen-reader-only text (e.g. icon-button labels) |
+
+Already installed in this repo: `dialog`, `dropdown-menu`, `tabs`, `accordion`, `tooltip`, `popover`, `select`, `slot`, `visually-hidden`. Anything else is one `npm i` away.
+
+### 2. Vetted npm package (Radix has no match)
+
+Radix is intentionally narrow. For things outside its scope, search npm. Use a single package per concern. Vetting checklist before adding a dependency:
+
+- **Downloads:** > 50k weekly on npm.
+- **Maintenance:** commits within the last six months; no `unmaintained`/`deprecated` notice.
+- **Types:** ships TypeScript types (`.d.ts`) — first-party, not from `@types/*` unless that's the established pattern for the package.
+- **Peer deps:** compatible with React 19 and Next 16. Check `peerDependencies` in the package's `package.json` before installing.
+- **Bundle:** check on `bundlephobia.com` — if a 200KB package replaces 30 lines of code, it's the wrong call.
+
+Common needs and vetted picks:
+
+| Need | Pick | Notes |
+|---|---|---|
+| Date picker | `react-day-picker` | Combine with Radix Popover for the floating panel |
+| Forms (validation, state) | `react-hook-form` | Pair with `zod` for schema validation if needed |
+| Carousels / sliders | `embla-carousel-react` | Lightweight, headless |
+| Data tables | `@tanstack/react-table` | Headless |
+| List virtualization | `@tanstack/react-virtual` | Headless |
+| Command palette / spotlight | `cmdk` | Radix-style API |
+| Bottom sheet / drawer | `vaul` | Built on Radix Dialog |
+| Animations | `framer-motion` | Or `motion` (the v12 rebrand) |
+| Toast notifications | `sonner` | Or `react-hot-toast` |
+
+**Confirm the choice with the user** before adding the dependency. Don't silently `npm i` a new runtime dep.
+
+### 3. Build custom (last resort)
+
+Only when no Radix primitive and no vetted package fits. Custom means **the dev owns full a11y responsibility**: correct semantic element (or `role` if no native fit), full ARIA state (`aria-disabled`, `aria-busy`, `aria-expanded`, `aria-selected`, `aria-controls`, `aria-labelledby`, `aria-describedby` as relevant), full keyboard handling (Tab order, Enter/Space activation, Escape close, arrow-key nav for grouped widgets), and focus management (trap + restore for overlays). Cite the relevant ARIA Authoring Practices pattern in the component README.
+
+## Composition with `asChild`
+
+Radix primitives accept `asChild` on most parts via `@radix-ui/react-slot`. Use it to swap the rendered element for a project component — keeps styling, refs, and event handlers wired through without nesting two elements:
+
+```tsx
+<Dialog.Trigger asChild>
+  <AppButton variant="primary">Open</AppButton>
+</Dialog.Trigger>
+```
+
+Without `asChild`, Radix renders its default element and `AppButton` would render *inside* it — two buttons, broken semantics.
+
+## Styling integration
+
+Radix exposes state via `data-*` attributes on the rendered DOM. Target them in SCSS modules — never override Radix's accessibility attributes:
+
+```scss
+@import 'mixins';
+
+.content {
+  background-color: var(--color-bg);
+  border-radius: var(--radius-md);
+
+  &[data-state='open'] {
+    animation: fade-in 0.15s ease;
+  }
+
+  &[data-state='closed'] {
+    animation: fade-out 0.15s ease;
+  }
+
+  &[data-side='top'] {
+    transform-origin: bottom center;
+  }
+}
+```
+
+Common data attributes:
+
+- `data-state` — `open` / `closed`, `checked` / `unchecked`, `active` / `inactive`
+- `data-side` / `data-align` — for floating primitives (Popover, Tooltip, DropdownMenu, Select)
+- `data-orientation` — `horizontal` / `vertical` for Tabs, Toolbar, etc.
+- `data-disabled` — present when the part is disabled
+
+## Bundle hygiene
+
+Import each primitive from its own scoped package — `@radix-ui/react-dialog`, not a barrel. Each primitive is independently versioned and tree-shaken. Never install the `@radix-ui/themes` meta-package — it ships its own theme system that fights this project's CSS-vars + `data-theme` approach.
+
+## File structure when wrapping a Radix primitive
+
+Wrap each Radix primitive in a project component that pins styling, default props, and accessible labels — call sites should never import from `@radix-ui/react-*` directly. The compound pattern from `11-add-compound-component.mdc` applies: a root file that re-exports Radix parts with the project's styling baked in.
+
+Component identifiers follow the `App` prefix convention from AGENTS.md Part 2 — `AppModal` not `Modal`, `AppDropdown` not `Dropdown`.
+
+```
+src/components/AppModal/
+├── index.tsx                     ← re-exports the compound API (Root, Trigger, Content, Header, Body, Footer, Close)
+├── AppModal.tsx                  ← root wrapping <Dialog.Root>
+├── AppModal.Trigger.tsx          ← wraps <Dialog.Trigger asChild>
+├── AppModal.Content.tsx          ← wraps <Dialog.Portal><Dialog.Overlay/><Dialog.Content/>
+├── AppModal.Header.tsx           ← composes <Dialog.Title> and <Dialog.Close>
+├── AppModal.Body.tsx
+├── AppModal.Footer.tsx
+├── AppModal.module.scss
+├── AppModal.<Sub>.module.scss
+├── AppModal.types.ts
+├── AppModal.stories.tsx
+└── README.md
+```
+
+The README must state the Radix primitive used so future readers and AI agents skip rebuilding from scratch.
+
+## Hard rules
+
+- **Default to Radix for any new interactive component.** Hand-rolling Dialog, Dropdown, Tabs, Tooltip, Popover, Select, Accordion etc. is a regression — don't do it.
+- **`asChild` for triggers**, not nested elements.
+- **Never override Radix ARIA attributes.** Style via `data-*`.
+- **Confirm any new dependency with the user.** Vet against the checklist before adding.
+- **Document the Radix primitive in the component README.** Future agents read it before touching the component.

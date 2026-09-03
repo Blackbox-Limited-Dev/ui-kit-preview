@@ -1,0 +1,304 @@
+@use 'text-styles' as *;
+@use 'mixins' as *;
+
+// The site header is 76px tall; the aside parks 24px under it.
+$aside-top: 100px;
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @include b-d(lg) {
+    gap: var(--size-lg);
+  }
+
+  &_body {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+
+    @include b-d(lg) {
+      flex-direction: column;
+      gap: var(--size-xl);
+    }
+  }
+
+  &_main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 40px;
+    min-width: 0;
+
+    @include b-d(lg) {
+      gap: var(--size-2xl);
+      width: 100%;
+    }
+  }
+
+  // Below `lg` the purchase card breaks apart across the page, so the aside
+  // stops being a box of its own — see `AppProductPurchaseCard`.
+  &_aside {
+    position: sticky;
+    top: $aside-top;
+    flex: none;
+    width: 350px;
+
+    @include b-d(lg) {
+      display: contents;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-2xl);
+
+  @include b-d(lg) {
+    gap: var(--size-xl);
+  }
+
+  &_titleBlock {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-sm);
+    max-width: 890px;
+  }
+
+  &_title {
+    @include text-display-1;
+
+    margin: 0;
+    color: var(--color-text-on-bg);
+
+    @include b-d(md) {
+      @include text-title-1;
+    }
+  }
+
+  &_meta {
+    @include text-body-xlarge;
+
+    color: var(--color-text-on-bg-subtle);
+
+    @include b-d(md) {
+      @include text-body-1;
+    }
+  }
+
+  &_specs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-md);
+    margin: 0;
+  }
+
+  &_specs_row {
+    display: grid;
+    grid-template-columns: 152px auto;
+    gap: var(--size-md);
+  }
+
+  &_specs_label {
+    @include text-body-large;
+
+    color: var(--color-text-on-surface-subtle);
+
+    @include b-d(md) {
+      @include text-body-1;
+    }
+  }
+
+  &_specs_value {
+    @include text-body-large;
+
+    margin: 0;
+    color: var(--color-text-on-surface);
+
+    @include b-d(md) {
+      @include text-body-1;
+    }
+  }
+}
+
+.textSection {
+  --section-card-gap: var(--size-sm);
+
+  &_paragraph {
+    @include text-body-large;
+
+    margin: 0;
+    color: var(--color-text-on-surface);
+
+    @include b-d(md) {
+      @include text-body-1;
+    }
+  }
+
+  &_strong {
+    font-weight: var(--font-weight-semibold);
+  }
+}
+
+.checklist {
+  &_list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-lg);
+  }
+}
+
+.location {
+  &_card {
+    display: flex;
+    flex-direction: column;
+    padding: var(--size-lg);
+    border: 1px solid var(--color-stroke-on-surface);
+    border-radius: var(--radius-2xl);
+  }
+
+  &_row {
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--color-stroke-divider-on-surface);
+    }
+
+    &_header {
+      margin: 0;
+    }
+
+    &_trigger {
+      @include text-body-1;
+
+      display: flex;
+      gap: var(--size-lg);
+      align-items: center;
+      width: 100%;
+      padding-block: var(--size-lg);
+      color: var(--color-text-on-card);
+      text-align: left;
+      cursor: pointer;
+      background: none;
+      border: none;
+
+      &:disabled {
+        cursor: default;
+      }
+    }
+
+    &_content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--size-lg);
+      padding-bottom: var(--size-lg);
+      overflow: hidden;
+    }
+  }
+
+  &_glyph {
+    flex: none;
+    color: var(--color-icon-on-card);
+  }
+
+  &_text {
+    display: flex;
+    flex: 1;
+    gap: var(--size-sm);
+    align-items: center;
+    min-width: 0;
+  }
+
+  &_status {
+    color: var(--color-accents-danger-text);
+
+    &__open {
+      color: var(--color-labels-green);
+    }
+  }
+
+  &_dot {
+    flex: none;
+    width: 3px;
+    height: 3px;
+    background-color: var(--color-interactive-disabled);
+    border-radius: var(--radius-pill);
+  }
+
+  &_chevron {
+    display: flex;
+    flex: none;
+    color: var(--color-icon-disabled);
+    transition: transform 0.2s ease;
+  }
+
+  &_schedule {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-sm);
+    margin: 0;
+
+    &_row {
+      @include text-body-1;
+
+      display: flex;
+      justify-content: space-between;
+      color: var(--color-text-on-card);
+
+      dd {
+        margin: 0;
+      }
+    }
+  }
+
+  &_map {
+    position: relative;
+    height: 160px;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &_pin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    width: 56px;
+    height: 56px;
+    background-color: var(--color-background-surface-accent);
+    border: 2px solid var(--color-stroke-divider-on-surface);
+    border-radius: var(--radius-pill);
+    transform: translate(-50%, -50%);
+
+    &::after {
+      width: 24px;
+      height: 24px;
+      margin: auto;
+      content: '';
+      background-color: var(--color-labels-blue);
+      border: 2px solid var(--color-stroke-image);
+      border-radius: var(--radius-pill);
+    }
+  }
+
+  &_actions {
+    display: flex;
+    gap: var(--size-md);
+
+    &_route {
+      flex: 1;
+    }
+  }
+
+  &_row:first-child &_row_trigger {
+    padding-top: 0;
+  }
+
+  &_row_trigger[data-state='open'] &_chevron {
+    transform: rotate(180deg);
+  }
+}

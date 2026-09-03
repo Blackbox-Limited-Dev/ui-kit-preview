@@ -1,0 +1,24 @@
+@use 'text-styles' as *;
+
+.root {
+  @include text-body-1;
+
+  color: var(--color-text-on-bg-subtle);
+  text-decoration: none;
+  transition: color 0.15s ease;
+
+  &:focus-visible {
+    outline: 2px solid var(--color-interactive-primary);
+    outline-offset: 2px;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--color-text-on-bg);
+    }
+  }
+
+  &:active {
+    color: var(--color-text-on-bg);
+  }
+}

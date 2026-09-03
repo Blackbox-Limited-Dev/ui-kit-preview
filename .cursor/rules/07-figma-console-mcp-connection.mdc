@@ -1,0 +1,28 @@
+---
+description: Figma Console MCP connection check — verify before any Figma work, stop if not connected
+alwaysApply: true
+---
+
+# Figma Console MCP — Connection Requirement
+
+Before doing ANY work that involves Figma (reading designs, writing to Figma, running plugin code, or fetching assets), verify that the `figma-console` MCP server is reachable.
+
+This rule mirrors user-level CLAUDE.md section 8: **use `figma-console` only.** Do not call the standard `claude.ai Figma` MCP (`mcp__claude_ai_Figma__*`) by default.
+
+## How to verify
+
+Call any lightweight tool from `figma-console` (e.g. `figma_get_status`, `figma_list_open_files`, or `figma_reconnect`) as the very first action. If the call succeeds, proceed normally.
+
+## If the connection fails or the server is not connected
+
+- **Stop immediately.** Do not attempt any Figma work.
+- **Do not silently fall back** to the standard Figma MCP, direct API calls, or any other alternative workflow.
+- Tell the user clearly:
+
+  > "The `figma-console` MCP is not connected right now. Please open the Figma Desktop app, make sure the Cursor plugin is running, and try again. I cannot continue until the connection is live. If you'd like me to use the standard `claude.ai Figma` MCP as a one-off fallback, say so explicitly."
+
+- Wait for the user to confirm either (a) the connection is back, or (b) they have explicitly approved the fallback.
+
+## Why
+
+This project uses the Figma Console MCP (Desktop Bridge plugin) as the single authorised channel for all Figma operations. Silently switching to a backup channel would produce inconsistent results and bypass the agreed workflow.

@@ -1,0 +1,27 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  color: var(--color-icon-on-card);
+  background-color: var(--color-background-bg-card);
+  border: 1px solid var(--color-stroke-on-surface);
+  border-radius: var(--radius-pill);
+  transition: opacity 0.15s ease;
+
+  &:focus-visible {
+    outline: 2px solid var(--color-interactive-primary);
+    outline-offset: 2px;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &:active {
+    background-color: var(--color-background-bg-card-pressed);
+  }
+}

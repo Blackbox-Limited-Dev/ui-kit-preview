@@ -1,0 +1,35 @@
+{
+  "updatedAt": "2026-06-25T08:00:00+03:00",
+  "lifts": {
+    "lift-1": { "status": "open", "queueMin": 1, "seats": 4 },
+    "lift-2": { "status": "open", "queueMin": 5, "seats": 4 },
+    "lift-2R": { "status": "open", "queueMin": 1, "seats": 4 },
+    "lift-3": { "status": "closed", "queueMin": 0, "seats": 4 },
+    "lift-5": { "status": "open", "queueMin": 15, "seats": 4 },
+    "lift-6": { "status": "open", "queueMin": 5, "seats": 0 },
+    "lift-7": { "status": "open", "queueMin": 1, "seats": 4 },
+    "lift-8": { "status": "open", "queueMin": 5, "seats": 6 },
+    "lift-9": { "status": "open", "queueMin": 1, "seats": 4 },
+    "lift-11": { "status": "open", "queueMin": 1, "seats": 4 },
+    "lift-12": { "status": "closed", "queueMin": 0, "seats": 6 },
+    "lift-13": { "status": "open", "queueMin": 5, "seats": 4 },
+    "lift-14": { "status": "open", "queueMin": 1, "seats": 4 },
+    "lift-15": { "status": "open", "queueMin": 5, "seats": 4 },
+    "lift-16": { "status": "open", "queueMin": 1, "seats": 4 },
+    "lift-17": { "status": "open", "queueMin": 1, "seats": 4 },
+    "lift-22": { "status": "open", "queueMin": 15, "seats": 4 },
+    "lift-7R": { "status": "open", "queueMin": 5, "seats": 0 }
+  },
+  "runs": {
+    "run-1C": { "status": "closed" },
+    "run-5C": { "status": "closed" },
+    "run-D": { "status": "closed" },
+    "run-G": { "status": "closed" },
+    "run-13A": { "status": "closed" },
+    "run-13B": { "status": "closed" },
+    "run-13C": { "status": "closed" },
+    "run-13D": { "status": "closed" },
+    "run-16D": { "status": "closed" },
+    "run-16E": { "status": "closed" }
+  }
+}

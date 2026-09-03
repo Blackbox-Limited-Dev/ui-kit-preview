@@ -1,0 +1,39 @@
+@use 'text-styles' as *;
+
+.root {
+  @include text-caption(medium);
+
+  display: inline-flex;
+  align-items: center;
+  padding: var(--size-xs) var(--size-sm);
+  border-radius: var(--radius-pill);
+}
+
+.neutral {
+  color: var(--color-text-on-surface-subtle);
+  background-color: var(--color-background-bg-on-surface);
+}
+
+.success {
+  color: var(--color-labels-green);
+  background-color: color-mix(
+    in srgb,
+    var(--color-labels-green) 12%,
+    transparent
+  );
+}
+
+.warning {
+  color: var(--color-accents-danger-warning);
+  background-color: color-mix(
+    in srgb,
+    var(--color-accents-danger-warning) 18%,
+    transparent
+  );
+}
+
+.outline {
+  color: var(--color-text-on-surface-subtle);
+  background-color: var(--color-background-surface);
+  border: 1px solid var(--color-stroke-on-surface);
+}

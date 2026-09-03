@@ -1,0 +1,128 @@
+{
+  "type": "FeatureCollection",
+  "name": "SPA та оздоровлення",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "bkv-056",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.40215084179632, 48.36971154811119]
+      },
+      "properties": {
+        "id": "bkv-056",
+        "name": "Аквапарк \"Mavka\"",
+        "pinIcon": "aquapark",
+        "subcategory": "СПА / оздоровлення",
+        "description": "Аквапарк «Мавка» — критий всесезонний аквапарк на території паркінгу №15. 9 басейнів (3 цілорічні, t +35°C), водні гірки (гігантська 200 м, «Ерик і Дерик» 190 м), гірка з VR, спа-простір «4 стихії» з 9 саунами, дитяча зона.",
+        "services": "Басейни, водні гірки, спа-зона, сауни, дитяча зона",
+        "hours": "Пн–Чт 09:00–22:00; Пт–Нд 09:00–23:00",
+        "website": "Сайт",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%90%D0%BA%D0%B2%D0%B0%D0%BF%D0%B0%D1%80%D0%BA%20Mavka%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "xlsx",
+        "category": "wellness-spa",
+        "categoryLabel": "SPA та оздоровлення",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-058",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.409595, 48.356948]
+      },
+      "properties": {
+        "id": "bkv-058",
+        "name": "Банька на дровах",
+        "pinIcon": "banya",
+        "subcategory": "СПА / оздоровлення",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%91%D0%B0%D0%BD%D1%8C%D0%BA%D0%B0%20%D0%BD%D0%B0%20%D0%B4%D1%80%D0%BE%D0%B2%D0%B0%D1%85%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "wellness-spa",
+        "categoryLabel": "SPA та оздоровлення",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-059",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.41007095779663, 48.35607799667239]
+      },
+      "properties": {
+        "id": "bkv-059",
+        "name": "Буковельські чани",
+        "pinIcon": "chan",
+        "pinIconOffset": [-1, 0],
+        "subcategory": "СПА / оздоровлення",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C%D1%81%D1%8C%D0%BA%D1%96%20%D1%87%D0%B0%D0%BD%D0%B8%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "wellness-spa",
+        "categoryLabel": "SPA та оздоровлення",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-060",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.41007095779663, 48.35607799667239]
+      },
+      "properties": {
+        "id": "bkv-060",
+        "name": "SPA-ЦЕНТР \"ОАЗИС\"",
+        "pinIcon": "oasis",
+        "pinIconOffset": [1, 0],
+        "subcategory": "СПА / оздоровлення",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=SPA-%D0%A6%D0%95%D0%9D%D0%A2%D0%A0%20%D0%9E%D0%90%D0%97%D0%98%D0%A1%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "wellness-spa",
+        "categoryLabel": "SPA та оздоровлення",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-062",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.405575095967905, 48.3632662091045]
+      },
+      "properties": {
+        "id": "bkv-062",
+        "name": "СПА \"VODA\"",
+        "pinIcon": "voda",
+        "subcategory": "СПА / оздоровлення",
+        "description": "VODA club — SPA-комплекс на березі озера Молодості: римська парна, середземноморська та фінська сауни, соляна печера, всесезонний відкритий басейн (t 30–32°C, 300 м²), 4 джакузі, спортзал, ресторан Bar&Grill, дитяча кімната.",
+        "services": "Басейн, сауни, парні, джакузі, соляна печера, спортзал, ресторан",
+        "hours": "Зазвичай 09:00–22:00 (уточнюється)",
+        "website": "Сайт",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%A1%D0%9F%D0%90%20%22VODA%22%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "xlsx",
+        "category": "wellness-spa",
+        "categoryLabel": "SPA та оздоровлення",
+        "seasons": ["all"]
+      }
+    }
+  ]
+}

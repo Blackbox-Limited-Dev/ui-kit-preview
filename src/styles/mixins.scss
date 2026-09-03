@@ -1,0 +1,98 @@
+@use 'sass:map';
+@use 'sass:math';
+@use 'breakpoints' as *;
+
+@mixin b-up($name) {
+  $min: map.get($breakpoints, $name);
+
+  @if $min and $min != 0 {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin b-d($name) {
+  $max: map.get($breakpoints, $name);
+
+  @if $max {
+    @media (max-width: $max - 0.02px) {
+      @content;
+    }
+  }
+}
+
+@mixin b-btw($lower, $upper) {
+  $min: map.get($breakpoints, $lower);
+  $max: map.get($breakpoints, $upper);
+
+  @media (min-width: $min) and (max-width: $max - 0.02px) {
+    @content;
+  }
+}
+
+@mixin b-o($name) {
+  $keys: map.keys($breakpoints);
+  $i: index($keys, $name);
+  $min: map.get($breakpoints, $name);
+  $next: null;
+  $max: null;
+
+  @if $i < length($keys) {
+    $next: nth($keys, $i + 1);
+    $max: map.get($breakpoints, $next);
+  }
+
+  @if $min and $min != 0 and $max {
+    @media (min-width: $min) and (max-width: $max - 0.02px) {
+      @content;
+    }
+  } @else if $min and $min != 0 {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else if $max {
+    @media (max-width: $max - 0.02px) {
+      @content;
+    }
+  }
+}
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return math.div($number, $number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+@function clamp-builder(
+  $lower,
+  $upper,
+  $min-size,
+  $max-size,
+  $bps: $breakpoints
+) {
+  $min-size: strip-unit($min-size);
+  $max-size: strip-unit($max-size);
+  $min-width: strip-unit(map.get($bps, $lower));
+  $max-width: strip-unit(map.get($bps, $upper) - 0.02);
+  $slope: math.div($max-size - $min-size, $max-width - $min-width);
+  $y-axis-intersection: -$min-width * $slope + $min-size;
+
+  @if $max-size >= $min-size {
+    @return clamp(
+      #{$min-size}px,
+      #{$y-axis-intersection}px + #{$slope * 100}vw,
+      #{$max-size}px
+    );
+  } @else {
+    @return clamp(
+      #{$max-size}px,
+      #{$y-axis-intersection}px + #{$slope * 100}vw,
+      #{$min-size}px
+    );
+  }
+}

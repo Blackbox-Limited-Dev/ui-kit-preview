@@ -1,0 +1,140 @@
+@use 'mixins' as *;
+@use 'text-styles' as *;
+
+.dates {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: var(--size-2xl);
+
+  @include b-up(lg) {
+    flex-direction: row;
+  }
+
+  &_gallery {
+    flex-shrink: 0;
+    height: 200px;
+
+    @include b-up(lg) {
+      width: 316px;
+    }
+  }
+
+  &_content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--size-md);
+    min-width: 0;
+
+    @include b-up(lg) {
+      padding-top: var(--size-sm);
+    }
+  }
+
+  &_header {
+    display: flex;
+    gap: var(--size-lg);
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &_title {
+    @include text-title-2;
+
+    color: var(--color-text-on-card);
+  }
+
+  &_distance {
+    @include text-body-2(semibold);
+
+    display: flex;
+    gap: var(--size-xs);
+    align-items: center;
+    margin-top: var(--size-xs);
+    color: color-mix(in srgb, var(--color-text-on-card) 72%, transparent);
+  }
+
+  &_installments {
+    display: flex;
+    flex-shrink: 0;
+    gap: var(--size-md);
+    align-items: center;
+    max-width: 151px;
+  }
+
+  &_installments_caption {
+    @include text-caption;
+
+    line-height: 14px;
+    color: color-mix(in srgb, var(--color-text-on-card) 72%, transparent);
+  }
+
+  &_installments_icon {
+    flex-shrink: 0;
+    color: var(--color-icon-on-card);
+  }
+
+  &_offers {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_offer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-md);
+    padding: var(--size-lg) 0;
+    border-bottom: 1px solid var(--color-stroke-divider-on-surface);
+
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+  }
+
+  &_offer_content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--size-lg);
+    align-items: center;
+  }
+
+  &_offer_text {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+  }
+
+  &_offer_dates {
+    @include text-body-1(semibold);
+
+    color: var(--color-text-on-card);
+  }
+
+  &_offer_board {
+    @include text-body-2;
+
+    color: color-mix(in srgb, var(--color-text-on-card) 72%, transparent);
+  }
+
+  &_offer_price {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &_offer_price_value {
+    @include text-body-1(semibold);
+
+    color: var(--color-text-on-card);
+  }
+
+  &_offer_price_nights {
+    @include text-body-2;
+
+    color: color-mix(in srgb, var(--color-text-on-card) 72%, transparent);
+  }
+}

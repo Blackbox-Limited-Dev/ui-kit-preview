@@ -1,0 +1,722 @@
+@use 'mixins' as *;
+@use 'text-styles' as *;
+
+.map {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+  pointer-events: auto;
+  background-color: var(--color-background-surface);
+}
+
+.missingToken {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--size-2xl);
+  text-align: center;
+  background-color: var(--color-background-surface);
+}
+
+.controls {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-sm);
+
+  &_left {
+    bottom: var(--size-2xl);
+    left: var(--size-2xl);
+  }
+}
+
+@keyframes drawer-tab-in {
+  from {
+    transform: translateY(-50%) translateX(100%);
+  }
+
+  to {
+    transform: translateY(-50%) translateX(0);
+  }
+}
+
+.drawerTab {
+  position: absolute;
+  top: calc(50% - 150px);
+  right: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size-2xl);
+  height: calc(var(--size-4xl) + var(--size-3xl));
+  color: var(--color-text-on-card);
+  cursor: pointer;
+  background-color: var(--color-background-surface);
+  border: none;
+  border-radius: var(--radius-pill) 0 0 var(--radius-pill);
+  box-shadow: var(--shadow-map);
+  transform: translateY(-50%) translateX(100%);
+  animation: drawer-tab-in 0.3s ease-out 0.5s both;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--color-background-bg-card-pressed);
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-interactive-primary);
+    outline-offset: 2px;
+  }
+}
+
+.controlBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size-4xl);
+  height: var(--size-4xl);
+  color: var(--color-text-on-card);
+  cursor: pointer;
+  background-color: var(--color-background-surface);
+  border: none;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-map);
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--color-background-bg-card-pressed);
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-interactive-primary);
+    outline-offset: 2px;
+  }
+}
+
+.modeLabel {
+  @include text-title-3;
+
+  color: var(--color-text-on-card);
+}
+
+.locateDot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size-lg);
+  height: var(--size-lg);
+  border: 2px solid var(--color-interactive-primary);
+  border-radius: var(--radius-pill);
+}
+
+.locateInner {
+  width: var(--size-sm);
+  height: var(--size-sm);
+  background-color: var(--color-interactive-primary);
+  border-radius: var(--radius-pill);
+}
+
+.headerRow {
+  display: flex;
+  gap: var(--size-sm);
+  align-items: center;
+  min-width: 0;
+
+  > *:first-child {
+    flex-shrink: 0;
+  }
+}
+
+.headerBack {
+  flex-shrink: 0;
+}
+
+.headerTitle {
+  min-width: 0;
+}
+
+.empty {
+  @include text-body-1;
+
+  padding: var(--size-xl) 0;
+  color: var(--color-text-disabled);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs {
+  padding-bottom: var(--size-lg);
+}
+
+.liftRow {
+  position: relative;
+  display: flex;
+  gap: var(--size-sm);
+  align-items: center;
+  padding: var(--size-xl) var(--map-drawer-pad-x);
+  margin-inline: calc(-1 * var(--map-drawer-pad-x));
+  background-color: transparent;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--color-background-bg-card-pressed);
+    }
+  }
+
+  &_divider {
+    border-top: 1px solid var(--color-stroke-divider-on-surface);
+  }
+}
+
+.liftHit {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  padding: 0;
+  cursor: pointer;
+  background: none;
+  border: none;
+
+  &:focus-visible {
+    outline: 2px solid var(--color-interactive-primary);
+    outline-offset: -2px;
+  }
+}
+
+.liftMeta {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-shrink: 0;
+  gap: var(--size-xs);
+  align-items: center;
+  min-width: 70px;
+  pointer-events: none;
+}
+
+.liftNumber {
+  @include text-title-3;
+
+  color: var(--color-text-on-card);
+  text-transform: uppercase;
+
+  &_closed {
+    color: var(--color-text-disabled);
+  }
+}
+
+.runs {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: var(--size-sm);
+  align-items: flex-start;
+  min-width: 0;
+  pointer-events: none;
+}
+
+.queue {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-shrink: 0;
+  gap: var(--size-xs);
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 40px;
+  margin-inline-start: auto;
+  pointer-events: none;
+}
+
+.queueNum {
+  @include text-title-3;
+}
+
+.queueUnit {
+  @include text-caption;
+}
+
+.queueNormal {
+  color: var(--color-text-on-card);
+}
+
+.queueWarning {
+  color: var(--color-accents-danger-warning);
+}
+
+.queueError {
+  color: var(--color-accents-danger-text);
+}
+
+.queueDisabled {
+  color: var(--color-text-disabled);
+}
+
+.chip {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  padding: 0 var(--size-sm);
+  overflow: hidden;
+  pointer-events: auto;
+  cursor: pointer;
+  background-color: var(--color-background-surface);
+  border: 1px solid var(--color-stroke-divider-on-surface);
+  border-radius: var(--radius-lg);
+
+  &_static {
+    cursor: default;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-interactive-primary);
+    outline-offset: 2px;
+  }
+}
+
+.chipLabel {
+  @include text-body-large;
+
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.chipHatch {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 4px,
+    color-mix(in srgb, var(--color-text-disabled) 28%, transparent) 4px,
+    color-mix(in srgb, var(--color-text-disabled) 28%, transparent) 6px
+  );
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-xl);
+}
+
+.card {
+  display: flex;
+  gap: var(--size-sm);
+  padding: var(--size-md);
+  background-color: var(--color-background-bg-on-surface);
+  border-radius: var(--radius-md);
+}
+
+.cell {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--size-sm);
+  min-width: 0;
+
+  &_right {
+    align-items: flex-end;
+  }
+}
+
+.colLabel {
+  @include text-overline;
+
+  color: var(--color-text-disabled);
+}
+
+.cellValue {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+}
+
+.value {
+  @include text-title-3;
+
+  color: var(--color-text-on-card);
+}
+
+.tableHeader,
+.tableRow {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr) 96px 88px;
+  column-gap: var(--size-sm);
+  align-items: center;
+}
+
+.tableRow {
+  box-sizing: border-box;
+  width: calc(100% + (var(--map-drawer-pad-x) * 2));
+  min-height: 40px;
+  padding: var(--size-xl) var(--map-drawer-pad-x);
+  margin-inline: calc(-1 * var(--map-drawer-pad-x));
+  text-align: left;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-top: 1px solid var(--color-stroke-divider-on-surface);
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--color-background-bg-card-pressed);
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-interactive-primary);
+    outline-offset: 2px;
+  }
+}
+
+.colRun,
+.colDifficulty,
+.colLength,
+.colQueue {
+  min-width: 0;
+}
+
+.colLength,
+.colQueue {
+  justify-self: end;
+  text-align: right;
+}
+
+.tableRow .queue {
+  min-height: 0;
+  margin-inline-start: 0;
+  pointer-events: auto;
+}
+
+.sectionTitle {
+  @include text-title-3;
+
+  margin-bottom: var(--size-md);
+  color: var(--color-text-on-surface);
+}
+
+.relatedLift {
+  box-sizing: border-box;
+  display: flex;
+  gap: var(--size-sm);
+  align-items: center;
+  width: calc(100% + (var(--map-drawer-pad-x) * 2));
+  padding: var(--size-md) var(--map-drawer-pad-x);
+  margin-inline: calc(-1 * var(--map-drawer-pad-x));
+  text-align: left;
+  cursor: pointer;
+  background: none;
+  border: none;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--color-background-bg-card-pressed);
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-interactive-primary);
+    outline-offset: 2px;
+  }
+}
+
+.liftInfo {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.liftType {
+  @include text-caption;
+
+  color: var(--color-text-on-card-subtle);
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-2xl);
+}
+
+.settingsHint {
+  @include text-body-2;
+
+  margin: var(--size-xs) 0 var(--size-md);
+  color: var(--color-text-on-surface-subtle);
+}
+
+.difficultyRow {
+  display: flex;
+  gap: var(--size-md);
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--size-sm) 0;
+}
+
+.difficultyLabel {
+  display: flex;
+  gap: var(--size-sm);
+  align-items: center;
+}
+
+.dot {
+  flex-shrink: 0;
+  width: var(--size-md);
+  height: var(--size-md);
+  border-radius: var(--radius-pill);
+}
+
+.mapDrawer {
+  --map-drawer-pad-x: var(--size-md);
+
+  @include b-up(lg) {
+    --map-drawer-pad-x: var(--size-lg);
+  }
+
+  .mapDrawerHeader {
+    padding-inline: var(--map-drawer-pad-x);
+
+    > *:first-child {
+      flex: 1;
+      min-width: 0;
+    }
+  }
+
+  .mapDrawerBody {
+    padding-inline: var(--map-drawer-pad-x);
+  }
+}
+
+// Offset is real `right`, not inner padding. Close travel is 100% + that
+// offset so vaul does not leave a 32px strip on the viewport.
+.mapDrawer.mapDrawer[data-vaul-drawer-direction='right'] {
+  --initial-transform: calc(100% + var(--size-2xl));
+
+  inset: var(--size-2xl) var(--size-2xl) var(--size-2xl) auto;
+  width: 450px;
+
+  // Vaul paints a 200% extension past the panel; it fills the offset.
+  &::after {
+    display: none;
+  }
+}
+
+.pin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 7.5rem;
+  padding: 0;
+  cursor: pointer;
+  background: none;
+  border: none;
+
+  &:focus-visible {
+    outline: 2px solid var(--color-interactive-primary);
+    outline-offset: 2px;
+  }
+
+  &_badge {
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--color-background-surface);
+    border-radius: var(--radius-pill);
+    box-shadow: var(--shadow-map);
+  }
+
+  &_active &_badge {
+    box-shadow:
+      0 0 0 3px var(--color-background-surface),
+      var(--shadow-map);
+  }
+
+  &_count {
+    @include text-caption;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: var(--size-lg);
+    height: var(--size-lg);
+    padding: 0 var(--size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-on-primary);
+    background-color: var(--color-interactive-selected);
+    border: 2px solid var(--color-background-surface);
+    border-radius: var(--radius-pill);
+    transform: translate(40%, -30%);
+  }
+
+  &_label {
+    @include text-caption;
+
+    max-width: 7.5rem;
+    margin-top: var(--size-xs);
+    overflow: hidden;
+    color: var(--color-text-on-surface);
+    text-align: center;
+    text-overflow: ellipsis;
+    text-shadow:
+      -1px -1px 0 var(--color-background-surface),
+      1px -1px 0 var(--color-background-surface),
+      -1px 1px 0 var(--color-background-surface),
+      1px 1px 0 var(--color-background-surface);
+    white-space: nowrap;
+  }
+}
+
+.pinDetail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-xl);
+}
+
+.pinMeta,
+.statusRow {
+  @include text-body-2;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--size-xs);
+  align-items: center;
+  color: var(--color-text-on-surface-subtle);
+}
+
+.statusOpen {
+  color: var(--color-interactive-primary);
+}
+
+.pinMetaDot {
+  flex-shrink: 0;
+  width: var(--size-xs);
+  height: var(--size-xs);
+  background-color: var(--color-stroke-divider-on-surface);
+  border-radius: var(--radius-pill);
+}
+
+.contactRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--size-sm);
+}
+
+.infoBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-md);
+}
+
+.infoRow {
+  display: flex;
+  gap: var(--size-sm);
+  align-items: flex-start;
+  color: var(--color-text-on-surface-subtle);
+}
+
+.overviewBody {
+  @include text-body-1;
+
+  margin: var(--size-sm) 0 var(--size-md);
+  color: var(--color-text-on-surface);
+
+  &_clamp {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+  }
+}
+
+.placeRow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-xs);
+  width: calc(100% + (var(--map-drawer-pad-x) * 2));
+  padding: var(--size-xl) var(--map-drawer-pad-x);
+  margin-inline: calc(-1 * var(--map-drawer-pad-x));
+  text-align: left;
+  cursor: pointer;
+  background: none;
+  border: none;
+
+  &_divider {
+    border-top: 1px solid var(--color-stroke-divider-on-surface);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--color-background-bg-card-pressed);
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-interactive-primary);
+    outline-offset: -2px;
+  }
+}
+
+.placeName {
+  @include text-body-1;
+
+  color: var(--color-text-on-card);
+}
+
+.placeTag {
+  @include text-caption;
+
+  color: var(--color-text-on-card-subtle);
+}
+
+.layerRow {
+  @include text-body-1;
+
+  width: 100%;
+  padding: var(--size-md) 0;
+  color: var(--color-text-on-surface);
+  text-align: left;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--color-stroke-divider-on-surface);
+
+  &_active {
+    color: var(--color-interactive-primary);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--color-background-bg-card-pressed);
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-interactive-primary);
+    outline-offset: 2px;
+  }
+}

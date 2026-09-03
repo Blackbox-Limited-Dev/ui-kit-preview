@@ -1,0 +1,31 @@
+@use 'text-styles' as *;
+
+// These icon buttons have no distinct pressed state: hover carries the pressed
+// fill, which `tertiary` already uses for `:active`.
+.root {
+  --app-button-size: 44px;
+  --app-button-bg-hover: var(--color-background-bg-card-pressed);
+}
+
+.wrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.count {
+  @include text-caption(semibold);
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 var(--size-xs);
+  color: var(--color-labels-text-on-label);
+  pointer-events: none;
+  background-color: var(--color-accents-brand-red);
+  border-radius: var(--radius-pill);
+}

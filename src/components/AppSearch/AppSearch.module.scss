@@ -1,0 +1,54 @@
+@use 'text-styles' as *;
+
+.root {
+  display: flex;
+  gap: var(--size-sm);
+  align-items: center;
+  height: 44px;
+  padding: var(--size-sm) var(--size-lg);
+  cursor: text;
+  background-color: var(--color-input-bg);
+  border: 1px solid var(--color-stroke-on-surface);
+  border-radius: var(--radius-pill);
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+
+  @media (hover: hover) {
+    &:hover:not(:focus-within) {
+      background-color: var(--color-background-bg-card-pressed);
+    }
+  }
+
+  &:focus-within {
+    border-color: var(--color-input-stroke-active);
+  }
+}
+
+.input {
+  @include text-body-1(regular);
+
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 0;
+
+  // Figma overrides the body-1 line-height on the search field: 20px, not 150%.
+  line-height: 20px;
+  color: var(--color-input-text);
+  text-overflow: ellipsis;
+  background-color: transparent;
+  border: 0;
+
+  // The pill border is the focus indicator — a second ring inside it reads as a bug.
+  outline: none;
+
+  &::placeholder {
+    color: color-mix(in srgb, var(--color-input-text) 40%, transparent);
+  }
+
+  // The design has no clear affordance inside the field.
+  &::-webkit-search-cancel-button {
+    display: none;
+    appearance: none;
+  }
+}

@@ -1,0 +1,75 @@
+.root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-xl);
+  padding: var(--size-xl);
+
+  &.top {
+    --cutout-y: 25%;
+  }
+
+  &.middle {
+    --cutout-y: 50%;
+  }
+
+  // Anchored to the bottom edge rather than to a ratio: the notch marks the gap
+  // above the CTA, which sits at a fixed offset whatever the card's height.
+  &.bottom {
+    --cutout-y: calc(100% - 72px);
+  }
+
+  // The 38px band height and 13px cap width mirror assets/cutout-cap.svg
+  // (12px notch arc + 1px border) — keep in sync.
+  &_bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+
+    &_top {
+      height: calc(var(--cutout-y) - 19px);
+      background-color: var(--color-background-surface);
+      border: 1px solid var(--color-stroke-on-surface);
+      border-bottom: 0;
+      border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
+    }
+
+    &_middle {
+      display: flex;
+      height: 38px;
+    }
+
+    &_cap {
+      flex: none;
+      width: 13px;
+      height: 100%;
+    }
+
+    &_cap_right {
+      transform: scaleX(-1);
+    }
+
+    &_center {
+      flex: 1;
+      background-color: var(--color-background-surface);
+    }
+
+    &_bottom {
+      flex: 1;
+      background-color: var(--color-background-surface);
+      border: 1px solid var(--color-stroke-on-surface);
+      border-top: 0;
+      border-radius: 0 0 var(--radius-2xl) var(--radius-2xl);
+    }
+  }
+
+  &_slot {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-lg);
+  }
+}

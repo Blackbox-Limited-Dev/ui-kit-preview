@@ -1,0 +1,37 @@
+@use 'text-styles' as *;
+
+.root {
+  display: flex;
+  gap: var(--size-sm);
+  align-items: center;
+  justify-content: space-between;
+
+  // Figma draws the pill at a fixed 110px; min-width keeps that footprint
+  // while letting longer custom labels grow instead of overflowing.
+  min-width: 110px;
+  height: 38px;
+  padding: var(--size-sm) var(--size-lg);
+
+  @include text-body-2(semibold);
+
+  // Figma overrides the body-2 line-height on the label: 20px, not 150%.
+  line-height: 20px;
+  color: var(--color-text-on-bg);
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: var(--color-background-bg-card);
+  border: 1px solid var(--color-stroke-on-surface);
+  border-radius: var(--radius-pill);
+  transition: background-color 0.15s ease;
+
+  &:focus-visible {
+    outline: 2px solid var(--color-interactive-primary);
+    outline-offset: 2px;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--color-background-bg-card-pressed);
+    }
+  }
+}

@@ -1,0 +1,72 @@
+@use 'text-styles' as *;
+
+.tabs {
+  display: inline-flex;
+  gap: var(--size-xs);
+  align-items: center;
+  padding: var(--size-xs);
+  border-radius: var(--radius-pill);
+
+  &.toneOnSurface {
+    background-color: var(--color-background-bg-on-surface);
+  }
+
+  &.toneOnCard {
+    background-color: var(--color-background-surface);
+  }
+
+  &.stretch {
+    display: flex;
+    width: 100%;
+  }
+
+  &_item {
+    @include text-body-1(semibold);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: color-mix(in srgb, var(--color-text-on-card) 72%, transparent);
+    cursor: pointer;
+    background: none;
+    border: none;
+    border-radius: var(--radius-pill);
+    transition:
+      background-color 0.15s ease,
+      color 0.15s ease;
+
+    &[data-state='on'] {
+      color: var(--color-text-on-card);
+    }
+
+    &[aria-disabled='true'] {
+      color: var(--color-text-disabled);
+      cursor: default;
+    }
+  }
+
+  &.stretch &_item {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &.toneOnSurface &_item[data-state='on'] {
+    background-color: var(--color-background-surface);
+  }
+
+  &.toneOnCard &_item[data-state='on'] {
+    background-color: var(--color-background-bg-theme);
+  }
+
+  &.xl &_item {
+    height: 44px;
+    padding: 10px var(--size-xl);
+  }
+
+  &.md &_item {
+    @include text-body-2(semibold);
+
+    height: 36px;
+    padding: var(--size-sm) var(--size-md);
+  }
+}

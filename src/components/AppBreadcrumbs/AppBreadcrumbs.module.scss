@@ -1,0 +1,44 @@
+.root {
+  &_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--size-md);
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &_item {
+    display: flex;
+    gap: var(--size-md);
+    align-items: center;
+    font-size: var(--font-size-body-1);
+    font-weight: var(--font-weight-regular);
+    line-height: 1.1;
+  }
+
+  &_link {
+    color: var(--color-text-on-bg);
+    text-decoration: none;
+    transition: color 0.15s ease;
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--color-text-interactive);
+      }
+    }
+  }
+
+  &_current {
+    color: var(--color-text-on-bg-subtle);
+  }
+
+  &_separator {
+    // SVGO strips the intrinsic width/height; without them the inline svg
+    // falls back to the 300×150 replaced-element default.
+    flex-shrink: 0;
+    width: 12px;
+    height: 16px;
+  }
+}

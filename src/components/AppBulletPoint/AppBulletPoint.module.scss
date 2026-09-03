@@ -1,0 +1,43 @@
+@use 'mixins' as *;
+@use 'text-styles' as *;
+
+.root {
+  display: flex;
+  gap: var(--size-md);
+  align-items: center;
+
+  &_marker {
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: var(--radius-pill);
+  }
+
+  &_text {
+    @include text-body-large;
+
+    color: var(--color-text-on-card-subtle);
+
+    @include b-d(md) {
+      @include text-body-1;
+    }
+  }
+
+  &.check &_marker {
+    color: var(--color-interactive-primary);
+    background-color: var(--color-interactive-primary-subtle);
+  }
+
+  &.attention &_marker {
+    color: var(--color-accents-red-icon-on-card);
+    background-color: var(--color-background-surface-attention);
+  }
+
+  &.info &_marker {
+    color: var(--color-labels-blue);
+    background-color: var(--color-background-bg-on-surface);
+  }
+}

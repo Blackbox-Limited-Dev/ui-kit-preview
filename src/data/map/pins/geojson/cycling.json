@@ -1,0 +1,29 @@
+{
+  "type": "FeatureCollection",
+  "name": "Велокатання",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "bkv-265",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4062204, 48.3648481]
+      },
+      "properties": {
+        "id": "bkv-265",
+        "name": "Bike Zip",
+        "subcategory": "Велопрокат / траси",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Bike%20Zip%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "cycling",
+        "categoryLabel": "Велокатання",
+        "seasons": ["spring", "summer", "autumn"]
+      }
+    }
+  ]
+}

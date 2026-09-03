@@ -1,0 +1,1800 @@
+{
+  "type": "FeatureCollection",
+  "name": "Харчування",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "bkv-073",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4099299, 48.3789082]
+      },
+      "properties": {
+        "id": "bkv-073",
+        "name": "\"Johnnie Walker #2\" (Торг. павільйон №12) біля Панорами-15",
+        "subcategory": "Бар / напої",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%22Johnnie%20Walker%20%232%22%20%28%D0%A2%D0%BE%D1%80%D0%B3.%20%D0%BF%D0%B0%D0%B2%D1%96%D0%BB%D1%8C%D0%B9%D0%BE%D0%BD%20%E2%84%9612%29%20%D0%B1%D1%96%D0%BB%D1%8F%20%D0%9F%D0%B0%D0%BD%D0%BE%D1%80%D0%B0%D0%BC%D0%B8-15%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-075",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4084184, 48.3600384]
+      },
+      "properties": {
+        "id": "bkv-075",
+        "name": "AW BAR & APRES SKI - CRAFT SHOP",
+        "subcategory": "Бар / напої",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=AW%20BAR%20%26%20APRES%20SKI%20-%20CRAFT%20SHOP%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-076",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.40882, 48.3605823]
+      },
+      "properties": {
+        "id": "bkv-076",
+        "name": "AW BAR & APRES SKI - SMALL BAR_1",
+        "subcategory": "Бар / напої",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=AW%20BAR%20%26%20APRES%20SKI%20-%20SMALL%20BAR_1%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-079",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4085355, 48.357932]
+      },
+      "properties": {
+        "id": "bkv-079",
+        "name": "Borzo Varenuki",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Borzo%20Varenuki%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-087",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.5376077, 48.4338113]
+      },
+      "properties": {
+        "id": "bkv-087",
+        "name": "Mangalica (Яремче - \"Едельвейс\")",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Mangalica%20%28%D0%AF%D1%80%D0%B5%D0%BC%D1%87%D0%B5%20-%20%22%D0%95%D0%B4%D0%B5%D0%BB%D1%8C%D0%B2%D0%B5%D0%B9%D1%81%22%29%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-088",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.40894, 48.3570843]
+      },
+      "properties": {
+        "id": "bkv-088",
+        "name": "NUMO",
+        "subcategory": "Ресторан",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=NUMO%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-090",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4045381, 48.3569156]
+      },
+      "properties": {
+        "id": "bkv-090",
+        "name": "Rebra BBQ",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Rebra%20BBQ%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-092",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4118135, 48.355666]
+      },
+      "properties": {
+        "id": "bkv-092",
+        "name": "Whisky-Bar",
+        "subcategory": "Бар / напої",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Whisky-Bar%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-094",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4074757, 48.3591918]
+      },
+      "properties": {
+        "id": "bkv-094",
+        "name": "Азія Фудс - Променад (Локшина)",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%90%D0%B7%D1%96%D1%8F%20%D0%A4%D1%83%D0%B4%D1%81%20-%20%D0%9F%D1%80%D0%BE%D0%BC%D0%B5%D0%BD%D0%B0%D0%B4%20%28%D0%9B%D0%BE%D0%BA%D1%88%D0%B8%D0%BD%D0%B0%29%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-095",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4074194, 48.3583601]
+      },
+      "properties": {
+        "id": "bkv-095",
+        "name": "Арена Дика вишня",
+        "subcategory": "Бар / напої",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%80%D0%B5%D0%BD%D0%B0%20%D0%94%D0%B8%D0%BA%D0%B0%20%D0%B2%D0%B8%D1%88%D0%BD%D1%8F%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-096",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.40882, 48.3605823]
+      },
+      "properties": {
+        "id": "bkv-096",
+        "name": "Атлас 14 витяг Бренд Зона IQos (Бар)",
+        "subcategory": "Бар / напої",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%82%D0%BB%D0%B0%D1%81%2014%20%D0%B2%D0%B8%D1%82%D1%8F%D0%B3%20%D0%91%D1%80%D0%B5%D0%BD%D0%B4%20%D0%97%D0%BE%D0%BD%D0%B0%20IQos%20%28%D0%91%D0%B0%D1%80%29%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-097",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4083156, 48.3587618]
+      },
+      "properties": {
+        "id": "bkv-097",
+        "name": "Бакара кава",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%91%D0%B0%D0%BA%D0%B0%D1%80%D0%B0%20%D0%BA%D0%B0%D0%B2%D0%B0%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-098",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.410426, 48.348352]
+      },
+      "properties": {
+        "id": "bkv-098",
+        "name": "Бар \"Jagermeister-Bar & Apres-Ski\"",
+        "subcategory": "Бар / напої",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%91%D0%B0%D1%80%20%22Jagermeister-Bar%20%26%20Apres-Ski%22%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-100",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4021814, 48.3710417]
+      },
+      "properties": {
+        "id": "bkv-100",
+        "name": "Бар Becherovka small",
+        "subcategory": "Бар / напої",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%91%D0%B0%D1%80%20Becherovka%20small%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-103",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.3681837, 48.3681]
+      },
+      "properties": {
+        "id": "bkv-103",
+        "name": "Бар MasterCard tent",
+        "subcategory": "Бар / напої",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%91%D0%B0%D1%80%20MasterCard%20tent%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-106",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4076587, 48.3585639]
+      },
+      "properties": {
+        "id": "bkv-106",
+        "name": "Бугіль",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%91%D1%83%D0%B3%D1%96%D0%BB%D1%8C%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-110",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.409192, 48.3579574]
+      },
+      "properties": {
+        "id": "bkv-110",
+        "name": "Будка № 1  \"Картопля\", Ярмарок",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%91%D1%83%D0%B4%D0%BA%D0%B0%20%E2%84%96%201%20%20%22%D0%9A%D0%B0%D1%80%D1%82%D0%BE%D0%BF%D0%BB%D1%8F%22%2C%20%D0%AF%D1%80%D0%BC%D0%B0%D1%80%D0%BE%D0%BA%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-111",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.409192, 48.3579574]
+      },
+      "properties": {
+        "id": "bkv-111",
+        "name": "Будка № 10  \"Випічка\", Ярмарок",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%91%D1%83%D0%B4%D0%BA%D0%B0%20%E2%84%96%2010%20%20%22%D0%92%D0%B8%D0%BF%D1%96%D1%87%D0%BA%D0%B0%22%2C%20%D0%AF%D1%80%D0%BC%D0%B0%D1%80%D0%BE%D0%BA%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-117",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.409192, 48.3579574]
+      },
+      "properties": {
+        "id": "bkv-117",
+        "name": "Будка № 7  \"Лапша\", Ярмарок",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%91%D1%83%D0%B4%D0%BA%D0%B0%20%E2%84%96%207%20%20%22%D0%9B%D0%B0%D0%BF%D1%88%D0%B0%22%2C%20%D0%AF%D1%80%D0%BC%D0%B0%D1%80%D0%BE%D0%BA%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-121",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4082376, 48.3592597]
+      },
+      "properties": {
+        "id": "bkv-121",
+        "name": "БУКА - Кафе \"Веранда\"",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%91%D0%A3%D0%9A%D0%90%20-%20%D0%9A%D0%B0%D1%84%D0%B5%20%22%D0%92%D0%B5%D1%80%D0%B0%D0%BD%D0%B4%D0%B0%22%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-122",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4236945, 48.3728866]
+      },
+      "properties": {
+        "id": "bkv-122",
+        "name": "Бульчиньоха",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%91%D1%83%D0%BB%D1%8C%D1%87%D0%B8%D0%BD%D1%8C%D0%BE%D1%85%D0%B0%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-123",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4075848, 48.3590238]
+      },
+      "properties": {
+        "id": "bkv-123",
+        "name": "біршоп \"Гуртівня Крафту\"",
+        "subcategory": "Бар / напої",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%96%D1%80%D1%88%D0%BE%D0%BF%20%22%D0%93%D1%83%D1%80%D1%82%D1%96%D0%B2%D0%BD%D1%8F%20%D0%9A%D1%80%D0%B0%D1%84%D1%82%D1%83%22%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-124",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4086347, 48.3587591]
+      },
+      "properties": {
+        "id": "bkv-124",
+        "name": "Випічка with love",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%92%D0%B8%D0%BF%D1%96%D1%87%D0%BA%D0%B0%20with%20love%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-125",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.408607, 48.358761]
+      },
+      "properties": {
+        "id": "bkv-125",
+        "name": "Випічка with love (Променад)",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%92%D0%B8%D0%BF%D1%96%D1%87%D0%BA%D0%B0%20with%20love%20%28%D0%9F%D1%80%D0%BE%D0%BC%D0%B5%D0%BD%D0%B0%D0%B4%29%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "xlsx",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-126",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4080484, 48.3590354]
+      },
+      "properties": {
+        "id": "bkv-126",
+        "name": "Вулик",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%92%D1%83%D0%BB%D0%B8%D0%BA%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-129",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4144937, 48.3534253]
+      },
+      "properties": {
+        "id": "bkv-129",
+        "name": "Вулична 6 - Каток",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%92%D1%83%D0%BB%D0%B8%D1%87%D0%BD%D0%B0%206%20-%20%D0%9A%D0%B0%D1%82%D0%BE%D0%BA%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-133",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.404588, 48.3642004]
+      },
+      "properties": {
+        "id": "bkv-133",
+        "name": "Дика Вишня (Озеро Молодості)",
+        "subcategory": "Бар / напої",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%94%D0%B8%D0%BA%D0%B0%20%D0%92%D0%B8%D1%88%D0%BD%D1%8F%20%28%D0%9E%D0%B7%D0%B5%D1%80%D0%BE%20%D0%9C%D0%BE%D0%BB%D0%BE%D0%B4%D0%BE%D1%81%D1%82%D1%96%29%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-134",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4074194, 48.3583601]
+      },
+      "properties": {
+        "id": "bkv-134",
+        "name": "Дика вишня озеро",
+        "subcategory": "Бар / напої",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%94%D0%B8%D0%BA%D0%B0%20%D0%B2%D0%B8%D1%88%D0%BD%D1%8F%20%D0%BE%D0%B7%D0%B5%D1%80%D0%BE%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-135",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4074194, 48.3583601]
+      },
+      "properties": {
+        "id": "bkv-135",
+        "name": "Дика вишня П1",
+        "subcategory": "Бар / напої",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%94%D0%B8%D0%BA%D0%B0%20%D0%B2%D0%B8%D1%88%D0%BD%D1%8F%20%D0%9F1%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-136",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4074194, 48.3583601]
+      },
+      "properties": {
+        "id": "bkv-136",
+        "name": "Дика вишня центр",
+        "subcategory": "Бар / напої",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%94%D0%B8%D0%BA%D0%B0%20%D0%B2%D0%B8%D1%88%D0%BD%D1%8F%20%D1%86%D0%B5%D0%BD%D1%82%D1%80%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-141",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4179972, 48.3537665]
+      },
+      "properties": {
+        "id": "bkv-141",
+        "name": "Кав'ярня \"Kava\" (П1)",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%9A%D0%B0%D0%B2%27%D1%8F%D1%80%D0%BD%D1%8F%20%22Kava%22%20%28%D0%9F1%29%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-142",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4086644, 48.3563227]
+      },
+      "properties": {
+        "id": "bkv-142",
+        "name": "Кайзер",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%9A%D0%B0%D0%B9%D0%B7%D0%B5%D1%80%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-143",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4092416, 48.3581368]
+      },
+      "properties": {
+        "id": "bkv-143",
+        "name": "Карпатські делікатеси (Променад)",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%9A%D0%B0%D1%80%D0%BF%D0%B0%D1%82%D1%81%D1%8C%D0%BA%D1%96%20%D0%B4%D0%B5%D0%BB%D1%96%D0%BA%D0%B0%D1%82%D0%B5%D1%81%D0%B8%20%28%D0%9F%D1%80%D0%BE%D0%BC%D0%B5%D0%BD%D0%B0%D0%B4%29%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-144",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4173719, 48.3536717]
+      },
+      "properties": {
+        "id": "bkv-144",
+        "name": "Кафе Астон",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%9A%D0%B0%D1%84%D0%B5%20%D0%90%D1%81%D1%82%D0%BE%D0%BD%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-145",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4160786, 48.3540968]
+      },
+      "properties": {
+        "id": "bkv-145",
+        "name": "Кафе Сімка Бар",
+        "subcategory": "Бар / напої",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%9A%D0%B0%D1%84%D0%B5%20%D0%A1%D1%96%D0%BC%D0%BA%D0%B0%20%D0%91%D0%B0%D1%80%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-147",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.437897, 48.3480657]
+      },
+      "properties": {
+        "id": "bkv-147",
+        "name": "Кебаб 7",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%9A%D0%B5%D0%B1%D0%B0%D0%B1%207%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-148",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4076986, 48.3595833]
+      },
+      "properties": {
+        "id": "bkv-148",
+        "name": "Кнайпа",
+        "subcategory": "Ресторан",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%9A%D0%BD%D0%B0%D0%B9%D0%BF%D0%B0%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-149",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.3913, 48.3602]
+      },
+      "properties": {
+        "id": "bkv-149",
+        "name": "Колиба",
+        "subcategory": "Ресторан",
+        "description": "Ресторан «Колиба» — автентична українська кухня, домашні страви.",
+        "services": "Українська кухня, ресторан",
+        "hours": "Пн–Нд 11:00–23:00",
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%9A%D0%BE%D0%BB%D0%B8%D0%B1%D0%B0%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "xlsx",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-150",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4097094, 48.3577228]
+      },
+      "properties": {
+        "id": "bkv-150",
+        "name": "Кондитерський дім Блажевських (ГР)",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%9A%D0%BE%D0%BD%D0%B4%D0%B8%D1%82%D0%B5%D1%80%D1%81%D1%8C%D0%BA%D0%B8%D0%B9%20%D0%B4%D1%96%D0%BC%20%D0%91%D0%BB%D0%B0%D0%B6%D0%B5%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D1%85%20%28%D0%93%D0%A0%29%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-151",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.3976487, 48.3730394]
+      },
+      "properties": {
+        "id": "bkv-151",
+        "name": "КрепДеШин",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%9A%D1%80%D0%B5%D0%BF%D0%94%D0%B5%D0%A8%D0%B8%D0%BD%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-152",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.3938866, 48.3652006]
+      },
+      "properties": {
+        "id": "bkv-152",
+        "name": "Куркуль",
+        "subcategory": "Ресторан",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%9A%D1%83%D1%80%D0%BA%D1%83%D0%BB%D1%8C%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-153",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.3913, 48.3602]
+      },
+      "properties": {
+        "id": "bkv-153",
+        "name": "Курінь",
+        "subcategory": "Ресторан",
+        "description": "Ресторація «Курінь» — українська та європейська кухня (борщ, вареники, деруни, банош, бограч). Інтер'єр у стилі української хати-мазанки.",
+        "services": "Українська / європейська кухня, ресторан",
+        "hours": "Уточнюється",
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%9A%D1%83%D1%80%D1%96%D0%BD%D1%8C%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "xlsx",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-155",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.392222, 48.360278]
+      },
+      "properties": {
+        "id": "bkv-155",
+        "name": "Кіоск \"Food Wine Drink 12\"",
+        "subcategory": "Бар / напої",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%9A%D1%96%D0%BE%D1%81%D0%BA%20%22Food%20Wine%20Drink%2012%22%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-157",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4116927, 48.3557017]
+      },
+      "properties": {
+        "id": "bkv-157",
+        "name": "Лакі-Бул",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%9B%D0%B0%D0%BA%D1%96-%D0%91%D1%83%D0%BB%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-158",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4033967, 48.3690252]
+      },
+      "properties": {
+        "id": "bkv-158",
+        "name": "Лангуста(Ресторан)",
+        "subcategory": "Ресторан",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%9B%D0%B0%D0%BD%D0%B3%D1%83%D1%81%D1%82%D0%B0%28%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%29%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-159",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4078113, 48.3584792]
+      },
+      "properties": {
+        "id": "bkv-159",
+        "name": "Морозиво",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%9C%D0%BE%D1%80%D0%BE%D0%B7%D0%B8%D0%B2%D0%BE%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-161",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4082281, 48.3598671]
+      },
+      "properties": {
+        "id": "bkv-161",
+        "name": "П'яна вишня",
+        "subcategory": "Бар / напої",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%9F%27%D1%8F%D0%BD%D0%B0%20%D0%B2%D0%B8%D1%88%D0%BD%D1%8F%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-165",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4066476, 48.3494468]
+      },
+      "properties": {
+        "id": "bkv-165",
+        "name": "Панорама 2",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%9F%D0%B0%D0%BD%D0%BE%D1%80%D0%B0%D0%BC%D0%B0%202%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-167",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4099299, 48.3789082]
+      },
+      "properties": {
+        "id": "bkv-167",
+        "name": "Панорама-Бар 15",
+        "subcategory": "Бар / напої",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%9F%D0%B0%D0%BD%D0%BE%D1%80%D0%B0%D0%BC%D0%B0-%D0%91%D0%B0%D1%80%2015%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-168",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.409192, 48.3579574]
+      },
+      "properties": {
+        "id": "bkv-168",
+        "name": "Пиво Grimbergen (Ярмарка)",
+        "subcategory": "Бар / напої",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%9F%D0%B8%D0%B2%D0%BE%20Grimbergen%20%28%D0%AF%D1%80%D0%BC%D0%B0%D1%80%D0%BA%D0%B0%29%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-169",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4172838, 48.3535506]
+      },
+      "properties": {
+        "id": "bkv-169",
+        "name": "Помідоро",
+        "subcategory": "Ресторан",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%9F%D0%BE%D0%BC%D1%96%D0%B4%D0%BE%D1%80%D0%BE%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-170",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4041182, 48.3682489]
+      },
+      "properties": {
+        "id": "bkv-170",
+        "name": "Піцерія Маргарита (Glacier)",
+        "subcategory": "Ресторан",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%9F%D1%96%D1%86%D0%B5%D1%80%D1%96%D1%8F%20%D0%9C%D0%B0%D1%80%D0%B3%D0%B0%D1%80%D0%B8%D1%82%D0%B0%20%28Glacier%29%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-174",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4048186, 48.3673637]
+      },
+      "properties": {
+        "id": "bkv-174",
+        "name": "Ресторан Rene (Glacier)",
+        "subcategory": "Ресторан",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%20Rene%20%28Glacier%29%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-175",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4069823, 48.3703404]
+      },
+      "properties": {
+        "id": "bkv-175",
+        "name": "Ресторан АСЛАРІ",
+        "subcategory": "Ресторан",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%20%D0%90%D0%A1%D0%9B%D0%90%D0%A0%D0%86%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-176",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4087033, 48.3563276]
+      },
+      "properties": {
+        "id": "bkv-176",
+        "name": "Ресторан ТБІЛІСО",
+        "subcategory": "Ресторан",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%20%D0%A2%D0%91%D0%86%D0%9B%D0%86%D0%A1%D0%9E%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-177",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4084264, 48.3576956]
+      },
+      "properties": {
+        "id": "bkv-177",
+        "name": "Риба гриль",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%A0%D0%B8%D0%B1%D0%B0%20%D0%B3%D1%80%D0%B8%D0%BB%D1%8C%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-178",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4099371, 48.3562842]
+      },
+      "properties": {
+        "id": "bkv-178",
+        "name": "САЛО",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%A1%D0%90%D0%9B%D0%9E%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-179",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4080081, 48.3589058]
+      },
+      "properties": {
+        "id": "bkv-179",
+        "name": "Сирне Королівство",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%A1%D0%B8%D1%80%D0%BD%D0%B5%20%D0%9A%D0%BE%D1%80%D0%BE%D0%BB%D1%96%D0%B2%D1%81%D1%82%D0%B2%D0%BE%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-180",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4019913, 48.3712602]
+      },
+      "properties": {
+        "id": "bkv-180",
+        "name": "Сироварня",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%A1%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%80%D0%BD%D1%8F%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-183",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4074194, 48.3583601]
+      },
+      "properties": {
+        "id": "bkv-183",
+        "name": "Сувеніри Фільварок + Дика Вишня (R2)",
+        "subcategory": "Бар / напої",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%A1%D1%83%D0%B2%D0%B5%D0%BD%D1%96%D1%80%D0%B8%20%D0%A4%D1%96%D0%BB%D1%8C%D0%B2%D0%B0%D1%80%D0%BE%D0%BA%20%2B%20%D0%94%D0%B8%D0%BA%D0%B0%20%D0%92%D0%B8%D1%88%D0%BD%D1%8F%20%28R2%29%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-186",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4032195, 48.3681595]
+      },
+      "properties": {
+        "id": "bkv-186",
+        "name": "Тераса",
+        "subcategory": "Ресторан",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%A2%D0%B5%D1%80%D0%B0%D1%81%D0%B0%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-192",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4115144, 48.3484824]
+      },
+      "properties": {
+        "id": "bkv-192",
+        "name": "Фастфуд \"Berlin Doner\"",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%A4%D0%B0%D1%81%D1%82%D1%84%D1%83%D0%B4%20%22Berlin%20Doner%22%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-194",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4106518, 48.3566194]
+      },
+      "properties": {
+        "id": "bkv-194",
+        "name": "Фелічіта",
+        "subcategory": "Ресторан",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%A4%D0%B5%D0%BB%D1%96%D1%87%D1%96%D1%82%D0%B0%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-195",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4018981, 48.3708121]
+      },
+      "properties": {
+        "id": "bkv-195",
+        "name": "Фуд корт Бренд Зона IQos 14 витяг",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%A4%D1%83%D0%B4%20%D0%BA%D0%BE%D1%80%D1%82%20%D0%91%D1%80%D0%B5%D0%BD%D0%B4%20%D0%97%D0%BE%D0%BD%D0%B0%20IQos%2014%20%D0%B2%D0%B8%D1%82%D1%8F%D0%B3%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-196",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4076986, 48.3595833]
+      },
+      "properties": {
+        "id": "bkv-196",
+        "name": "Фуд корт(ТОВ \"Аква Карпати\")",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%A4%D1%83%D0%B4%20%D0%BA%D0%BE%D1%80%D1%82%28%D0%A2%D0%9E%D0%92%20%22%D0%90%D0%BA%D0%B2%D0%B0%20%D0%9A%D0%B0%D1%80%D0%BF%D0%B0%D1%82%D0%B8%22%29%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-201",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4061665, 48.3613431]
+      },
+      "properties": {
+        "id": "bkv-201",
+        "name": "Чебуречна",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%A7%D0%B5%D0%B1%D1%83%D1%80%D0%B5%D1%87%D0%BD%D0%B0%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-202",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4061665, 48.3613431]
+      },
+      "properties": {
+        "id": "bkv-202",
+        "name": "Чебуречна (R14)",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%A7%D0%B5%D0%B1%D1%83%D1%80%D0%B5%D1%87%D0%BD%D0%B0%20%28R14%29%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-203",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4077257, 48.359451]
+      },
+      "properties": {
+        "id": "bkv-203",
+        "name": "Шоколад (П1)",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%A8%D0%BE%D0%BA%D0%BE%D0%BB%D0%B0%D0%B4%20%28%D0%9F1%29%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-206",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4077257, 48.359451]
+      },
+      "properties": {
+        "id": "bkv-206",
+        "name": "Шоколад п1",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%A8%D0%BE%D0%BA%D0%BE%D0%BB%D0%B0%D0%B4%20%D0%BF1%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-207",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4077257, 48.359451]
+      },
+      "properties": {
+        "id": "bkv-207",
+        "name": "Шоколад центр",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%A8%D0%BE%D0%BA%D0%BE%D0%BB%D0%B0%D0%B4%20%D1%86%D0%B5%D0%BD%D1%82%D1%80%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-208",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4072938, 48.3591837]
+      },
+      "properties": {
+        "id": "bkv-208",
+        "name": "Я люблю Кебаб (Променад)",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%AF%20%D0%BB%D1%8E%D0%B1%D0%BB%D1%8E%20%D0%9A%D0%B5%D0%B1%D0%B0%D0%B1%20%28%D0%9F%D1%80%D0%BE%D0%BC%D0%B5%D0%BD%D0%B0%D0%B4%29%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-211",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4074194, 48.3583601]
+      },
+      "properties": {
+        "id": "bkv-211",
+        "name": "Ярмарка Дика Вишня",
+        "subcategory": "Бар / напої",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%AF%D1%80%D0%BC%D0%B0%D1%80%D0%BA%D0%B0%20%D0%94%D0%B8%D0%BA%D0%B0%20%D0%92%D0%B8%D1%88%D0%BD%D1%8F%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-213",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.409192, 48.3579574]
+      },
+      "properties": {
+        "id": "bkv-213",
+        "name": "Ярмарок \"ГРУЗІЯ\"",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%AF%D1%80%D0%BC%D0%B0%D1%80%D0%BE%D0%BA%20%22%D0%93%D0%A0%D0%A3%D0%97%D0%86%D0%AF%22%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-214",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.409192, 48.3579574]
+      },
+      "properties": {
+        "id": "bkv-214",
+        "name": "Ярмарок Алкоголь 677",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%AF%D1%80%D0%BC%D0%B0%D1%80%D0%BE%D0%BA%20%D0%90%D0%BB%D0%BA%D0%BE%D0%B3%D0%BE%D0%BB%D1%8C%20677%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-215",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.409192, 48.3579574]
+      },
+      "properties": {
+        "id": "bkv-215",
+        "name": "Ярмарок Бельгійські вафлі",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%AF%D1%80%D0%BC%D0%B0%D1%80%D0%BE%D0%BA%20%D0%91%D0%B5%D0%BB%D1%8C%D0%B3%D1%96%D0%B9%D1%81%D1%8C%D0%BA%D1%96%20%D0%B2%D0%B0%D1%84%D0%BB%D1%96%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-216",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.409192, 48.3579574]
+      },
+      "properties": {
+        "id": "bkv-216",
+        "name": "Ярмарок Борщ",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%AF%D1%80%D0%BC%D0%B0%D1%80%D0%BE%D0%BA%20%D0%91%D0%BE%D1%80%D1%89%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-218",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.409192, 48.3579574]
+      },
+      "properties": {
+        "id": "bkv-218",
+        "name": "Ярмарок ДВ",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%AF%D1%80%D0%BC%D0%B0%D1%80%D0%BE%D0%BA%20%D0%94%D0%92%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-220",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.409192, 48.3579574]
+      },
+      "properties": {
+        "id": "bkv-220",
+        "name": "Ярмарок Млинці 671",
+        "subcategory": "Кафе / фастфуд / кіоск",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%AF%D1%80%D0%BC%D0%B0%D1%80%D0%BE%D0%BA%20%D0%9C%D0%BB%D0%B8%D0%BD%D1%86%D1%96%20671%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "dining",
+        "categoryLabel": "Харчування",
+        "seasons": ["all"]
+      }
+    }
+  ]
+}

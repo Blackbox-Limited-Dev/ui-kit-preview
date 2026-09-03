@@ -1,0 +1,121 @@
+{
+  "type": "FeatureCollection",
+  "name": "Паркінг",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "parking-1",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4051, 48.3592]
+      },
+      "properties": {
+        "id": "parking-1",
+        "name": "Паркінг №1",
+        "subcategory": "Паркінг",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": null,
+        "precision": "exact",
+        "source": "mock",
+        "category": "parking",
+        "categoryLabel": "Паркінг",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "parking-2",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4103, 48.3601]
+      },
+      "properties": {
+        "id": "parking-2",
+        "name": "Паркінг №2",
+        "subcategory": "Паркінг",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": null,
+        "precision": "exact",
+        "source": "mock",
+        "category": "parking",
+        "categoryLabel": "Паркінг",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "parking-14",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4018, 48.3558]
+      },
+      "properties": {
+        "id": "parking-14",
+        "name": "Паркінг №14",
+        "subcategory": "Паркінг",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": null,
+        "precision": "exact",
+        "source": "mock",
+        "category": "parking",
+        "categoryLabel": "Паркінг",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "parking-15",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4132, 48.3564]
+      },
+      "properties": {
+        "id": "parking-15",
+        "name": "Паркінг №15",
+        "subcategory": "Паркінг",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": null,
+        "precision": "exact",
+        "source": "mock",
+        "category": "parking",
+        "categoryLabel": "Паркінг",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "parking-buka",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4079, 48.3583]
+      },
+      "properties": {
+        "id": "parking-buka",
+        "name": "Готель “Buka”",
+        "subcategory": "Паркінг",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": null,
+        "precision": "exact",
+        "source": "mock",
+        "category": "parking",
+        "categoryLabel": "Паркінг",
+        "seasons": ["all"]
+      }
+    }
+  ]
+}

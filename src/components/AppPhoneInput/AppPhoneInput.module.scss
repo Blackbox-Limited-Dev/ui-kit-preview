@@ -1,0 +1,145 @@
+@use 'text-styles' as *;
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-sm);
+}
+
+.label {
+  @include text-body-1(semibold);
+
+  line-height: var(--line-height-tight);
+  color: var(--color-text-on-card);
+}
+
+.required {
+  @include text-body-2(bold);
+
+  color: var(--color-accents-danger-text);
+}
+
+.row {
+  display: flex;
+  gap: var(--size-md);
+  align-items: flex-start;
+}
+
+.number {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.trigger {
+  display: flex;
+  flex-shrink: 0;
+  gap: var(--size-sm);
+  align-items: center;
+  min-height: 52px;
+  padding: var(--size-md);
+  cursor: pointer;
+  background-color: var(--color-input-bg);
+  border: 1px solid var(--color-input-stroke);
+  border-radius: var(--radius-md);
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+
+  @media (hover: hover) {
+    &:hover:not([data-state='open'], [data-disabled]) {
+      background-color: var(--color-background-bg-card-pressed);
+    }
+  }
+
+  &[data-state='open'],
+  &:focus-visible {
+    border-color: var(--color-input-stroke-active);
+    outline: none;
+  }
+
+  &[data-disabled] {
+    cursor: not-allowed;
+    background-color: var(--color-input-bg-disabled);
+  }
+
+  &_error {
+    border-color: var(--color-accents-danger-text);
+  }
+}
+
+// White-topped flags need the outline to read as a disc on the input background.
+.flag {
+  display: flex;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  border: 1px solid var(--color-stroke-divider-on-surface);
+  border-radius: var(--radius-pill);
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.dial {
+  @include text-body-1(regular);
+
+  color: var(--color-input-text);
+}
+
+.caret {
+  display: flex;
+  color: var(--color-icon-on-card);
+  transition: transform 0.15s ease;
+
+  .trigger[data-state='open'] & {
+    transform: rotate(180deg);
+  }
+}
+
+.content {
+  z-index: 10;
+  min-width: var(--radix-select-trigger-width);
+  overflow: hidden;
+  background-color: var(--color-input-bg);
+  border: 1px solid var(--color-input-stroke);
+  border-radius: var(--radius-md);
+}
+
+.item {
+  @include text-body-1(regular);
+
+  display: flex;
+  gap: var(--size-sm);
+  align-items: center;
+  padding: var(--size-md);
+  color: var(--color-input-text);
+  cursor: pointer;
+  outline: none;
+
+  &[data-highlighted] {
+    background-color: var(--color-background-bg-card-pressed);
+  }
+
+  &[data-state='checked'] {
+    font-weight: var(--font-weight-semibold);
+  }
+
+  &_dial {
+    margin-left: auto;
+    color: var(--color-input-placeholder);
+  }
+}
+
+.message {
+  @include text-body-2(regular);
+
+  margin: 0;
+  color: var(--color-text-on-card-subtle);
+
+  &_error {
+    color: var(--color-accents-danger-text);
+  }
+}

@@ -1,0 +1,119 @@
+// Text styles — 1:1 with the Figma "Bukovel: WEB Design System" text styles.
+// Values come from the `--font-*`, `--line-height-*` and `--letter-spacing-*`
+// tokens in `settings.scss`; never inline raw px/em here.
+// Body and caption styles take the weight as a parameter (`regular` | `medium` |
+// `semibold`); headers and utility styles have exactly one weight in Figma.
+// Keep in sync with `AppText.module.scss`, which exposes each mixin as a variant.
+
+// Headers
+
+@mixin text-hero {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-hero);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-display);
+  letter-spacing: var(--letter-spacing-display);
+}
+
+@mixin text-display-1 {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-display-1);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-display);
+  letter-spacing: var(--letter-spacing-display);
+}
+
+@mixin text-display-2 {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-display-2);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-display);
+  letter-spacing: var(--letter-spacing-display);
+}
+
+@mixin text-display-3 {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-display-3);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-display);
+  letter-spacing: var(--letter-spacing-display);
+}
+
+@mixin text-title-1 {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-title-1);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-title);
+  letter-spacing: var(--letter-spacing-title);
+}
+
+@mixin text-title-2 {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-title-2);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-title);
+  letter-spacing: var(--letter-spacing-title);
+}
+
+@mixin text-title-3 {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-title-3);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-title);
+  letter-spacing: var(--letter-spacing-title);
+}
+
+// Body
+
+@mixin text-body-xlarge($weight: regular) {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body-xlarge);
+  font-weight: var(--font-weight-#{$weight});
+  line-height: var(--line-height-body);
+}
+
+@mixin text-body-large($weight: regular) {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body-large);
+  font-weight: var(--font-weight-#{$weight});
+  line-height: var(--line-height-body);
+}
+
+@mixin text-body-1($weight: regular) {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body-1);
+  font-weight: var(--font-weight-#{$weight});
+  line-height: var(--line-height-body);
+}
+
+@mixin text-body-2($weight: regular) {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body-2);
+  font-weight: var(--font-weight-#{$weight});
+  line-height: var(--line-height-compact);
+}
+
+@mixin text-caption($weight: regular) {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-#{$weight});
+  line-height: var(--line-height-compact);
+}
+
+// Utility
+
+@mixin text-overline {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-overline);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-compact);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-overline);
+}
+
+@mixin text-date-number {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-date-number);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-none);
+}

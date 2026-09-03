@@ -1,0 +1,95 @@
+@use 'mixins' as *;
+@use 'text-styles' as *;
+
+.drawer {
+  &_overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    background-color: var(--color-background-modal-bg);
+
+    // Vaul fades the overlay; keep it on its own compositor layer.
+    will-change: opacity;
+  }
+
+  &_content {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 41;
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    overflow: hidden;
+    background-color: var(--color-background-surface);
+    border-top-left-radius: var(--radius-3xl);
+    border-top-right-radius: var(--radius-3xl);
+    outline: none;
+
+    // Vaul slides via transform; without a layer hint the rounded full-height
+    // panel re-rasterizes every frame of the close animation.
+    will-change: transform;
+
+    @include b-up(lg) {
+      inset: var(--size-xl) var(--size-xl) var(--size-xl) auto;
+      left: auto;
+      width: 550px;
+      height: auto;
+      border-radius: var(--radius-3xl);
+    }
+  }
+
+  &_contentScreen {
+    &[data-vaul-drawer-direction='right'] {
+      inset: var(--size-2xl) var(--size-2xl) var(--size-2xl) auto;
+      left: auto;
+      width: 550px;
+      height: auto;
+      max-height: calc(100dvh - (var(--size-2xl) * 2));
+      border-radius: var(--radius-3xl);
+    }
+  }
+
+  &_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--size-xl) var(--size-xl) var(--size-lg);
+
+    @include b-up(lg) {
+      padding: var(--size-2xl);
+    }
+  }
+
+  &_title {
+    @include text-title-2;
+
+    color: var(--color-text-on-surface);
+  }
+
+  &_body {
+    flex: 1;
+    padding: 0 var(--size-xl);
+    overflow-y: auto;
+
+    @include b-up(lg) {
+      padding: 0 var(--size-2xl);
+    }
+  }
+
+  &_footer {
+    display: flex;
+    gap: var(--size-md);
+    padding: var(--size-xl) var(--size-xl);
+
+    // --shadow-navbar flipped upward for the footer edge.
+    box-shadow:
+      0 -1px 2px 0 rgb(43 51 60 / 2%),
+      0 -4px 16px 0 rgb(43 51 60 / 2%);
+
+    @include b-up(lg) {
+      padding: var(--size-xl) var(--size-2xl);
+    }
+  }
+}

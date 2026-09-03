@@ -1,0 +1,97 @@
+@use 'text-styles' as *;
+
+.hero {
+  @include text-hero;
+}
+
+.display-1 {
+  @include text-display-1;
+}
+
+.display-2 {
+  @include text-display-2;
+}
+
+.display-3 {
+  @include text-display-3;
+}
+
+.title-1 {
+  @include text-title-1;
+}
+
+.title-2 {
+  @include text-title-2;
+}
+
+.title-3 {
+  @include text-title-3;
+}
+
+.body-xlarge-regular {
+  @include text-body-xlarge;
+}
+
+.body-xlarge-medium {
+  @include text-body-xlarge(medium);
+}
+
+.body-xlarge-semibold {
+  @include text-body-xlarge(semibold);
+}
+
+.body-large-regular {
+  @include text-body-large;
+}
+
+.body-large-medium {
+  @include text-body-large(medium);
+}
+
+.body-large-semibold {
+  @include text-body-large(semibold);
+}
+
+.body-1-regular {
+  @include text-body-1;
+}
+
+.body-1-medium {
+  @include text-body-1(medium);
+}
+
+.body-1-semibold {
+  @include text-body-1(semibold);
+}
+
+.body-2-regular {
+  @include text-body-2;
+}
+
+.body-2-medium {
+  @include text-body-2(medium);
+}
+
+.body-2-semibold {
+  @include text-body-2(semibold);
+}
+
+.caption-regular {
+  @include text-caption;
+}
+
+.caption-medium {
+  @include text-caption(medium);
+}
+
+.caption-semibold {
+  @include text-caption(semibold);
+}
+
+.overline {
+  @include text-overline;
+}
+
+.date-number {
+  @include text-date-number;
+}

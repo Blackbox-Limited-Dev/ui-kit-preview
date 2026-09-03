@@ -1,0 +1,547 @@
+{
+  "season": {
+    "winter": "iarnă",
+    "summer": "vară"
+  },
+  "search": {
+    "placeholder": "Caută orice"
+  },
+  "footer": {
+    "infoLine": {
+      "label": "Linie de informații 08:30–21:00",
+      "value": "0 800 500 818"
+    },
+    "hotelBooking": {
+      "label": "Rezervări hoteluri",
+      "value": "+38 (0342) 59 11 00"
+    },
+    "support": {
+      "label": "Suport «Bukovel-24»",
+      "value": "b24@bukovel.com"
+    },
+    "allContacts": "Toate contactele",
+    "subscribe": {
+      "title": "Abonează-te și află primul despre promoții, noutăți și starea pârtiilor",
+      "placeholder": "E-mailul tău",
+      "cta": "Abonează-te",
+      "invalid": "Introdu o adresă de e-mail validă",
+      "success": "Mulțumim! Abonarea a fost înregistrată"
+    },
+    "mobileApp": "Bukovel pe smartphone-ul tău",
+    "groups": {
+      "conditions": "Reguli și condiții",
+      "company": "Companie",
+      "info": "Informații",
+      "other": "Altele"
+    },
+    "links": {
+      "hotelRules": "Reguli de rezervare a hotelurilor",
+      "purchaseRules": "Reguli de achiziție a ski-pass-urilor, închirierii, școlii de schi și aquaparcului",
+      "slopeRules": "Reguli de comportament pe pârtii",
+      "liftRules": "Reguli de utilizare a teleschiurilor",
+      "paymentSecurity": "Securitatea datelor de plată",
+      "publicInfo": "Informații publice",
+      "refunds": "Rambursarea banilor",
+      "jobs": "Cariere la Bukovel",
+      "rent": "Închiriere spații comerciale",
+      "partnership": "Parteneriat cu Bukovel",
+      "invest": "Invest Bukovel",
+      "hotelPartner": "Devino hotel partener",
+      "sustainability": "Politica de dezvoltare durabilă",
+      "blog": "Blog",
+      "news": "Noutăți",
+      "contacts": "Contacte",
+      "bus": "Bukovel Bus",
+      "parking": "Parcare",
+      "maps": "Hărțile stațiunii",
+      "insurance": "Asigurare",
+      "companyLogin": "Autentificare companie",
+      "medical": "Centru medical",
+      "emergency": "Servicii de urgență",
+      "ecology": "Starea ecologiei",
+      "faq": "Întrebări frecvente",
+      "skiSchools": "Școli de schi în Bukovel"
+    },
+    "copyright": "© {year} TOV «Bukovel»",
+    "slogan": {
+      "winter": "Ne vedem pe pârtii",
+      "summer": "Aventura ta de vară e aici"
+    }
+  },
+  "header": {
+    "actionsLabel": "Secțiuni principale",
+    "scrollBack": "Derulează înapoi",
+    "scrollForward": "Derulează înainte",
+    "nav": {
+      "profile": "Profil",
+      "cart": "Coș",
+      "favourites": "Favorite",
+      "menu": "Meniu",
+      "search": "Căutare"
+    },
+    "actions": {
+      "hotels": "Hoteluri",
+      "skipass": "Skipass",
+      "school": "Școala de schi",
+      "rentals": "Închiriere și service",
+      "mavka": "Aquapark «Mavka»",
+      "med": "Centru medical",
+      "insurance": "Asigurare",
+      "online": "Bukovel online"
+    },
+    "panels": {
+      "hotels": {
+        "links": {
+          "spa": "SPA inclus",
+          "pool": "Cu piscină",
+          "board": "Pensiune completă",
+          "kids": "Cu copii"
+        },
+        "cards": {
+          "rare": {
+            "title": "Descoperiri rare",
+            "alt": "Cort de glamping pe o platformă de lemn în Carpații verzi"
+          },
+          "hotels": {
+            "title": "Hoteluri",
+            "alt": "Căsuțe de hotel din lemn iluminate noaptea"
+          },
+          "apartments": {
+            "title": "Apartamente",
+            "alt": "Aparthotel Bukovel pe fundalul muntelui cu telescaun"
+          },
+          "chalet": {
+            "title": "Cabane chalet",
+            "alt": "Cabană din lemn printre brazi"
+          }
+        }
+      },
+      "skipass": {
+        "links": {
+          "all": "Toate skipass-urile",
+          "carriers": "Carduri suport",
+          "rules": "Reguli"
+        },
+        "priceLabel": "Preț de la",
+        "priceUnit": "/ zi",
+        "action": "Detalii: {season}",
+        "seasons": {
+          "day": {
+            "title": "Skipass pe zi",
+            "dates": ["Doar 14 februarie"],
+            "price": "400 ₴"
+          },
+          "low": {
+            "title": "Sezon redus",
+            "dates": ["22 noi - 18 dec", "17 mar - ..."],
+            "price": "1 125 ₴"
+          },
+          "high": {
+            "title": "Sezon de vârf",
+            "badge": "Acum",
+            "dates": ["19 dec - 1 ian", "7 ian - 16 mar"],
+            "price": "1 875 ₴"
+          },
+          "holiday": {
+            "title": "Sezon de sărbători",
+            "dates": ["2 - 6 ianuarie"],
+            "price": "2 225 ₴"
+          }
+        }
+      },
+      "school": {
+        "links": {
+          "skis": "Schiuri",
+          "snowboard": "Snowboard"
+        },
+        "cards": {
+          "individual": {
+            "title": "Lecții individuale",
+            "alt": "Instructor care învață o schioare pe pârtie"
+          },
+          "group": {
+            "title": "Lecții de grup",
+            "alt": "Grup de schiori cu instructor pe pârtia înzăpezită"
+          },
+          "kids": {
+            "title": "Lecții pentru copii",
+            "alt": "Instructor și copil pe schiuri arătând degetul mare ridicat"
+          }
+        }
+      },
+      "rentals": {
+        "links": {
+          "skis": "Schiuri",
+          "snowboard": "Snowboard"
+        },
+        "cards": {
+          "fullSets": {
+            "title": "Seturi complete",
+            "alt": "Schiori cu echipament complet pe pârtie"
+          },
+          "accessories": {
+            "title": "Accesorii",
+            "alt": "Schiori cu căști și ochelari înainte de coborâre"
+          }
+        }
+      },
+      "mavka": {
+        "cards": {
+          "slides": {
+            "title": "Zona toboganelor",
+            "alt": "Tobogane acvatice ale aquaparkului «Mavka»"
+          },
+          "wave": {
+            "title": "Zona bazinului\ncu valuri",
+            "alt": "Bazin cu valuri al aquaparkului «Mavka»"
+          },
+          "spa": {
+            "title": "Zona SPA",
+            "alt": "Zona SPA a aquaparkului «Mavka»"
+          },
+          "infinity": {
+            "title": "Zona Infinity",
+            "alt": "Saună din lemn a aquaparkului «Mavka», cu fereastră panoramică spre pădure"
+          }
+        }
+      },
+      "med": {
+        "cards": {
+          "emergency": {
+            "title": "Urgențe",
+            "alt": "Ambulanță în fața clădirii centrului medical"
+          },
+          "appointment": {
+            "title": "Programare",
+            "alt": "Medic al centrului medical în timpul consultației"
+          },
+          "services": {
+            "title": "Specializări",
+            "alt": "Clădirea centrului medical din Bukovel, între munți"
+          }
+        }
+      },
+      "insurance": {
+        "cards": {
+          "skiing": {
+            "title": "Schi alpin",
+            "alt": "Schior pe pârtia de schi alpin"
+          },
+          "school": {
+            "title": "Școala de schi",
+            "alt": "Lecție a școlii de schi pe pârtie"
+          },
+          "aquapark": {
+            "title": "Aquapark MAVKA",
+            "alt": "Vizitatori ai aquaparkului «Mavka»"
+          },
+          "accommodation": {
+            "title": "Cazare",
+            "alt": "Cameră de hotel în Bukovel"
+          }
+        }
+      }
+    }
+  },
+  "hotels": {
+    "breadcrumbs": {
+      "home": "Acasă",
+      "hotels": "Hoteluri",
+      "list": "Lista hotelurilor",
+      "label": "Cale de navigare"
+    },
+    "card": {
+      "stars": "{count} din 5",
+      "nights": "{count, plural, one {# noapte} few {# nopți} other {# de nopți}}",
+      "roomTypesCount": "{count, plural, one {Încă # tip de cameră} few {Încă # tipuri de camere} other {Încă # de tipuri de camere}}",
+      "favourite": "La favorite",
+      "prevPhoto": "Fotografia anterioară",
+      "nextPhoto": "Fotografia următoare"
+    },
+    "hero": {
+      "title": "Cazare în Bukovel\ncu bonusuri suplimentare",
+      "description": "Folosește avantaje exclusive: upgrade la skipass VIP, schi de seară, reduceri la aquaparcul “Mavka” și alte bonusuri de la anumite hoteluri",
+      "imageAlt": "Bukovel iarna: cabană în zăpadă lângă telescaun",
+      "datesCaption": "Datele sejurului",
+      "datesPlaceholder": "Alege datele",
+      "guestsCaption": "Număr de oaspeți",
+      "searchCta": "Caută"
+    },
+    "search": {
+      "guestsAdults": "Adulți",
+      "guestsAdultsHint": "De la 13 ani",
+      "guestsChildren": "Copii",
+      "guestsChildrenHint": "2-12 ani",
+      "guestsValue": "{adults, plural, one {# adult} few {# adulți} other {# adulți}}{children, plural, =0 {} one {, # copil} few {, # copii} other {, # copii}}",
+      "guestsDecrease": "Mai puțin: {label}",
+      "guestsIncrease": "Mai mult: {label}",
+      "apply": "Aplică",
+      "viewOptions": "Vezi opțiunile"
+    },
+    "benefits": {
+      "title": "Ce avantaje pot primi?",
+      "subtitle": "Rezervând cazarea prin site-ul nostru, oaspeții primesc bonusuri suplimentare",
+      "mavkaIconAlt": "Logoul aquaparcului “Mavka”",
+      "cards": {
+        "vip": {
+          "title": "Upgrade VIP al skipass-ului",
+          "alt": "Schior coborând pe pârtia înzăpezită din Bukovel",
+          "description": "Obține acces la avantajele schiului VIP"
+        },
+        "mavka": {
+          "title": "Reduceri la aquaparcul “Mavka”",
+          "alt": "Tobogane cu apă în aquaparcul “Mavka”",
+          "description": "Condiții speciale pentru vizitarea aquaparcului"
+        },
+        "mastercard": {
+          "title": "Mastercard și PrivatBank",
+          "alt": "Plată cu cardul în stațiunea Bukovel",
+          "description": "Ofertă exclusivă a sistemului de plăți partener"
+        },
+        "night": {
+          "title": "Schi de seară",
+          "alt": "Schi de seară pe pârtia iluminată din Bukovel",
+          "description": "Upgrade gratuit al skipass-ului cu schi de seară"
+        }
+      }
+    },
+    "carousel": {
+      "title": "Hoteluri cu bonusuri exclusive de la Bukovel",
+      "imageAlt": "Complex hotelier înzăpezit din Bukovel",
+      "prev": "Hotelurile anterioare",
+      "next": "Hotelurile următoare"
+    },
+    "compare": {
+      "title": "De ce e mai avantajos să rezervi direct prin Bukovel",
+      "mavkaIconAlt": "Logoul aquaparcului “Mavka”",
+      "cta": "Alege hotelul",
+      "chips": {
+        "vip": "Upgrade VIP al skipass-ului",
+        "mavka": "Reduceri la aquaparcul “Mavka”",
+        "mastercard": "Reduceri de la Mastercard și PrivatBank",
+        "night": "Schi de seară"
+      },
+      "rows": {
+        "bonuses": "Bonusurile stațiunii",
+        "packages": "Pachete hotel + activități",
+        "support": "Asistență oficială la fața locului",
+        "flexibility": "Condiții flexibile de modificare sau anulare"
+      },
+      "others": {
+        "title": "Pe alte\nplatforme",
+        "bonuses": "Nu există",
+        "packages": "Rar",
+        "support": "Prin intermediar",
+        "flexibility": "Imposibil"
+      },
+      "bukovel": {
+        "title": "Rezervând\npe Bukovel",
+        "bonuses": "Inclus",
+        "packages": "Inclus",
+        "support": "Direct",
+        "flexibility": "Inclus"
+      }
+    },
+    "list": {
+      "countTitle": "{count, plural, one {# hotel disponibil} few {# hoteluri disponibile} other {# hoteluri disponibile}} pentru {dates}",
+      "banner": {
+        "title": "Rezervare timpurie",
+        "description": "Reducere la toate tipurile de camere",
+        "label": "până la -20%"
+      },
+      "choice": "Alegerea Bukovel",
+      "hide": "Ascunde",
+      "sort": {
+        "recommended": "Recomandate",
+        "cheapFirst": "Întâi cele ieftine",
+        "expensiveFirst": "Întâi cele scumpe",
+        "byRating": "După popularitate",
+        "byDistance": "După distanța până la teleschiuri"
+      },
+      "tabs": {
+        "list": "Listă",
+        "map": "Hartă"
+      },
+      "filters": {
+        "title": "Filtre",
+        "show": "{count, plural, one {Arată # hotel} few {Arată # hoteluri} other {Arată # hoteluri}}",
+        "clear": "Resetează",
+        "close": "Închide",
+        "from": "De la",
+        "to": "Până la",
+        "groups": {
+          "exclusive": "Oferte exclusive",
+          "price": "Preț",
+          "type": "Tip de cazare",
+          "distance": "Distanța până la teleschiuri",
+          "payment": "Modalitate de plată",
+          "board": "Masă",
+          "perks": "Avantajele hotelului",
+          "amenities": "Facilități"
+        },
+        "options": {
+          "vipUpgrade": "Upgrade VIP al skipass-ului",
+          "freeNightSkiing": "Schi de seară gratuit",
+          "mavkaDiscount": "Reducere la aquaparcul “Mavka”",
+          "mastercardDiscount": "Reducere cu Mastercard și PrivatBank",
+          "typeHotel": "Hotel",
+          "typeChalet": "Cabană",
+          "typeApartments": "Apartamente",
+          "boardNone": "Fără masă",
+          "boardBreakfast": "Cu mic dejun",
+          "boardHalf": "Demipensiune (mic dejun + cină)",
+          "boardFull": "Pensiune completă (mic dejun + prânz + cină)",
+          "skiInOut": "Ski-in/out (acces la teleschi din hotel)",
+          "transferToLift": "Transfer disponibil până la teleschi",
+          "near200": "Aproape (până la 200 m)",
+          "walk500": "La distanță de mers pe jos (până la 500 m)",
+          "far500": "Departe (peste 500 m)",
+          "noPrepay": "Fără plată în avans",
+          "prepay": "Cu plată în avans",
+          "partialPrepay": "Plată parțială în avans",
+          "spa": "SPA în hotel",
+          "gym": "Sală de sport",
+          "playroom": "Zonă de divertisment/cameră de joacă",
+          "kidsRoom": "Cameră pentru copii",
+          "nanny": "Servicii de bonă/animator",
+          "transfer": "Transfer",
+          "bbq": "Zonă BBQ",
+          "vats": "-15% la ciubărele din Bukovel",
+          "oasisSpa": "SPA Oasis gratuit",
+          "skiRoom": "Ski room",
+          "parking": "Parcare gratuită",
+          "reception": "Recepție",
+          "tv": "TV",
+          "miniBar": "Mini bar",
+          "restaurant": "Restaurant",
+          "luggage": "Depozitare bagaje",
+          "roomService": "Room service",
+          "bikeRental": "Închiriere biciclete",
+          "pets": "Se acceptă animale (cu acordul prealabil)",
+          "inclusiveRoom": "Cameră incluzivă"
+        }
+      },
+      "pagination": {
+        "showMore": "Arată mai multe",
+        "prev": "Pagina anterioară",
+        "next": "Pagina următoare"
+      },
+      "otherDates": "Disponibil pentru alte date",
+      "selectRoom": "Alege camera",
+      "installments": "Plata în rate de la monobank",
+      "countTitleNoDates": "{count, plural, one {# hotel disponibil} few {# hoteluri disponibile} other {# hoteluri disponibile}}",
+      "filtersAria": "Deschide filtrele",
+      "guestsShort": "{adults, plural, one {# oaspete} few {# oaspeți} other {# oaspeți}}",
+      "childrenShort": "{children, plural, one {# copil} few {# copii} other {# copii}}"
+    }
+  },
+  "skiPass": {
+    "breadcrumbs": {
+      "home": "Acasă",
+      "skiPass": "Skipass-uri",
+      "label": "Traseu de navigare"
+    },
+    "meta": {
+      "title": "Skipass-uri",
+      "description": "Cumpărare rapidă pentru azi sau rezervare din timp"
+    },
+    "list": {
+      "title": "Skipass-uri",
+      "subtitle": "Cumpărare rapidă pentru azi sau rezervare din timp",
+      "dayTitle": "Skipass-uri de o zi",
+      "daySubtitle": "Valabile doar astăzi",
+      "accordionTrigger": "Arată tarifele",
+      "daysLeft": "Până la finalul sezonului {days} zile",
+      "seasonEnd": "finalul sezonului",
+      "hintTrigger": "Arată datele sezonului",
+      "hintClose": "Închide",
+      "promoBadge": "-10%",
+      "promo": "Primești 10% reducere la plata cu cardul MasterCard de la PrivatBank",
+      "usageGroup": "Mod de utilizare",
+      "usage": {
+        "consecutive": "Consecutiv",
+        "flexible": "La alegere"
+      },
+      "seasons": {
+        "high": {
+          "title": "Sezon de vârf",
+          "hint": "Când este sezonul de vârf"
+        },
+        "low": {
+          "title": "Sezon redus",
+          "hint": "Când este sezonul redus"
+        },
+        "ny": {
+          "title": "Sezon de sărbători",
+          "hint": "Când este sezonul de sărbători"
+        }
+      }
+    },
+    "dateCard": {
+      "exactTab": "Date exacte",
+      "flexibleTab": "Date flexibile",
+      "tabsGroup": "Mod de alegere a datelor",
+      "daysLabel": "Număr aproximativ de zile",
+      "decreaseDays": "Scade numărul de zile",
+      "increaseDays": "Crește numărul de zile",
+      "monthLabel": "Luna",
+      "apply": "Aplică",
+      "open": "Alegeți datele",
+      "close": "Închide",
+      "months": [
+        "Ianuarie",
+        "Februarie",
+        "Martie",
+        "Aprilie",
+        "Mai",
+        "Iunie",
+        "Iulie",
+        "August",
+        "Septembrie",
+        "Octombrie",
+        "Noiembrie",
+        "Decembrie"
+      ]
+    },
+    "links": {
+      "myPasses": "Skipass-urile și cardurile mele",
+      "rules": "Reguli de utilizare a skipass-urilor",
+      "faq": "Întrebări frecvente"
+    },
+    "brilliant": {
+      "title": "Schi nelimitat",
+      "body": "Cardul Brilliant oferă acces nelimitat la telescaune și intrare VIP fără cozi pe tot sezonul",
+      "cta": "Cumpără cardul",
+      "cardTitle": "Card de sezon Brilliant",
+      "cardSubtitle": "Intrare VIP pe tot sezonul de iarnă",
+      "cardChip": "Schi nelimitat",
+      "cardPrice": "34 850 ₴",
+      "cardAction": "Mergi la cardul de sezon Brilliant"
+    },
+    "offSeason": {
+      "title": "Skipass-urile revin odată cu prima zăpadă",
+      "subtitle": "Stațiunea trăiește și fără zăpadă: aquapark, SPA, telescaune panoramice, excursii și multe altele te așteaptă chiar acum.",
+      "remind": "Anunță-mă la startul sezonului",
+      "activities": "Vezi toate activitățile",
+      "notice": "Start estimativ al sezonului de iarnă — mijlocul lunii noiembrie",
+      "promoTitle": "Află primul când se deschid pârtiile",
+      "promoBody": "Activează notificările în aplicația Bukovel — te anunțăm imediat ce începe vânzarea skipass-urilor pentru noul sezon.",
+      "appStore": "Descarcă aplicația Bukovel din App Store",
+      "googlePlay": "Descarcă aplicația Bukovel din Google Play",
+      "promoPhotoAlt": "Aplicația Bukovel pe ecranul unui smartphone"
+    },
+    "pdp": {
+      "descriptionTitle": "Descriere",
+      "deliveryTitle": "Livrare și activare",
+      "faqTitle": "Întrebări frecvente",
+      "locationTitle": "Locație",
+      "route": "Trasează ruta",
+      "copyAddress": "Copiază adresa",
+      "open": "Deschis",
+      "closed": "Închis",
+      "cta": "Comandă",
+      "tariffs": "Tarif",
+      "favourite": "Adaugă la favorite"
+    }
+  }
+}

@@ -1,0 +1,77 @@
+@use 'text-styles' as *;
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-sm);
+}
+
+.row {
+  display: flex;
+  gap: var(--size-sm);
+}
+
+.cell {
+  @include text-body-1(regular);
+
+  position: relative;
+  display: flex;
+  flex: 1 1 0;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 52px;
+  padding: var(--size-md);
+  color: var(--color-input-text);
+  background-color: var(--color-input-bg);
+  border: 1px solid var(--color-input-stroke);
+  border-radius: var(--radius-md);
+  transition: border-color 0.15s ease;
+
+  &_active {
+    border-color: var(--color-input-stroke-active);
+  }
+
+  &_error {
+    border-color: var(--color-accents-danger-text);
+  }
+
+  &_disabled {
+    color: var(--color-input-text-disabled);
+    background-color: var(--color-input-bg-disabled);
+  }
+}
+
+// The real input is visually hidden by input-otp, so the caret is drawn here.
+.caret {
+  position: absolute;
+  width: 1px;
+  height: 24px;
+  background-color: var(--color-input-text);
+  animation: caret-blink 1s steps(1) infinite;
+}
+
+.message {
+  @include text-body-2(regular);
+
+  margin: 0;
+  color: var(--color-accents-danger-text);
+}
+
+@keyframes caret-blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .caret {
+    animation: none;
+  }
+}

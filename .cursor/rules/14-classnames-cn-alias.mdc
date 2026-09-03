@@ -1,0 +1,56 @@
+---
+description: Always alias the `classnames` library as `cn` and use it for every class-composition site. Bans template literals and `.join(' ')` for class strings. Includes the canonical call pattern.
+globs: src/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# classnames `cn` Alias
+
+`classnames` is the only allowed class-composition helper in this repo. Always import it under the alias `cn` and call it directly wherever more than one class is composed — including the single-class case where a conditional or merged `className` prop is involved.
+
+## Canonical pattern
+
+```tsx
+import cn from 'classnames'
+
+import s from './AppHeader.module.scss'
+
+export const AppHeader = ({ isActive, className }: Props) => (
+  <header className={cn(s.header, 'container', { [s.active]: isActive }, className)}>
+    …
+  </header>
+)
+```
+
+What that example demonstrates:
+
+1. **Default import aliased as `cn`** — `import cn from 'classnames'`.
+2. **SCSS module imported as `s`** — short alias keeps call sites compact when many classes compose. Other repo conventions (`styles`) are acceptable, but `s` is preferred for components with several class composition sites.
+3. **Positional args for unconditional classes** — `s.header`, `'container'` (a global class).
+4. **Object form for conditional classes** — `{ [s.active]: isActive }`. The key is the class string, the value is the boolean toggle. Computed keys for module classes; bare string keys for global classes.
+5. **Forwarded `className` last** — so consumer overrides win when conflicts merge alphabetically.
+
+## Hard rules
+
+- **No template literals for class strings.** ❌ `` className={`${styles.root} ${className}`} `` → ✅ `className={cn(styles.root, className)}`.
+- **No array `.join(' ')`.** ❌ `[a, b].join(' ')` → ✅ `cn(a, b)`.
+- **No manual string concatenation.** ❌ `styles.root + (active ? ' ' + styles.active : '')` → ✅ `cn(styles.root, { [styles.active]: active })`.
+- **No ternaries for class toggles.** ❌ `isActive ? styles.active : ''` → ✅ `{ [styles.active]: isActive }` inside `cn(...)`.
+- **`cn` not `classNames` / `clsx` / `c`.** Other aliases break grep and codemods.
+- **Always pass forwarded `className` last** in the `cn(...)` call. Order doesn't change rendering, but consistency makes diffs and reviews easier.
+
+## When `cn` is overkill
+
+Single static class string — call without `cn`:
+
+```tsx
+<button className={s.root}>…</button>
+```
+
+The moment a second class, a conditional, or a forwarded `className` appears, switch to `cn`.
+
+## Don't reach for `clsx`
+
+`classnames` is already a dependency. Don't install `clsx` even though the APIs are nearly identical — extra dep, no gain.
+
+If you need merge-aware composition (Tailwind-style conflict resolution), bring it up with the user before adding anything. This project is SCSS-module-first, so the standard `cn` covers the common cases.

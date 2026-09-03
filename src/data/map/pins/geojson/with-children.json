@@ -1,0 +1,52 @@
+{
+  "type": "FeatureCollection",
+  "name": "З дітьми",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "bkv-023",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.3913, 48.3602]
+      },
+      "properties": {
+        "id": "bkv-023",
+        "name": "Етно парк «Гуцул Ленд»",
+        "subcategory": "Сімейні розваги",
+        "description": "Етнопарк «Гуцул Ленд» — за озером Молодості. Інтерактивний музей побуту гуцулів, бойків і лемків: автентичні хати ХІХ ст., сироварня, ткацький верстат, гуцульське весілля, контактний зоопарк, арт-галерея «Скриня», найвище колесо огляду в Україні.",
+        "services": "Музей, майстер-класи, контактний зоопарк, колесо огляду, кінні прогулянки",
+        "hours": "Щодня 10:00–18:30",
+        "website": "Сайт",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%95%D1%82%D0%BD%D0%BE%20%D0%BF%D0%B0%D1%80%D0%BA%20%C2%AB%D0%93%D1%83%D1%86%D1%83%D0%BB%20%D0%9B%D0%B5%D0%BD%D0%B4%C2%BB%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "xlsx",
+        "category": "with-children",
+        "categoryLabel": "З дітьми",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-036",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.408153, 48.3599704]
+      },
+      "properties": {
+        "id": "bkv-036",
+        "name": "Лео парк",
+        "subcategory": "Сімейні розваги",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%9B%D0%B5%D0%BE%20%D0%BF%D0%B0%D1%80%D0%BA%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "with-children",
+        "categoryLabel": "З дітьми",
+        "seasons": ["all"]
+      }
+    }
+  ]
+}

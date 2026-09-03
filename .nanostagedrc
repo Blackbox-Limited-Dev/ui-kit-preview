@@ -1,0 +1,14 @@
+{
+  "*.{js,jsx,ts,tsx,json}": [
+    "node scripts/eslint-staged.mjs"
+  ],
+  "*.{css,scss}": [
+    "stylelint --allow-empty-input"
+  ],
+  "*.module.scss": [
+    "node scripts/check-scss-nesting.mjs"
+  ],
+  "*.{md,mdx}": [
+    "prettier --write"
+  ]
+}

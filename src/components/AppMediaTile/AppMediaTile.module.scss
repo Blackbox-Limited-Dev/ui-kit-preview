@@ -1,0 +1,44 @@
+@use 'text-styles' as *;
+@use 'mixins' as *;
+
+// The bottom fade ends on a near-black that has no design token yet — raise it
+// with design before reusing it anywhere else.
+$fade-end: #0d1c27;
+
+.root {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-3xl);
+
+  @include b-d(lg) {
+    border-radius: var(--radius-2xl);
+  }
+
+  &_image {
+    object-fit: cover;
+  }
+
+  &_overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgb(0 0 0 / 0%) 0%, rgb(0 0 0 / 100%) 100%);
+  }
+
+  &_fade {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 125px;
+    background: linear-gradient(rgb(0 0 0 / 0%) 0%, $fade-end 100%);
+  }
+
+  &_caption {
+    @include text-title-2;
+
+    position: absolute;
+    bottom: var(--size-xl);
+    left: var(--size-xl);
+    color: #fff;
+  }
+}

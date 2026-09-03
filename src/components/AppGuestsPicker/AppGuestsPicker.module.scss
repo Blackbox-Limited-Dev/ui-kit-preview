@@ -1,0 +1,35 @@
+@use 'text-styles' as *;
+
+.picker {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-lg);
+
+  &_row {
+    display: flex;
+    gap: var(--size-lg);
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &_labels {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_label {
+    @include text-body-1(semibold);
+
+    color: var(--color-text-on-card);
+  }
+
+  &_hint {
+    @include text-caption;
+
+    color: var(--color-text-disabled);
+  }
+
+  &_stepper {
+    flex-shrink: 0;
+  }
+}

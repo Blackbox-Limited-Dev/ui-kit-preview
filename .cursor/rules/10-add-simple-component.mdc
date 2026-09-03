@@ -1,0 +1,183 @@
+---
+description: How to add a simple (single-root, theme-aware) Next.js component — AppButton, AppInput, AppText, AppCard, AppBadge, etc.
+globs: src/components/**/*.{ts,tsx,scss}
+alwaysApply: false
+---
+
+# How to add a simple component
+
+Pattern: theme-aware, single root element. Use this for `AppButton`, `AppInput`, `AppText`, `AppCard`, `AppBadge`, `AppIcon`, etc.
+
+Every design-system component is prefixed `App` (see AGENTS.md Part 2 — Conventions). Examples below use `AppButton` as the canonical case; substitute `App<Name>` for your component.
+
+## Step-by-step
+
+1. Create `src/components/App<Name>/`:
+
+   ```
+   src/components/App<Name>/
+   ├── index.tsx
+   ├── App<Name>.module.scss
+   ├── App<Name>.types.ts
+   ├── App<Name>.stories.tsx
+   ├── README.md
+   └── assets/                 ← only if the component has colocated SVGs
+   ```
+
+2. Define props in `App<Name>.types.ts`. Always accept `className` on the root for downstream styling:
+
+   ```ts
+   import type { ButtonHTMLAttributes, ReactNode } from 'react'
+
+   export type AppButtonVariant = 'primary' | 'secondary' | 'ghost'
+   export type AppButtonSize = 'small' | 'medium' | 'large'
+
+   export type AppButtonProps = {
+     variant?: AppButtonVariant
+     size?: AppButtonSize
+     isLoading?: boolean
+     children: ReactNode
+     className?: string
+   } & ButtonHTMLAttributes<HTMLButtonElement>
+   ```
+
+3. Write styles in `App<Name>.module.scss`. **Never** hardcode hex, raw spacing, raw radii, or raw breakpoints — always go through tokens. Reference `src/styles/settings.scss` and the breakpoint mixins in `src/styles/mixins.scss`:
+
+   ```scss
+   @import 'mixins';
+
+   .root {
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     padding: var(--size-sm) var(--size-md);
+     font-family: var(--font-family-base);
+     font-size: var(--font-size-md);
+     font-weight: var(--font-weight-semibold);
+     line-height: var(--line-height-tight);
+     color: var(--color-text-on-primary);
+     background-color: var(--color-primary);
+     border: none;
+     border-radius: var(--radius-md);
+     cursor: pointer;
+     transition: background-color 0.15s ease;
+
+     @media (hover: hover) {
+       &:hover {
+         background-color: var(--color-primary-hover);
+       }
+     }
+
+     &:focus-visible {
+       outline: 2px solid var(--color-focus-ring);
+       outline-offset: 2px;
+     }
+
+     &:active {
+       background-color: var(--color-primary-pressed);
+     }
+
+     &[disabled],
+     &[aria-disabled='true'] {
+       cursor: not-allowed;
+       opacity: 0.5;
+     }
+
+     @include b-up(md) {
+       padding: var(--size-md) var(--size-lg);
+     }
+   }
+
+   .secondary {
+     color: var(--color-text);
+     background-color: var(--color-bg-elevated);
+   }
+
+   .ghost {
+     color: var(--color-text);
+     background-color: transparent;
+   }
+
+   .small {
+     padding: var(--size-xs) var(--size-sm);
+     font-size: var(--font-size-sm);
+   }
+
+   .large {
+     padding: var(--size-md) var(--size-xl);
+     font-size: var(--font-size-lg);
+   }
+   ```
+
+   Single-root design-system components keep `.root` plus flat variant classes as above. **Multi-element modules** (feature/layout components like `Footer`, or any module with child elements) use `&_` nesting instead: name the block after the component and nest every child class as `&_element` — `.footer { &_card { … } }` compiles to `.footer_card`, consumed as `s.footer_card`.
+
+4. Implement `index.tsx` as an **arrow-function component** (enforced by ESLint). Use `classnames` aliased as `cn` (rule 14):
+
+   ```tsx
+   import cn from 'classnames'
+
+   import s from './AppButton.module.scss'
+
+   import type { AppButtonProps } from './AppButton.types'
+
+   export const AppButton = ({
+     variant = 'primary',
+     size = 'medium',
+     isLoading = false,
+     disabled,
+     className,
+     children,
+     ...rest
+   }: AppButtonProps) => (
+     <button
+       type="button"
+       className={cn(s.root, s[variant], s[size], className)}
+       disabled={disabled || isLoading}
+       aria-busy={isLoading || undefined}
+       {...rest}
+     >
+       {children}
+     </button>
+   )
+   ```
+
+5. Stories in `App<Name>.stories.tsx` (CSF3, types from `@storybook/nextjs-vite`). The Storybook title path mirrors the component name — `Components/App<Name>`.
+
+   ```tsx
+   import type { Meta, StoryObj } from '@storybook/nextjs-vite'
+
+   import { AppButton } from '.'
+
+   const meta = {
+     title: 'Components/AppButton',
+     component: AppButton,
+     args: { children: 'Primary action' },
+   } satisfies Meta<typeof AppButton>
+
+   export default meta
+   type Story = StoryObj<typeof meta>
+
+   export const Primary: Story = {}
+   export const Secondary: Story = { args: { variant: 'secondary' } }
+   export const Disabled: Story = { args: { disabled: true } }
+   export const Loading: Story = { args: { isLoading: true } }
+   ```
+
+6. Export from `src/components/index.ts` so consumers can do `import { AppButton } from '~components'`:
+
+   ```ts
+   export { AppButton } from './AppButton'
+   export type {
+     AppButtonProps,
+     AppButtonVariant,
+     AppButtonSize,
+   } from './AppButton/AppButton.types'
+   ```
+
+7. Add the component to the in-app showcase:
+   - Append an entry to the catalog used by `src/app/showcase/page.tsx` (list + search). Use `status: 'available'` plus a stable `slug` — slugs stay unprefixed (`button`, `icon`, `modal`) for URL readability; the `name` field holds the full `App<Name>` identifier.
+   - Create `src/app/showcase/<slug>/page.tsx` rendering each variant + state for visual inspection. Keep it minimal: section per variant, section per state.
+
+8. Write `README.md` per the template in `05-quality-checks.mdc`. Heading is `App<Name>`.
+
+9. Run `npm run lint` and verify the new files have zero warnings before handing off.

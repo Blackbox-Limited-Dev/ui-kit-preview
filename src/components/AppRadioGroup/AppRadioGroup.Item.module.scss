@@ -1,0 +1,70 @@
+@use 'text-styles' as *;
+
+.row {
+  display: inline-flex;
+  gap: var(--size-md);
+  align-items: center;
+}
+
+// Ring, gap and dot are three stacked inset shadows on one box rather than a
+// bordered box holding a child. Element boxes snap to whole device pixels, so
+// at a fractional pixel ratio a 12px child inside a 24px parent snaps to a
+// different phase than its parent and lands a device pixel off centre; shadows
+// painted inside a single box share that box's rounding and stay concentric.
+.control {
+  display: block;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  cursor: pointer;
+  background-color: var(--color-background-surface);
+  border: 0;
+  border-radius: var(--radius-pill);
+  box-shadow: inset 0 0 0 2px var(--color-stroke-on-surface);
+
+  &:focus-visible {
+    outline: 2px solid var(--color-interactive-primary);
+    outline-offset: 2px;
+  }
+
+  &[data-state='checked'] {
+    box-shadow:
+      inset 0 0 0 2px var(--color-interactive-primary),
+      inset 0 0 0 6px var(--color-background-surface),
+      inset 0 0 0 12px var(--color-interactive-primary);
+  }
+
+  &[data-disabled] {
+    cursor: not-allowed;
+    background-color: var(--color-input-bg-disabled);
+    box-shadow: none;
+  }
+
+  // No token sits between icon-disabled and the disabled background, so the
+  // lighter dot is mixed from the two.
+  &[data-disabled][data-state='checked'] {
+    box-shadow:
+      inset 0 0 0 6px var(--color-input-bg-disabled),
+      inset 0 0 0 12px
+        color-mix(
+          in srgb,
+          var(--color-icon-disabled) 50%,
+          var(--color-input-bg-disabled)
+        );
+  }
+}
+
+.text {
+  @include text-body-1(regular);
+
+  color: var(--color-text-on-surface);
+  cursor: pointer;
+}
+
+.disabled {
+  .text {
+    color: var(--color-text-disabled);
+    cursor: not-allowed;
+  }
+}

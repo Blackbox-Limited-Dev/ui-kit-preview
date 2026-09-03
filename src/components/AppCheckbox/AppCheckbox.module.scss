@@ -1,0 +1,63 @@
+@use 'text-styles' as *;
+
+.row {
+  display: inline-flex;
+  gap: var(--size-md);
+  align-items: center;
+}
+
+// The checked and disabled states drop the border so the indicator's 24×24
+// viewBox maps 1:1 onto the box — `border-box` would otherwise shrink the
+// content area to 20×20 and shift the checkmark.
+.control {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  cursor: pointer;
+  background-color: var(--color-background-surface);
+  border: 2px solid var(--color-stroke-on-surface);
+  border-radius: var(--radius-xs);
+
+  &:focus-visible {
+    outline: 2px solid var(--color-interactive-primary);
+    outline-offset: 2px;
+  }
+
+  &[data-state='checked'] {
+    background-color: var(--color-interactive-primary);
+    border: 0;
+  }
+
+  &[data-disabled] {
+    cursor: not-allowed;
+    background-color: var(--color-input-bg-disabled);
+    border: 0;
+  }
+}
+
+.indicator {
+  display: flex;
+  color: var(--color-icon-on-primary);
+
+  &[data-disabled] {
+    color: var(--color-icon-disabled);
+  }
+}
+
+.text {
+  @include text-body-1(regular);
+
+  color: var(--color-text-on-surface);
+  cursor: pointer;
+}
+
+.disabled {
+  .text {
+    color: var(--color-text-disabled);
+    cursor: not-allowed;
+  }
+}

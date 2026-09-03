@@ -1,0 +1,177 @@
+@use 'text-styles' as *;
+
+.root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-lg);
+  justify-content: space-between;
+  height: 200px;
+  padding: 20px;
+  overflow: hidden;
+  color: var(--color-text-on-surface);
+  background-color: var(--app-season-card-bg);
+  border: 2px solid rgb(255 255 255 / 20%);
+  border-radius: var(--radius-2xl);
+}
+
+.decor {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.decorMain,
+.decorSatellite,
+.decorSatelliteAlt {
+  position: absolute;
+}
+
+.decorMain {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.neutral {
+  --app-season-card-bg: var(--color-season-neutral);
+}
+
+.low {
+  --app-season-card-bg: var(--color-season-low);
+
+  .decorSatellite {
+    top: 16px;
+    right: -39px;
+  }
+
+  .decorSatelliteAlt {
+    bottom: 13px;
+    left: -39px;
+  }
+}
+
+.high {
+  --app-season-card-bg: var(--color-season-high);
+
+  // The high-season card is the one variant drawn without the inner stroke.
+  border-color: transparent;
+
+  // The outer two hang off both edges symmetrically, so the trio reads as one
+  // centred row.
+  .decorSatellite,
+  .decorSatelliteAlt {
+    top: 50%;
+    left: 50%;
+  }
+
+  .decorSatellite {
+    transform: translate(calc(-50% - 206px), -50%);
+  }
+
+  .decorSatelliteAlt {
+    transform: translate(calc(-50% + 206px), -50%);
+  }
+}
+
+.holiday {
+  --app-season-card-bg: var(--color-season-ny);
+
+  .decorSatellite {
+    top: -47px;
+    right: -140px;
+  }
+
+  .decorSatelliteAlt {
+    bottom: -47px;
+    left: -140px;
+  }
+}
+
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-xs);
+}
+
+.titleRow {
+  display: flex;
+  gap: var(--size-sm);
+  align-items: center;
+}
+
+.title {
+  @include text-body-xlarge(medium);
+
+  // Figma overrides the body-xlarge line-height on the card title: 28px.
+  line-height: 28px;
+}
+
+.badge {
+  @include text-caption(medium);
+
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  padding: 2px var(--size-sm);
+  color: var(--color-labels-text-on-label);
+  background-color: var(--color-labels-purple);
+  border-radius: var(--radius-pill);
+}
+
+.dates {
+  @include text-body-2(regular);
+
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin: 0;
+  color: var(--color-text-on-surface-subtle);
+}
+
+.datesSeparator {
+  width: 3px;
+  height: 3px;
+  background-color: currentcolor;
+  border-radius: 50%;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  gap: var(--size-sm);
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.priceLabel {
+  @include text-caption(regular);
+
+  color: var(--color-text-on-surface-subtle);
+}
+
+.priceValue {
+  display: flex;
+  gap: 6px;
+  align-items: baseline;
+}
+
+.priceAmount {
+  @include text-title-2;
+
+  // Figma overrides the title-2 line-height on the price: 32px.
+  line-height: 32px;
+}
+
+.priceUnit {
+  @include text-body-2(regular);
+
+  color: var(--color-text-on-surface-subtle);
+}

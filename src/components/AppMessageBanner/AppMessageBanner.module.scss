@@ -1,0 +1,71 @@
+@use 'text-styles' as *;
+
+.root {
+  display: flex;
+  gap: var(--size-md);
+  align-items: center;
+  padding: var(--size-lg);
+  border-radius: var(--radius-lg);
+
+  &_icon {
+    flex: none;
+  }
+
+  &_text {
+    margin: 0;
+  }
+
+  &_action {
+    flex: none;
+    margin-left: auto;
+  }
+
+  &.start {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  &.center {
+    justify-content: center;
+    text-align: center;
+  }
+
+  &.sizeSm &_text {
+    @include text-body-2(semibold);
+  }
+
+  &.sizeMd &_text {
+    @include text-body-1;
+  }
+
+  &.sizeMdCondensed &_text {
+    @include text-body-1;
+
+    line-height: 1.1;
+  }
+
+  &.secondary {
+    gap: 10px;
+    color: var(--color-text-interactive);
+    background-color: var(--color-interactive-secondary);
+  }
+
+  &.secondary.sizeSm &_text {
+    @include text-body-2;
+  }
+
+  &.info {
+    color: var(--color-labels-blue);
+    background-color: var(--color-background-bg-on-surface);
+  }
+
+  &.white {
+    color: var(--color-labels-blue);
+    background-color: var(--color-background-surface);
+  }
+
+  &.danger {
+    color: var(--color-accents-danger-text);
+    background-color: var(--color-background-surface-attention);
+  }
+}

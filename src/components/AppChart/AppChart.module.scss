@@ -1,0 +1,20 @@
+.root {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--color-background-surface);
+  border: 1px solid var(--color-stroke-on-surface);
+  border-radius: var(--radius-md);
+}
+
+.host {
+  position: absolute;
+  inset: 0;
+}
+
+.status {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  color: var(--color-text-on-surface-subtle);
+}

@@ -1,0 +1,193 @@
+---
+description: Quality checks and consistency guardrails. Run when creating or updating any component. Covers missing states, token misuse, prop consistency, accessibility, and handoff questions.
+globs: src/components/**/*.{ts,tsx,scss}
+alwaysApply: false
+---
+
+# Quality & Consistency Checks
+
+## Before Completing Any Component Build
+
+Run this checklist and flag any issue to the user before marking a task done.
+
+### Token Check
+
+- [ ] Zero hardcoded hex values in component SCSS — colors via CSS custom properties (`var(--color-primary)`) or SCSS mirrors (`$primary`) declared in `src/styles/settings.scss`
+- [ ] Zero raw spacing pixel values — use `var(--size-*)` / SCSS mirrors, or compose via `rem`/`em` scale
+- [ ] Zero raw border-radius values — use shared radius tokens
+- [ ] Zero raw breakpoint values in `@media` queries — use the `b-up` / `b-d` / `b-btw` / `b-o` mixins from `src/styles/mixins.scss` (they read the `$breakpoints` map)
+- [ ] No `darken()` / `lighten()` / `rgba()` calls against `var(--...)` — color functions need SCSS values, so use the SCSS mirror (`$primary`) not the CSS variable
+- [ ] Font sizes/families/weights via tokens (`--font-*`, `$font-*`) — never literal numbers in component SCSS
+
+### State Completeness
+
+Check if these states exist in the Figma design AND in code. Flag any that are missing from either.
+
+- Default / rest
+- Hover — all interactive elements (desktop only — gate with `@media (hover: hover)`)
+- Focus / focus-visible — all interactive elements (keyboard reachable)
+- Pressed / active — all interactive elements
+- Disabled — interactive elements (`disabled` for native controls, `aria-disabled="true"` for custom)
+- Loading / busy — elements that trigger async (`aria-busy="true"`)
+- Error — inputs, forms, data displays
+- Empty — lists, data displays
+- Read-only — form fields where applicable
+
+**Flag example**: "The Figma component has no error state for `AppInput`. Should I build it with a red border and error message below as the default, or add it to Figma first?"
+
+### Merging Check
+
+If two components being built are structurally identical with minor style differences, flag it:
+
+"`AppComponentA` and `AppComponentB` appear to be the same component with different visual styles. Recommend merging into one component with a `variant` prop. Agree?"
+
+### Multi-Theme Readiness
+
+Project ships at least `summer` (default) and `winter` themes — and must be ready for more. Theme is selected via `<html data-theme="summer">` (see `src/styles/settings.scss`). Apply these rules in every component:
+
+- All colors must resolve via CSS custom properties so the component automatically restyles when `data-theme` changes
+- If a color literally cannot change between themes, it still goes through a named token — never hardcode
+- Test rendered output under at least both existing themes before marking the task done
+
+### Multi-Language Text Stress
+
+For any component that contains text:
+
+1. Does it handle text that is ~2× longer without breaking layout?
+2. Does it handle text that wraps to 2 lines without breaking layout?
+
+Apply unconditionally:
+
+- No fixed `width` / `height` on text containers. Use `min-width` / `min-height` if a minimum is required.
+- Allow wrapping unless the design explicitly says "single line only" — in which case use `white-space: nowrap; overflow: hidden; text-overflow: ellipsis;` and a tooltip if context is lost.
+- Icon + label rows: label flexes, icon pinned with `flex-shrink: 0`.
+- Avoid `position: absolute` for text labels — they overflow in long languages.
+
+If not handled, raise: "The `App[Name]` label breaks with longer text. Should I (1) truncate with ellipsis, or (2) allow wrapping and adjust the layout?"
+
+### Accessibility
+
+- Prefer semantic HTML first (`<button>`, `<a>`, `<input>`, `<nav>`, `<dialog>`). ARIA only when no native element fits.
+- All interactive elements reachable via keyboard. Visible focus indicator (no `outline: none` without a replacement).
+- Buttons activate on Enter and Space. Links activate on Enter.
+- `aria-label` on icon-only buttons. `aria-describedby` for error/help text on inputs. `aria-disabled`, `aria-busy`, `aria-selected`, `aria-expanded` where applicable.
+- Decorative icons: `aria-hidden="true"` and no accessible name.
+- Color contrast: minimum 4.5:1 for body text, 3:1 for large text and interactive boundaries — under every theme.
+
+### Props Consistency
+
+Props that appear in more than one component must use identical names and types:
+
+```
+disabled: boolean         (use native `disabled` for native controls; `aria-disabled` for custom widgets)
+isLoading: boolean        (not: loading, pending, busy)
+onClick: () => void       (not: onPress, onTap)
+variant: string union     (not: type, kind, mode)
+size: 'small' | 'medium' | 'large'   (use full names, not abbreviations)
+className?: string        (always accepted on the root element)
+```
+
+If an existing component uses the wrong naming, flag it:
+
+"I noticed `AppComponentX` uses `onTap` but the convention is `onClick`. Should I fix it now or log it as a TODO?"
+
+### className Composition
+
+`classnames` is the only allowed class-composition helper. See `14-classnames-cn-alias.mdc` for the full rule — quick recap:
+
+```tsx
+import cn from 'classnames'
+
+<div className={cn(s.base, 'container', { [s.disabled]: disabled }, className)} />
+```
+
+No template literals. No `.join(' ')`. No ternaries for class toggles — use the object form.
+
+---
+
+## Compound Component Pattern
+
+Use the compound pattern (subcomponent files + context) when:
+
+- The component has 3 or more meaningfully separate slots (e.g. `AppModal`: header, body, footer)
+- Sub-parts need independent props
+- Sub-parts may be omitted, reordered, or reused elsewhere
+
+Follow AGENTS.md and the `11-add-compound-component.mdc` rule. Example:
+
+```tsx
+<AppModal>
+  <AppModal.Header title="Confirm booking" onClose={close} />
+  <AppModal.Body>...</AppModal.Body>
+  <AppModal.Footer>
+    <AppButton variant="primary" onClick={confirm}>Confirm</AppButton>
+  </AppModal.Footer>
+</AppModal>
+```
+
+File structure for compound components:
+
+```
+AppModal/
+├── index.tsx                 ← root, owns state, renders Context.Provider, attaches subcomponents
+├── AppModal.Header.tsx
+├── AppModal.Body.tsx
+├── AppModal.Footer.tsx
+├── AppModal.context.ts       ← Context + useAppModalContext()
+├── AppModal.types.ts
+├── AppModal.module.scss      ← root + shared styles
+├── AppModal.Header.module.scss
+├── AppModal.Body.module.scss
+├── AppModal.Footer.module.scss
+├── AppModal.stories.tsx
+└── assets/                   ← only if colocated SVGs are needed
+```
+
+---
+
+## Figma Mismatch Detection
+
+When building from a Figma link, flag every discrepancy:
+
+- **Unmapped colour**: "Figma uses #XXXXXX which has no matching CSS variable. Closest: `var(--color-primary)`. Use that, or add a new token in `src/styles/settings.scss`?"
+- **Unmapped typography**: "Figma uses 15px / weight 600, which is not in the type scale. Closest: `--font-size-medium` + `--font-weight-semibold`. Use that, or add a new size?"
+- **Off-grid spacing**: "Figma has 10px padding here, which is not on the spacing scale. Round to the nearest token?"
+- **Missing corner radius**: "This object has no corner radius applied in Figma. It may be missing — please update it in Figma and let me know when it's ready."
+- **Raw pixel radius**: "This object has a raw `[X]px` corner radius instead of a named token. Nearest match: `var(--radius-Y)`. Use that, or update it in Figma first?"
+- **Off-breakpoint media query**: "Figma frame width `[X]px` is not in the `$breakpoints` map. Round to nearest breakpoint or add a new one?"
+
+Never silently round or invent a value. Always ask before proceeding.
+
+---
+
+## README Requirement
+
+Every component folder must contain a `README.md` before the task is considered complete. Create it automatically if missing.
+
+Minimum structure:
+
+```md
+# App<Name>
+
+One-sentence description of purpose.
+
+## Variants
+
+| Variant | Description |
+|---------|-------------|
+| primary | … |
+
+## States
+
+| State    | Prop                  | Default |
+|----------|-----------------------|---------|
+| Default  | —                     | —       |
+| Disabled | `disabled={true}`     | false   |
+| Loading  | `isLoading={true}`    | false   |
+
+## Usage
+
+\`\`\`tsx
+<App<Name> variant="primary" onClick={() => {}} />
+\`\`\`
+```

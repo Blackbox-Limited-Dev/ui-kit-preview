@@ -1,0 +1,87 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+
+  // On the universal selector, not html/body — iOS Safari applies the
+  // highlight per element and ignores the inherited value.
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  -webkit-overflow-scrolling: touch;
+
+  // Mozilla Firefox
+  scrollbar-width: thin;
+  scrollbar-color: #ced4da transparent;
+}
+
+body {
+  min-width: 360px;
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text-on-surface);
+  background: var(--color-background-surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Styled scrollbar
+::-webkit-scrollbar {
+  width: 8px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ced4da;
+  border-radius: 5px;
+
+  &:hover {
+    background: #adb5bd;
+  }
+}
+
+// Drop autofill
+input:-webkit-autofill {
+  &,
+  &:active,
+  &:hover,
+  &:focus {
+    transition: background-color 5000000s ease-in-out 0s;
+  }
+}
+
+::selection {
+  background: color-mix(
+    in srgb,
+    var(--color-interactive-primary) 30%,
+    transparent
+  );
+}
+
+[type='search']::-webkit-search-decoration,
+[type='search']::-webkit-search-cancel-button,
+[type='search']::-webkit-search-results-button,
+[type='search']::-webkit-search-results-decoration {
+  appearance: none;
+}
+
+a {
+  transition: color 200ms;
+}
+
+.js-off-canvas-overlay {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  display: block;
+}

@@ -1,0 +1,63 @@
+@use 'text-styles' as *;
+
+.qty {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+  padding: 4px;
+  background-color: var(--color-background-bg-on-surface);
+  border-radius: var(--radius-pill);
+
+  &_button {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    color: var(--color-icon-on-card);
+    cursor: pointer;
+    background-color: var(--color-background-bg-card);
+    border: none;
+    border-radius: var(--radius-pill);
+    transition: background-color 0.15s ease;
+
+    @media (hover: hover) {
+      &:hover:not(:disabled) {
+        background-color: var(--color-background-bg-card-pressed);
+      }
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-interactive-primary);
+      outline-offset: 2px;
+    }
+
+    &:disabled {
+      cursor: default;
+      opacity: 0.5;
+    }
+
+    &:active:not(:disabled) {
+      background-color: var(--color-background-bg-card-pressed);
+    }
+  }
+
+  &_count {
+    @include text-body-1(medium);
+
+    min-width: 22px;
+    color: var(--color-text-on-card);
+    text-align: center;
+  }
+
+  &_disabled {
+    opacity: 0.5;
+
+    // Figma dims the disabled control once; keep at-limit buttons from stacking.
+    .qty_button:disabled {
+      opacity: 1;
+    }
+  }
+}

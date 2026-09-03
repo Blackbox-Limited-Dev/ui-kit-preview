@@ -1,0 +1,215 @@
+@use 'mixins' as *;
+@use 'text-styles' as *;
+
+.card {
+  position: relative;
+  display: flex;
+  background-color: var(--color-background-bg-card);
+
+  &_gallery {
+    flex-shrink: 0;
+  }
+
+  &_title {
+    @include text-title-2;
+
+    color: var(--color-text-on-card);
+  }
+
+  &_distance {
+    @include text-body-2(semibold);
+
+    display: flex;
+    gap: var(--size-xs);
+    align-items: center;
+    color: color-mix(in srgb, var(--color-text-on-card) 72%, transparent);
+  }
+
+  &_distance_icon {
+    color: var(--color-icon-on-card);
+  }
+
+  &_room {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-xs);
+  }
+
+  &_room_type {
+    @include text-body-1(semibold);
+
+    color: var(--color-text-on-card);
+  }
+
+  &_room_count {
+    @include text-body-2;
+
+    color: color-mix(in srgb, var(--color-text-on-card) 72%, transparent);
+  }
+
+  &_labels {
+    display: flex;
+    gap: 6px;
+    overflow: hidden;
+
+    > * {
+      flex-shrink: 0;
+    }
+  }
+
+  &_price {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-xs);
+  }
+
+  &_price_caption {
+    @include text-body-2;
+
+    color: color-mix(in srgb, var(--color-text-on-card) 72%, transparent);
+  }
+
+  &_price_row {
+    display: flex;
+    gap: var(--size-xs);
+    align-items: baseline;
+  }
+
+  &_price_value {
+    @include text-title-2;
+
+    color: var(--color-text-on-card);
+  }
+
+  &_price_old {
+    @include text-body-2;
+
+    color: color-mix(in srgb, var(--color-text-on-card) 72%, transparent);
+    text-decoration: line-through;
+  }
+
+  &_installments {
+    display: flex;
+    gap: var(--size-md);
+    align-items: center;
+  }
+
+  &_installments_caption {
+    @include text-caption;
+
+    line-height: 14px;
+    color: color-mix(in srgb, var(--color-text-on-card) 72%, transparent);
+    text-align: right;
+  }
+
+  &_installments_icon {
+    flex-shrink: 0;
+    color: var(--color-icon-on-card);
+  }
+}
+
+// Stacked arrangement. Source order is the wide-row one (header, distance,
+// room, labels) so the row needs no reordering; `order` moves room last here.
+@mixin stacked {
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+  padding: 20px 20px var(--size-xl);
+  border-radius: var(--radius-2xl);
+
+  .card_gallery {
+    height: 200px;
+    border-radius: var(--radius-lg);
+  }
+
+  .card_body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--size-xs);
+  }
+
+  .card_labels {
+    order: 1;
+    margin-top: var(--size-sm);
+  }
+
+  .card_room {
+    order: 2;
+    margin-top: var(--size-lg);
+  }
+
+  .card_side {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: var(--size-md);
+    align-items: flex-start;
+  }
+
+  .card_installments_caption {
+    text-align: left;
+  }
+
+  .card_select {
+    display: none;
+  }
+}
+
+.vertical {
+  @include stacked;
+}
+
+.responsive {
+  @include stacked;
+
+  @include b-up(lg) {
+    flex-direction: row;
+    height: auto;
+    padding: var(--size-xl) 0;
+    border-bottom: 1px solid var(--color-stroke-divider-on-surface);
+    border-radius: 0;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .card_gallery {
+      width: 316px;
+      height: 200px;
+      border-radius: var(--radius-2xl);
+    }
+
+    .card_body {
+      gap: var(--size-md);
+      min-width: 0;
+    }
+
+    .card_labels,
+    .card_room {
+      order: 0;
+      margin-top: 0;
+    }
+
+    .card_side {
+      flex-direction: column;
+      flex-shrink: 0;
+      gap: var(--size-lg);
+      align-items: flex-end;
+      justify-content: space-between;
+      width: 151px;
+    }
+
+    .card_installments_caption {
+      text-align: right;
+    }
+
+    .card_price {
+      align-items: flex-end;
+      text-align: right;
+    }
+
+    .card_select {
+      display: inline-flex;
+    }
+  }
+}

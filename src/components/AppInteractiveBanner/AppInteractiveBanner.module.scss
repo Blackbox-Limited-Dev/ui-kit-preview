@@ -1,0 +1,35 @@
+@use 'text-styles' as *;
+
+.banner {
+  display: flex;
+  gap: var(--size-lg);
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--size-lg);
+  background-color: var(--color-background-bg-card);
+  border: 1px solid var(--color-stroke-on-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+
+  &_text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &_title {
+    @include text-body-1(semibold);
+
+    color: var(--color-text-on-card);
+  }
+
+  &_description {
+    @include text-body-2;
+
+    color: color-mix(in srgb, var(--color-text-on-card) 72%, transparent);
+  }
+
+  &_label {
+    flex-shrink: 0;
+  }
+}

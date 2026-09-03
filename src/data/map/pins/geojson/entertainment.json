@@ -1,0 +1,581 @@
+{
+  "type": "FeatureCollection",
+  "name": "Розваги",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "bkv-002",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.40882, 48.3605823]
+      },
+      "properties": {
+        "id": "bkv-002",
+        "name": "atlasweekend",
+        "subcategory": "Атракціон / розвага",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=atlasweekend%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "entertainment",
+        "categoryLabel": "Розваги",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-003",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4084276, 48.3488926]
+      },
+      "properties": {
+        "id": "bkv-003",
+        "name": "Roller Coaster zipline(Буковельські гірки)",
+        "subcategory": "Атракціон / розвага",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Roller%20Coaster%20zipline%28%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C%D1%81%D1%8C%D0%BA%D1%96%20%D0%B3%D1%96%D1%80%D0%BA%D0%B8%29%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "entertainment",
+        "categoryLabel": "Розваги",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-004",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.395885, 48.372162]
+      },
+      "properties": {
+        "id": "bkv-004",
+        "name": "STAV14 Snowpark & School Bukovel",
+        "subcategory": "Атракціон / розвага",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=STAV14%20Snowpark%20%26%20School%20Bukovel%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "entertainment",
+        "categoryLabel": "Розваги",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-005",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.395885, 48.372162]
+      },
+      "properties": {
+        "id": "bkv-005",
+        "name": "STAV14 Snowpark Cafe",
+        "subcategory": "Атракціон / розвага",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=STAV14%20Snowpark%20Cafe%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "entertainment",
+        "categoryLabel": "Розваги",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-006",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.3937777, 48.3731437]
+      },
+      "properties": {
+        "id": "bkv-006",
+        "name": "STAV14 WAKE PARK",
+        "subcategory": "Атракціон / розвага",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=STAV14%20WAKE%20PARK%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "entertainment",
+        "categoryLabel": "Розваги",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-007",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4087695, 48.3606251]
+      },
+      "properties": {
+        "id": "bkv-007",
+        "name": "Street Food (Колесо огляду)",
+        "subcategory": "Атракціон / розвага",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Street%20Food%20%28%D0%9A%D0%BE%D0%BB%D0%B5%D1%81%D0%BE%20%D0%BE%D0%B3%D0%BB%D1%8F%D0%B4%D1%83%29%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "entertainment",
+        "categoryLabel": "Розваги",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-009",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.3913, 48.3602]
+      },
+      "properties": {
+        "id": "bkv-009",
+        "name": "Адреналінова Вежа",
+        "subcategory": "Атракціон / розвага",
+        "description": "Адреналінова вежа — атракціон активного відпочинку з екстремальними спусками.",
+        "services": "Екстрим-атракціон",
+        "hours": "Сезонно",
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%90%D0%B4%D1%80%D0%B5%D0%BD%D0%B0%D0%BB%D1%96%D0%BD%D0%BE%D0%B2%D0%B0%20%D0%92%D0%B5%D0%B6%D0%B0%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "xlsx",
+        "category": "entertainment",
+        "categoryLabel": "Розваги",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-011",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.408429, 48.354542]
+      },
+      "properties": {
+        "id": "bkv-011",
+        "name": "Родельбан",
+        "subcategory": "Атракціон / розвага",
+        "description": "Всепогодна санна траса німецької фірми \"Віганд\" вперше розташована на території України. Віражі, повороти та стрибки надають особливу гостроту відчуттів. Атракціон надає можливість самостійно керувати швидкістю санчат, які несуть вниз по схилу одного або двох пасажирів.",
+        "services": null,
+        "hours": "Щодня 10:00–18:30",
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/place/%D0%A0%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C%D0%B1%D0%B0%D0%BD+'Speed+Fun'+(%D0%BD%D0%B8%D0%B6%D0%BD%D1%96%D0%B9+%D0%B2%D1%85%D1%96%D0%B4)/@48.3523213,24.4113838,1367m/data=!3m1!1e3!4m6!3m5!1s0x4737190033081623:0x58fc85d8677bee5e!8m2!3d48.3543753!4d24.4084132!16s%2Fg%2F11z3_mz2pt?entry=ttu&g_ep=EgoyMDI2MDYwMy4xIKXMDSoASAFQAw%3D%3D",
+        "precision": "exact",
+        "source": "xlsx",
+        "category": "entertainment",
+        "categoryLabel": "Розваги",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-012",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4145658, 48.3485796]
+      },
+      "properties": {
+        "id": "bkv-012",
+        "name": "Арена",
+        "subcategory": "Атракціон / розвага",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%80%D0%B5%D0%BD%D0%B0%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "entertainment",
+        "categoryLabel": "Розваги",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-014",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4082376, 48.3592597]
+      },
+      "properties": {
+        "id": "bkv-014",
+        "name": "БУКА - Клуб-Бар",
+        "subcategory": "Атракціон / розвага",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%91%D0%A3%D0%9A%D0%90%20-%20%D0%9A%D0%BB%D1%83%D0%B1-%D0%91%D0%B0%D1%80%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "entertainment",
+        "categoryLabel": "Розваги",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-015",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4082376, 48.3592597]
+      },
+      "properties": {
+        "id": "bkv-015",
+        "name": "БУКА - РЦ",
+        "subcategory": "Атракціон / розвага",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%91%D0%A3%D0%9A%D0%90%20-%20%D0%A0%D0%A6%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "entertainment",
+        "categoryLabel": "Розваги",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-019",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4001855, 48.3690563]
+      },
+      "properties": {
+        "id": "bkv-019",
+        "name": "Вулична 5 - Колесо Огляду",
+        "subcategory": "Атракціон / розвага",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%92%D1%83%D0%BB%D0%B8%D1%87%D0%BD%D0%B0%205%20-%20%D0%9A%D0%BE%D0%BB%D0%B5%D1%81%D0%BE%20%D0%9E%D0%B3%D0%BB%D1%8F%D0%B4%D1%83%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "entertainment",
+        "categoryLabel": "Розваги",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-034",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.3913, 48.3602]
+      },
+      "properties": {
+        "id": "bkv-034",
+        "name": "Картинг (П1)",
+        "subcategory": "Атракціон / розвага",
+        "description": "Картинг — траса для катання на картах.",
+        "services": "Картинг",
+        "hours": "У годинах роботи курорту",
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%9A%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%B3%20%28%D0%9F1%29%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "xlsx",
+        "category": "entertainment",
+        "categoryLabel": "Розваги",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-035",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.3913, 48.3602]
+      },
+      "properties": {
+        "id": "bkv-035",
+        "name": "Картинг-центр",
+        "subcategory": "Атракціон / розвага",
+        "description": "Картинг-центр — траса для катання на картах для дорослих і дітей.",
+        "services": "Картинг",
+        "hours": "У годинах роботи курорту",
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%9A%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%B3-%D1%86%D0%B5%D0%BD%D1%82%D1%80%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "xlsx",
+        "category": "entertainment",
+        "categoryLabel": "Розваги",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-037",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4077257, 48.359451]
+      },
+      "properties": {
+        "id": "bkv-037",
+        "name": "Львівська майстерня шоколаду",
+        "subcategory": "Атракціон / розвага",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%9B%D1%8C%D0%B2%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0%20%D0%BC%D0%B0%D0%B9%D1%81%D1%82%D0%B5%D1%80%D0%BD%D1%8F%20%D1%88%D0%BE%D0%BA%D0%BE%D0%BB%D0%B0%D0%B4%D1%83%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "entertainment",
+        "categoryLabel": "Розваги",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-038",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.404588, 48.3642004]
+      },
+      "properties": {
+        "id": "bkv-038",
+        "name": "Мармелад + Морозиво (Озеро Молодості)",
+        "subcategory": "Атракціон / розвага",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%9C%D0%B0%D1%80%D0%BC%D0%B5%D0%BB%D0%B0%D0%B4%20%2B%20%D0%9C%D0%BE%D1%80%D0%BE%D0%B7%D0%B8%D0%B2%D0%BE%20%28%D0%9E%D0%B7%D0%B5%D1%80%D0%BE%20%D0%9C%D0%BE%D0%BB%D0%BE%D0%B4%D0%BE%D1%81%D1%82%D1%96%29%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "entertainment",
+        "categoryLabel": "Розваги",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-039",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4013746, 48.3684391]
+      },
+      "properties": {
+        "id": "bkv-039",
+        "name": "Мохіто Бар (Озеро Молодості)",
+        "subcategory": "Атракціон / розвага",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%9C%D0%BE%D1%85%D1%96%D1%82%D0%BE%20%D0%91%D0%B0%D1%80%20%28%D0%9E%D0%B7%D0%B5%D1%80%D0%BE%20%D0%9C%D0%BE%D0%BB%D0%BE%D0%B4%D0%BE%D1%81%D1%82%D1%96%29%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "entertainment",
+        "categoryLabel": "Розваги",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-040",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.3913, 48.3602]
+      },
+      "properties": {
+        "id": "bkv-040",
+        "name": "Музей Воскових Фігур",
+        "subcategory": "Атракціон / розвага",
+        "description": "Музей воскових фігур «OSCAR» — фотореалістичні воскові фігури світових та українських знаменитостей (майстерня співпрацює з музеєм мадам Тюссо). 1-й поверх паркінгу №2.",
+        "services": "Музейна експозиція, фотозони",
+        "hours": "Щодня (уточнюється)",
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%9C%D1%83%D0%B7%D0%B5%D0%B9%20%D0%92%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D0%B8%D1%85%20%D0%A4%D1%96%D0%B3%D1%83%D1%80%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "xlsx",
+        "category": "entertainment",
+        "categoryLabel": "Розваги",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-041",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.3913, 48.3602]
+      },
+      "properties": {
+        "id": "bkv-041",
+        "name": "Озеро Молодості Вхід",
+        "subcategory": "Атракціон / розвага",
+        "description": "Озеро Молодості — рукотворне озеро в центрі курорту. Влітку — водні атракціони, катамарани, прокат пляжного реквізиту, пляж; навколо ресторани та зони відпочинку.",
+        "services": "Водні атракціони, катамарани, прокат, пляж",
+        "hours": "Сезонно (літо)",
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%9E%D0%B7%D0%B5%D1%80%D0%BE%20%D0%9C%D0%BE%D0%BB%D0%BE%D0%B4%D0%BE%D1%81%D1%82%D1%96%20%D0%92%D1%85%D1%96%D0%B4%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "xlsx",
+        "category": "entertainment",
+        "categoryLabel": "Розваги",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-042",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.3913, 48.3602]
+      },
+      "properties": {
+        "id": "bkv-042",
+        "name": "Озеро Молодості Пляжний реквізит",
+        "subcategory": "Пляж / водний відпочинок",
+        "description": "Озеро Молодості — рукотворне озеро в центрі курорту. Влітку — водні атракціони, катамарани, прокат пляжного реквізиту, пляж; навколо ресторани та зони відпочинку.",
+        "services": "Водні атракціони, катамарани, прокат, пляж",
+        "hours": "Сезонно (літо)",
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%9E%D0%B7%D0%B5%D1%80%D0%BE%20%D0%9C%D0%BE%D0%BB%D0%BE%D0%B4%D0%BE%D1%81%D1%82%D1%96%20%D0%9F%D0%BB%D1%8F%D0%B6%D0%BD%D0%B8%D0%B9%20%D1%80%D0%B5%D0%BA%D0%B2%D1%96%D0%B7%D0%B8%D1%82%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "xlsx",
+        "category": "entertainment",
+        "categoryLabel": "Розваги",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-043",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4013746, 48.3684391]
+      },
+      "properties": {
+        "id": "bkv-043",
+        "name": "Пекарня(Озеро молодості)",
+        "subcategory": "Атракціон / розвага",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%9F%D0%B5%D0%BA%D0%B0%D1%80%D0%BD%D1%8F%28%D0%9E%D0%B7%D0%B5%D1%80%D0%BE%20%D0%BC%D0%BE%D0%BB%D0%BE%D0%B4%D0%BE%D1%81%D1%82%D1%96%29%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "entertainment",
+        "categoryLabel": "Розваги",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-045",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4009419, 48.3695583]
+      },
+      "properties": {
+        "id": "bkv-045",
+        "name": "Ресторан \"Сяєво\" (Колесо огляду)",
+        "subcategory": "Атракціон / розвага",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%20%22%D0%A1%D1%8F%D1%94%D0%B2%D0%BE%22%20%28%D0%9A%D0%BE%D0%BB%D0%B5%D1%81%D0%BE%20%D0%BE%D0%B3%D0%BB%D1%8F%D0%B4%D1%83%29%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "entertainment",
+        "categoryLabel": "Розваги",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-048",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.404588, 48.3642004]
+      },
+      "properties": {
+        "id": "bkv-048",
+        "name": "Сувеніри (Озеро Молодості)",
+        "subcategory": "Атракціон / розвага",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%A1%D1%83%D0%B2%D0%B5%D0%BD%D1%96%D1%80%D0%B8%20%28%D0%9E%D0%B7%D0%B5%D1%80%D0%BE%20%D0%9C%D0%BE%D0%BB%D0%BE%D0%B4%D0%BE%D1%81%D1%82%D1%96%29%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "entertainment",
+        "categoryLabel": "Розваги",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-049",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4032195, 48.3681595]
+      },
+      "properties": {
+        "id": "bkv-049",
+        "name": "Тераса Бар (Озеро Молодості)",
+        "subcategory": "Атракціон / розвага",
+        "description": null,
+        "services": null,
+        "hours": null,
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%A2%D0%B5%D1%80%D0%B0%D1%81%D0%B0%20%D0%91%D0%B0%D1%80%20%28%D0%9E%D0%B7%D0%B5%D1%80%D0%BE%20%D0%9C%D0%BE%D0%BB%D0%BE%D0%B4%D0%BE%D1%81%D1%82%D1%96%29%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "google",
+        "category": "entertainment",
+        "categoryLabel": "Розваги",
+        "seasons": ["all"]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bkv-050",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.3913, 48.3602]
+      },
+      "properties": {
+        "id": "bkv-050",
+        "name": "Тролей",
+        "subcategory": "Атракціон / розвага",
+        "description": "Тролей (зиплайн) — швидкісний спуск на роликовому блоці вздовж натягнутого троса; довжина траси «Буковель» ~1130 м.",
+        "services": "Зиплайн / екстрим-атракціон",
+        "hours": "Сезонно, у годинах роботи курорту",
+        "website": null,
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=%D0%A2%D1%80%D0%BE%D0%BB%D0%B5%D0%B9%20%D0%91%D1%83%D0%BA%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C",
+        "precision": "exact",
+        "source": "xlsx",
+        "category": "entertainment",
+        "categoryLabel": "Розваги",
+        "seasons": ["all"]
+      }
+    }
+  ]
+}

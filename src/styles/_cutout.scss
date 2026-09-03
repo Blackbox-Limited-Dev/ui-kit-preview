@@ -1,0 +1,48 @@
+// Ticket-stub notch, shared by `AppCutoutCard` and the purchase card's own
+// mobile boundary. The card body and its 1px border are two stacked masked
+// layers: the outer layer paints the border colour, the inner one paints the
+// surface 1px inside it, and both are cut by the same pair of edge circles so
+// the stroke follows the arc.
+// `mask-composite: intersect` needs the `-webkit-` alias for Safari.
+
+$notch-radius: 12px;
+
+@mixin notch-mask($radius, $offset) {
+  mask-image: linear-gradient(#000 0 100%),
+    radial-gradient(
+      circle $radius at $offset var(--cutout-y),
+      transparent calc(#{$radius} - 0.5px),
+      #000 $radius
+    ),
+    radial-gradient(
+      circle $radius at calc(100% - #{$offset}) var(--cutout-y),
+      transparent calc(#{$radius} - 0.5px),
+      #000 $radius
+    );
+
+  // Safari only implements the legacy `-webkit-mask-composite` keywords;
+  // `source-in` is its equivalent of `intersect`.
+  // stylelint-disable-next-line property-no-vendor-prefix
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+
+@mixin cutout-shape {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-color: var(--color-stroke-on-surface);
+  border-radius: var(--radius-2xl);
+
+  @include notch-mask($notch-radius, 0);
+
+  &::after {
+    position: absolute;
+    inset: 1px;
+    content: '';
+    background-color: var(--color-background-surface);
+    border-radius: calc(var(--radius-2xl) - 1px);
+
+    @include notch-mask($notch-radius + 1px, -1px);
+  }
+}
